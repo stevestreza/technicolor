@@ -12,7 +12,9 @@
 #import "TCProcessingQueueController.h"
 
 @implementation Technicolor_AppDelegate
-@synthesize viewControllers, jobQueue, calendar;
+@synthesize viewControllers, jobQueue;
+
+//@synthesize calendar;
 
 /**
     Returns the support folder for the application, used to store the Core Data
@@ -116,17 +118,17 @@
 
 -(void)loadCalendar{
 	NSString *uid = [[NSUserDefaults standardUserDefaults] stringForKey:@"calendarUID"];
-	TCCalendar *cal = nil;
-	if(uid){
-		cal = [TCCalendar calendarWithUID:uid];
-	}
-	
-	if(!cal){
-		cal = [TCCalendar calendarWithName:@"Sweeps" createIfNeeded:YES];
-		[[NSUserDefaults standardUserDefaults] setObject:[cal uid] forKey:@"calendarUID"];
-	}
-	
-	calendar = [cal retain];
+//	TCCalendar *cal = nil;
+//	if(uid){
+//		cal = [TCCalendar calendarWithUID:uid];
+//	}
+//	
+//	if(!cal){
+//		cal = [TCCalendar calendarWithName:@"Sweeps" createIfNeeded:YES];
+//		[[NSUserDefaults standardUserDefaults] setObject:[cal uid] forKey:@"calendarUID"];
+//	}
+//	
+//	calendar = [cal retain];
 }
 
 -(void)addViewController:(NSViewController *)controller forType:(NSString *)type{
@@ -202,10 +204,10 @@
 	NSArray *filenames = [openPanel filenames];
 	for(NSString *path in filenames){
 		TCVideoFile *video = [TCVideoFile videoFileForPath:path];
-		if([video isKindOfClass:[TCDVDVideo class]]){
-			NSLog(@"DVD!");
-			[(TCDVDVideo *)video loadTitles];
-		}
+//		if([video isKindOfClass:[TCDVDVideo class]]){
+//			NSLog(@"DVD!");
+//			[(TCDVDVideo *)video loadTitles];
+//		}
 	}
 	
 }

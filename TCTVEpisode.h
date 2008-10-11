@@ -10,8 +10,8 @@
 #import "TCVideo.h"
 @class TCTVShow;
 
-#import "TCCalendar.h"
-#import "TCCalendarEvent.h"
+//#import "TCCalendar.h"
+//#import "TCCalendarEvent.h"
 
 @interface TCTVEpisode : NSManagedObject {
 

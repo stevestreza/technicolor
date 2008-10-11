@@ -184,6 +184,7 @@
 }
 
 -(void)createCalendarEvent{
+	/*
 	if([self calendarEvent]) return;
 	
 	TCCalendarEvent *event = [TCCalendarEvent calendarEventWithName:[NSString stringWithFormat:@"%@ - %@",[[self show] showName], [self episodeName]]
@@ -196,6 +197,7 @@
 	[event saveCalendarEvent];
 	
 	[self setValue:event forKey:@"calendarEvent"];
+	 */
 }
 
 @end

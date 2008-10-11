@@ -7,11 +7,11 @@
 //
 
 #import "TCProcessingQueueController.h"
-#import "hb.h"
+//#import "hb.h"
 
 @implementation TCProcessingQueueController
 
-static hb_handle_t *sHBHandle = NULL;
+//static hb_handle_t *sHBHandle = NULL;
 
 +(void)initialize{
 	setenv("HB_DEBUG","true",1);
@@ -37,13 +37,13 @@ static hb_handle_t *sHBHandle = NULL;
 	
 	NSString *path = [[openPanel filenames] objectAtIndex:0];
 	
-	if(!sHBHandle){
-		sHBHandle = hb_init_dl(HB_DEBUG_ALL, 0);
-	}
+//	if(!sHBHandle){
+//		sHBHandle = hb_init_dl(HB_DEBUG_ALL, 0);
+//	}
 	
 	char *pathString = [path UTF8String];
 	
-	hb_scan(sHBHandle,pathString,0);
+//	hb_scan(sHBHandle,pathString,0);
 }
 
 @end

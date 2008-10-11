@@ -29,7 +29,7 @@
 	NSViewController *selectedViewController;
 	
 	NSOperationQueue *jobQueue;
-	TCCalendar *calendar;
+//	TCCalendar *calendar;
 }
 @property (readonly) NSOperationQueue *jobQueue;
 @property (retain) NSMutableDictionary *viewControllers;
