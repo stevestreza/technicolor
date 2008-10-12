@@ -11,4 +11,8 @@
 
 @implementation TCCalendarPlugin
 
+-(void)awake{
+	NSLog(@"CALENDAR IS AWAKE MWAHAHAHAHAHA");
+}
+
 @end

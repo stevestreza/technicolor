@@ -40,6 +40,7 @@
 		1E63692E0EA26EE60003034E /* TCOrganizationPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E63692C0EA26EE60003034E /* TCOrganizationPlugin.m */; };
 		1E6369310EA270970003034E /* TCCalendarPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6369300EA270970003034E /* TCCalendarPlugin.m */; };
 		1E6369340EA270CC0003034E /* TCTVRagePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6369330EA270CC0003034E /* TCTVRagePlugin.m */; };
+		1E63698A0EA2736E0003034E /* TCOrganizationPluginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6369890EA2736E0003034E /* TCOrganizationPluginManager.m */; };
 		1E83CC760E6B74CB00987FC1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E83CC750E6B74CB00987FC1 /* WebKit.framework */; };
 		1E83CCD80E6B890D00987FC1 /* libpng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E735ADF0E5159D9004FAD1A /* libpng.dylib */; };
 		1E83CCD90E6B890D00987FC1 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE3EE750E53CF590099684C /* libz.1.2.3.dylib */; };
@@ -107,6 +108,8 @@
 		1E6369300EA270970003034E /* TCCalendarPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCCalendarPlugin.m; sourceTree = "<group>"; };
 		1E6369320EA270CC0003034E /* TCTVRagePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTVRagePlugin.h; sourceTree = "<group>"; };
 		1E6369330EA270CC0003034E /* TCTVRagePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTVRagePlugin.m; sourceTree = "<group>"; };
+		1E6369880EA2736E0003034E /* TCOrganizationPluginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCOrganizationPluginManager.h; sourceTree = "<group>"; };
+		1E6369890EA2736E0003034E /* TCOrganizationPluginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCOrganizationPluginManager.m; sourceTree = "<group>"; };
 		1E735ADF0E5159D9004FAD1A /* libpng.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng.dylib; path = usr/local/lib/libpng.dylib; sourceTree = SDKROOT; };
 		1E83CC750E6B74CB00987FC1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1E95DBF70E57BD9600B6A7E9 /* TCTVShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTVShowController.h; sourceTree = "<group>"; };
@@ -263,9 +266,19 @@
 		1E6369150EA2592C0003034E /* App */ = {
 			isa = PBXGroup;
 			children = (
+				1E6369720EA273370003034E /* Plugins */,
 				1EB8C95E0EA1AB0A00984CD7 /* Controllers */,
 			);
 			name = App;
+			sourceTree = "<group>";
+		};
+		1E6369720EA273370003034E /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				1E6369880EA2736E0003034E /* TCOrganizationPluginManager.h */,
+				1E6369890EA2736E0003034E /* TCOrganizationPluginManager.m */,
+			);
+			name = Plugins;
 			sourceTree = "<group>";
 		};
 		1EB8C9320EA1A9D500984CD7 /* Plugins */ = {
@@ -608,6 +621,7 @@
 				77C8280E06725ACE000B614F /* Technicolor_AppDelegate.m in Sources */,
 				1E95DBF90E57BD9600B6A7E9 /* TCTVShowController.m in Sources */,
 				1E10D8080E6C459900C69D38 /* TCProcessingQueueController.m in Sources */,
+				1E63698A0EA2736E0003034E /* TCOrganizationPluginManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

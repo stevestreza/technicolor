@@ -17,4 +17,15 @@ static NSMutableArray *pluginArray;
 	NSLog(@"Initializing %@",[self class]);
 }
 
+-(id)init{
+	if(self = [super init]){
+		
+	}
+	return self;
+}
+
+-(void)awake{
+	
+}
+
 @end

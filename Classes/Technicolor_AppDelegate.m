@@ -149,9 +149,11 @@
 }
 
 -(void)awakeFromNib{
-	[self loadCalendar];
 	[viewArrayController addObserver:self forKeyPath:@"selection" options:0 context:nil];
 	[self selectViewController:[[viewArrayController selectedObjects] objectAtIndex:0]];	
+
+	organizationPluginManager = [[TCOrganizationPluginManager alloc] init];
+	[organizationPluginManager loadPlugins];
 }
 
 -(void)applicationDidFinishLaunching:(NSNotification *)notif{

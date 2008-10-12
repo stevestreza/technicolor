@@ -12,6 +12,8 @@
 #import "TCCalendar.h"
 #import <CalendarStore/CalendarStore.h>
 
+#import "TCOrganizationPluginManager.h"
+
 @interface Technicolor_AppDelegate : NSObject 
 {
     IBOutlet NSWindow *window;
@@ -27,6 +29,8 @@
 	IBOutlet NSArrayController *viewArrayController;
 	
 	NSViewController *selectedViewController;
+	
+	TCOrganizationPluginManager *organizationPluginManager;
 	
 	NSOperationQueue *jobQueue;
 //	TCCalendar *calendar;
