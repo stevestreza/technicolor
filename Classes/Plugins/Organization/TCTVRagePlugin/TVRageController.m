@@ -61,7 +61,7 @@ static TVRageController *sharedController = nil;
 
 -(void)beginLoadOperation:(TCTVRageOperationType)operationType withInfoObject:(id)infoObject delegate:(id)delegate{
 	TVRageOperation *op = [[TVRageOperation alloc] initWithOperation:operationType dataObject:infoObject delegate:delegate];
-	[TCJobQueue addOperation:op];
+	[((NSOperationQueue *)([[NSApp delegate] jobQueue])) addOperation:op];
 	[op release];
 }
 

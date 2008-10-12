@@ -64,7 +64,7 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
 	if([keyPath isEqualToString:@"favorite"]){
 		NSLog(@"Favorite changed for %@ - %@",[self valueForKey:@"showName"],[self valueForKey:@"favorite"]);
-		[TCJobQueue beginLoadOperation:TCTVRageGetEpisodesOperation withInfoObject:self delegate:nil];
+//		[TCJobQueue beginLoadOperation:TCTVRageGetEpisodesOperation withInfoObject:self delegate:nil];
 	}else{
 		[super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
 	}
