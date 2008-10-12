@@ -42,6 +42,7 @@
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
 - (NSManagedObjectModel *)managedObjectModel;
 - (NSManagedObjectContext *)managedObjectContext;
+-(TCOrganizationPluginManager *)organizationPluginManager;
 
 - (IBAction)saveAction:sender;
 -(IBAction)addVideos:(id)sender;

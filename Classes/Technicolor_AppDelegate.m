@@ -10,6 +10,7 @@
 #import "TCWizardController.h"
 #import "TCTVShowController.h"
 #import "TCProcessingQueueController.h"
+#import "TCCore.h"
 
 @implementation Technicolor_AppDelegate
 @synthesize viewControllers, jobQueue;
@@ -42,7 +43,11 @@
         return managedObjectModel;
     }
 	
-    managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:nil] retain];    
+    NSManagedObjectModel *coreModel = [TCCore coreModel];
+	NSManagedObjectModel *pluginModel = [[self organizationPluginManager] pluginModel];
+	
+	managedObjectModel = [[NSManagedObjectModel modelByMergingModels:[NSArray arrayWithObjects:coreModel,pluginModel,nil]] retain];
+	
     return managedObjectModel;
 }
 
@@ -78,6 +83,14 @@
     }    
 
     return persistentStoreCoordinator;
+}
+
+-(TCOrganizationPluginManager *)organizationPluginManager{
+	if(!organizationPluginManager){
+		organizationPluginManager = [[TCOrganizationPluginManager alloc] init];
+		[organizationPluginManager loadPlugins];
+	}
+	return organizationPluginManager;
 }
 
 -(id)init{
@@ -116,21 +129,6 @@
 	return self;
 }
 
--(void)loadCalendar{
-	NSString *uid = [[NSUserDefaults standardUserDefaults] stringForKey:@"calendarUID"];
-//	TCCalendar *cal = nil;
-//	if(uid){
-//		cal = [TCCalendar calendarWithUID:uid];
-//	}
-//	
-//	if(!cal){
-//		cal = [TCCalendar calendarWithName:@"Sweeps" createIfNeeded:YES];
-//		[[NSUserDefaults standardUserDefaults] setObject:[cal uid] forKey:@"calendarUID"];
-//	}
-//	
-//	calendar = [cal retain];
-}
-
 -(void)addViewController:(NSViewController *)controller forType:(NSString *)type{
 	if(!viewControllers){
 		viewControllers = [[NSMutableDictionary alloc] init];
@@ -150,10 +148,7 @@
 
 -(void)awakeFromNib{
 	[viewArrayController addObserver:self forKeyPath:@"selection" options:0 context:nil];
-	[self selectViewController:[[viewArrayController selectedObjects] objectAtIndex:0]];	
-
-	organizationPluginManager = [[TCOrganizationPluginManager alloc] init];
-	[organizationPluginManager loadPlugins];
+	[self selectViewController:[[viewArrayController selectedObjects] objectAtIndex:0]];
 }
 
 -(void)applicationDidFinishLaunching:(NSNotification *)notif{

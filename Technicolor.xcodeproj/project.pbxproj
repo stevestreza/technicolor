@@ -41,6 +41,11 @@
 		1E6369310EA270970003034E /* TCCalendarPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6369300EA270970003034E /* TCCalendarPlugin.m */; };
 		1E6369340EA270CC0003034E /* TCTVRagePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6369330EA270CC0003034E /* TCTVRagePlugin.m */; };
 		1E63698A0EA2736E0003034E /* TCOrganizationPluginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6369890EA2736E0003034E /* TCOrganizationPluginManager.m */; };
+		1E636A020EA290200003034E /* TCCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E636A000EA290200003034E /* TCCore.h */; };
+		1E636A030EA290200003034E /* TCCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E636A010EA290200003034E /* TCCore.m */; };
+		1E636A560EA29B030003034E /* TCTVShowView.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1E636A540EA29B030003034E /* TCTVShowView.nib */; };
+		1E636A720EA29CA10003034E /* whitebar-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E636A710EA29CA10003034E /* whitebar-bg.png */; };
+		1E636A7E0EA29D1B0003034E /* TCCore-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E63689F0EA253590003034E /* TCCore-Info.plist */; };
 		1E83CC760E6B74CB00987FC1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E83CC750E6B74CB00987FC1 /* WebKit.framework */; };
 		1E83CCD80E6B890D00987FC1 /* libpng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E735ADF0E5159D9004FAD1A /* libpng.dylib */; };
 		1E83CCD90E6B890D00987FC1 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE3EE750E53CF590099684C /* libz.1.2.3.dylib */; };
@@ -86,6 +91,20 @@
 			remoteGlobalIDString = 1E63689D0EA253590003034E /* TCCore */;
 			remoteInfo = TCCore;
 		};
+		1E636A790EA29D090003034E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EB8C9620EA1AB4000984CD7 /* TCCalendarPlugin */;
+			remoteInfo = TCCalendarPlugin;
+		};
+		1E636A7B0EA29D090003034E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EB8CADE0EA1ACC300984CD7 /* TCTVRagePlugin */;
+			remoteInfo = TCTVRagePlugin;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -95,9 +114,6 @@
 		1E10D8070E6C459900C69D38 /* TCProcessingQueueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCProcessingQueueController.m; sourceTree = "<group>"; };
 		1E3BA36A0E8F070200585E21 /* CalendarStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalendarStore.framework; path = System/Library/Frameworks/CalendarStore.framework; sourceTree = SDKROOT; };
 		1E50D7D50E5010ED00BDA918 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Wizard.nib; sourceTree = "<group>"; };
-		1E5979300E6CD60E004AC648 /* TNSWDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNSWDownload.h; sourceTree = "<group>"; };
-		1E5979310E6CD60E004AC648 /* TNSWDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNSWDownload.m; sourceTree = "<group>"; };
-		1E6368950EA2533F0003034E /* TCCore.framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TCCore.framework-Info.plist"; sourceTree = "<group>"; };
 		1E63689E0EA253590003034E /* TCCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TCCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E63689F0EA253590003034E /* TCCore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TCCore-Info.plist"; sourceTree = "<group>"; };
 		1E6369180EA25A3C0003034E /* TCDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDownload.h; sourceTree = "<group>"; };
@@ -110,6 +126,10 @@
 		1E6369330EA270CC0003034E /* TCTVRagePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTVRagePlugin.m; sourceTree = "<group>"; };
 		1E6369880EA2736E0003034E /* TCOrganizationPluginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCOrganizationPluginManager.h; sourceTree = "<group>"; };
 		1E6369890EA2736E0003034E /* TCOrganizationPluginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCOrganizationPluginManager.m; sourceTree = "<group>"; };
+		1E636A000EA290200003034E /* TCCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCCore.h; sourceTree = "<group>"; };
+		1E636A010EA290200003034E /* TCCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCCore.m; sourceTree = "<group>"; };
+		1E636A550EA29B030003034E /* TCTVShowView.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = TCTVShowView.nib; path = Resources/App/English.lproj/TCTVShowView.nib; sourceTree = "<group>"; };
+		1E636A710EA29CA10003034E /* whitebar-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whitebar-bg.png"; sourceTree = "<group>"; };
 		1E735ADF0E5159D9004FAD1A /* libpng.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng.dylib; path = usr/local/lib/libpng.dylib; sourceTree = SDKROOT; };
 		1E83CC750E6B74CB00987FC1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1E95DBF70E57BD9600B6A7E9 /* TCTVShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTVShowController.h; sourceTree = "<group>"; };
@@ -281,6 +301,36 @@
 			name = Plugins;
 			sourceTree = "<group>";
 		};
+		1E636A630EA29B750003034E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1E636A540EA29B030003034E /* TCTVShowView.nib */,
+				1E636A710EA29CA10003034E /* whitebar-bg.png */,
+				1E50D7D40E5010ED00BDA918 /* Wizard.nib */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				2F7446970DB6B7EA00F9684A /* MainMenu.xib */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1E636A6D0EA29C030003034E /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				1EB8C9640EA1AB4000984CD7 /* TCCalendarPlugin-Info.plist */,
+				1EB8CAE00EA1ACC300984CD7 /* TCTVRagePlugin-Info.plist */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		1E636A6E0EA29C090003034E /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				1E63689F0EA253590003034E /* TCCore-Info.plist */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
 		1EB8C9320EA1A9D500984CD7 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,10 +381,10 @@
 		1EB8C95D0EA1AAF500984CD7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				1E5979300E6CD60E004AC648 /* TNSWDownload.h */,
-				1E5979310E6CD60E004AC648 /* TNSWDownload.m */,
 				1E6369180EA25A3C0003034E /* TCDownload.h */,
 				1E6369190EA25A3C0003034E /* TCDownload.m */,
+				1E636A000EA290200003034E /* TCCore.h */,
+				1E636A010EA290200003034E /* TCCore.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -406,16 +456,11 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1E50D7D40E5010ED00BDA918 /* Wizard.nib */,
-				1EB8C9640EA1AB4000984CD7 /* TCCalendarPlugin-Info.plist */,
-				1EB8CAE00EA1ACC300984CD7 /* TCTVRagePlugin-Info.plist */,
-				1E6368950EA2533F0003034E /* TCCore.framework-Info.plist */,
-				1E63689F0EA253590003034E /* TCCore-Info.plist */,
-				8D1107310486CEB800E47090 /* Info.plist */,
-				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				2F7446970DB6B7EA00F9684A /* MainMenu.xib */,
+				1E636A6E0EA29C090003034E /* Framework */,
+				1E636A6D0EA29C030003034E /* Plugins */,
+				1E636A630EA29B750003034E /* App */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
@@ -442,6 +487,7 @@
 				1E6368AE0EA253A70003034E /* TCVideoFile.h in Headers */,
 				1E63691A0EA25A3C0003034E /* TCDownload.h in Headers */,
 				1E63692D0EA26EE60003034E /* TCOrganizationPlugin.h in Headers */,
+				1E636A020EA290200003034E /* TCCore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +560,8 @@
 			);
 			dependencies = (
 				1E6368BA0EA253D60003034E /* PBXTargetDependency */,
+				1E636A7A0EA29D090003034E /* PBXTargetDependency */,
+				1E636A7C0EA29D090003034E /* PBXTargetDependency */,
 			);
 			name = Technicolor;
 			productInstallPath = "$(HOME)/Applications";
@@ -546,6 +594,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E636A7E0EA29D1B0003034E /* TCCore-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +619,8 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */,
 				1E50D7D60E5010ED00BDA918 /* Wizard.nib in Resources */,
+				1E636A560EA29B030003034E /* TCTVShowView.nib in Resources */,
+				1E636A720EA29CA10003034E /* whitebar-bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +640,7 @@
 				1E6368B40EA253BF0003034E /* TCVideoFile.m in Sources */,
 				1E63691B0EA25A3C0003034E /* TCDownload.m in Sources */,
 				1E63692E0EA26EE60003034E /* TCOrganizationPlugin.m in Sources */,
+				1E636A030EA290200003034E /* TCCore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,6 +695,16 @@
 			target = 1E63689D0EA253590003034E /* TCCore */;
 			targetProxy = 1E6368C00EA253EC0003034E /* PBXContainerItemProxy */;
 		};
+		1E636A7A0EA29D090003034E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EB8C9620EA1AB4000984CD7 /* TCCalendarPlugin */;
+			targetProxy = 1E636A790EA29D090003034E /* PBXContainerItemProxy */;
+		};
+		1E636A7C0EA29D090003034E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EB8CADE0EA1ACC300984CD7 /* TCTVRagePlugin */;
+			targetProxy = 1E636A7B0EA29D090003034E /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -660,6 +722,15 @@
 				1E50D7D50E5010ED00BDA918 /* English */,
 			);
 			name = Wizard.nib;
+			sourceTree = "<group>";
+		};
+		1E636A540EA29B030003034E /* TCTVShowView.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E636A550EA29B030003034E /* TCTVShowView.nib */,
+			);
+			name = TCTVShowView.nib;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		2F7446970DB6B7EA00F9684A /* MainMenu.xib */ = {
@@ -687,7 +758,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "TCCore-Info.plist";
+				INFOPLIST_FILE = "Resources/Framework/TCCore-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -738,7 +809,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "TCCalendarPlugin-Info.plist";
+				INFOPLIST_FILE = "Resources/Plugins/TCCalendarPlugin-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -792,7 +863,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "TCTVRagePlugin-Info.plist";
+				INFOPLIST_FILE = "Resources/Plugins/TCTVRagePlugin-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -854,7 +925,7 @@
 					"/usr/local/include/**",
 					"~/Projects/External/ffmpeg/ffmpeg/trunk//**",
 				);
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Resources/App/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

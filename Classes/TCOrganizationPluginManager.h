@@ -12,8 +12,12 @@
 @interface TCOrganizationPluginManager : NSObject {
 	NSMutableArray *mClasses;
 	NSMutableArray *mInstances;
+	NSMutableArray *mBundles;
+	NSManagedObjectModel *mPluginModel;
 }
+@property (readonly) NSManagedObjectModel *pluginModel;
 -(BOOL)classIsValidPlugin:(Class)pluginClass;
--(void)addPluginClass:(Class)pluginClass;
+-(void)addPluginClass:(Class)pluginClass forBundle:(NSBundle *)bundle;
 -(void)addPluginInstance:(id)pluginInstance;
+
 @end

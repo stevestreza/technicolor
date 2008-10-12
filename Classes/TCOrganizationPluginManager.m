@@ -8,26 +8,68 @@
 
 #import "TCOrganizationPluginManager.h"
 #import "Technicolor_AppDelegate.h"
-
+#import "TCCore.h"
 #import "TCOrganizationPlugin.h"
+
+@interface TCOrganizationPluginManager (Private)
+-(void)_addClass:(Class)pluginClass;
+-(void)_addInstance:(id)pluginInstance;
+-(void)_addBundle:(NSBundle *)pluginBundle;
+@end
 
 @implementation TCOrganizationPluginManager
 
+@synthesize pluginModel=mPluginModel;
+
 -(void)loadPlugins{
 	NSArray *bundles = [self allBundles];
-
+	NSMutableArray *models = [NSMutableArray arrayWithCapacity:bundles.count+1];
+	[models addObject:[TCCore coreModel]];
+	
 	for(NSBundle *pluginBundle in bundles){
 		Class principleClass = [pluginBundle principalClass];
-		[self addPluginClass:principleClass];
+		[self addPluginClass:principleClass forBundle:pluginBundle];
+		
+		NSManagedObjectModel *model = [principleClass objectModel];
+		if(model){
+			[models addObject:model];
+		}
 	}
+	
+	NSManagedObjectModel *masterModel = [NSManagedObjectModel modelByMergingModels:models];
+	NSLog(@"Plugins loaded");
+	
+	mPluginModel = [masterModel retain];
 }
 
--(void)addPluginClass:(Class)pluginClass{
+-(void)_addClass:(Class)pluginClass{
+	if(!mClasses){
+		mClasses = [[NSMutableArray array] retain];
+	}
+	[mClasses addObject:[NSValue valueWithPointer:(void *)pluginClass]];
+}
+
+-(void)_addInstance:(id)pluginInstance{
+	if(!mInstances){
+		mInstances = [[NSMutableArray array] retain];
+	}
+	
+	[mInstances addObject:pluginInstance];	
+}
+
+-(void)_addBundle:(NSBundle *)pluginBundle{
+	if(!mBundles){
+		mBundles = [[NSMutableArray array] retain];
+	}
+	
+	[mBundles addObject:pluginBundle];
+}
+
+
+-(void)addPluginClass:(Class)pluginClass forBundle:(NSBundle *)bundle{
 	if(pluginClass && [self classIsValidPlugin:pluginClass]){
-		if(!mClasses){
-			mClasses = [[NSMutableArray array] retain];
-		}
-		[mClasses addObject:[NSValue valueWithPointer:(void *)pluginClass]];
+		[self _addClass:pluginClass];
+		[self _addBundle:bundle];
 		
 		id pluginInstance = [[pluginClass alloc] init];
 		[self addPluginInstance:pluginInstance];
@@ -37,12 +79,7 @@
 
 -(void)addPluginInstance:(id)pluginInstance{
 	if(pluginInstance){
-		if(!mInstances){
-			mInstances = [[NSMutableArray array] retain];
-		}
-		
-		[mInstances addObject:pluginInstance];
-		
+		[self _addInstance:pluginInstance];
 		[pluginInstance awake];
 	}
 }

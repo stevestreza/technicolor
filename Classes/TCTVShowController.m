@@ -32,9 +32,6 @@
 
 -(void)importPanel:(NSOpenPanel *)openPanel didReturn:(int)returnCode contextInfo:(void*)hahaWhoCares{
 	NSArray *sourceDirectories = [openPanel filenames];
-//	[NSThread detachNewThreadSelector:@selector(threadedLoadDirectories:) toTarget:self withObject:sourceDirectories];
-	
-//	[TCJobQueue addOperation:[[[NSInvocationOperation alloc] initWithTarget:self selector:@selector(threadedLoadDirectories:) object:sourceDirectories] autorelease]];
 	[self threadedLoadDirectories:sourceDirectories];
 }
 

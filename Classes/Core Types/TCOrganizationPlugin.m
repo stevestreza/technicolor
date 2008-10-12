@@ -17,6 +17,10 @@ static NSMutableArray *pluginArray;
 	NSLog(@"Initializing %@",[self class]);
 }
 
++(NSManagedObjectModel *)objectModel{
+	return [NSManagedObjectModel mergedModelFromBundles:[NSArray arrayWithObject:[NSBundle bundleForClass:self]]];
+}
+
 -(id)init{
 	if(self = [super init]){
 		
