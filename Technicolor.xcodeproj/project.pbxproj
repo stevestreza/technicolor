@@ -34,8 +34,12 @@
 		1E6368BD0EA253E00003034E /* TCCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E63689E0EA253590003034E /* TCCore.framework */; };
 		1E6368BF0EA253EA0003034E /* TCCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E63689E0EA253590003034E /* TCCore.framework */; };
 		1E6368CE0EA254180003034E /* Technicolor_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* Technicolor_DataModel.xcdatamodel */; };
-		1E6368D20EA2545A0003034E /* TNSWDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5979310E6CD60E004AC648 /* TNSWDownload.m */; };
-		1E6368D30EA2545C0003034E /* TNSWDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E5979300E6CD60E004AC648 /* TNSWDownload.h */; };
+		1E63691A0EA25A3C0003034E /* TCDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6369180EA25A3C0003034E /* TCDownload.h */; };
+		1E63691B0EA25A3C0003034E /* TCDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6369190EA25A3C0003034E /* TCDownload.m */; };
+		1E63692D0EA26EE60003034E /* TCOrganizationPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E63692B0EA26EE60003034E /* TCOrganizationPlugin.h */; };
+		1E63692E0EA26EE60003034E /* TCOrganizationPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E63692C0EA26EE60003034E /* TCOrganizationPlugin.m */; };
+		1E6369310EA270970003034E /* TCCalendarPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6369300EA270970003034E /* TCCalendarPlugin.m */; };
+		1E6369340EA270CC0003034E /* TCTVRagePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6369330EA270CC0003034E /* TCTVRagePlugin.m */; };
 		1E83CC760E6B74CB00987FC1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E83CC750E6B74CB00987FC1 /* WebKit.framework */; };
 		1E83CCD80E6B890D00987FC1 /* libpng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E735ADF0E5159D9004FAD1A /* libpng.dylib */; };
 		1E83CCD90E6B890D00987FC1 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE3EE750E53CF590099684C /* libz.1.2.3.dylib */; };
@@ -95,6 +99,14 @@
 		1E6368950EA2533F0003034E /* TCCore.framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TCCore.framework-Info.plist"; sourceTree = "<group>"; };
 		1E63689E0EA253590003034E /* TCCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TCCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E63689F0EA253590003034E /* TCCore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TCCore-Info.plist"; sourceTree = "<group>"; };
+		1E6369180EA25A3C0003034E /* TCDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDownload.h; sourceTree = "<group>"; };
+		1E6369190EA25A3C0003034E /* TCDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDownload.m; sourceTree = "<group>"; };
+		1E63692B0EA26EE60003034E /* TCOrganizationPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCOrganizationPlugin.h; sourceTree = "<group>"; };
+		1E63692C0EA26EE60003034E /* TCOrganizationPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCOrganizationPlugin.m; sourceTree = "<group>"; };
+		1E63692F0EA270970003034E /* TCCalendarPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCCalendarPlugin.h; sourceTree = "<group>"; };
+		1E6369300EA270970003034E /* TCCalendarPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCCalendarPlugin.m; sourceTree = "<group>"; };
+		1E6369320EA270CC0003034E /* TCTVRagePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTVRagePlugin.h; sourceTree = "<group>"; };
+		1E6369330EA270CC0003034E /* TCTVRagePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTVRagePlugin.m; sourceTree = "<group>"; };
 		1E735ADF0E5159D9004FAD1A /* libpng.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng.dylib; path = usr/local/lib/libpng.dylib; sourceTree = SDKROOT; };
 		1E83CC750E6B74CB00987FC1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1E95DBF70E57BD9600B6A7E9 /* TCTVShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTVShowController.h; sourceTree = "<group>"; };
@@ -111,7 +123,7 @@
 		1EB8C9530EA1AAA500984CD7 /* TCVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCVideo.m; sourceTree = "<group>"; };
 		1EB8C9540EA1AAA500984CD7 /* TCVideoFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCVideoFile.h; sourceTree = "<group>"; };
 		1EB8C9550EA1AAA500984CD7 /* TCVideoFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCVideoFile.m; sourceTree = "<group>"; };
-		1EB8C9630EA1AB4000984CD7 /* TCCalendarPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCCalendarPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EB8C9630EA1AB4000984CD7 /* TCCalendarPlugin.tcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCCalendarPlugin.tcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EB8C9640EA1AB4000984CD7 /* TCCalendarPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TCCalendarPlugin-Info.plist"; sourceTree = "<group>"; };
 		1EB8CAC40EA1AC2500984CD7 /* TCCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCCalendar.h; sourceTree = "<group>"; };
 		1EB8CAC50EA1AC2500984CD7 /* TCCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCCalendar.m; sourceTree = "<group>"; };
@@ -122,7 +134,7 @@
 		1EB8CACD0EA1AC6C00984CD7 /* TVRageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVRageController.m; sourceTree = "<group>"; };
 		1EB8CACE0EA1AC6C00984CD7 /* TVRageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVRageOperation.h; sourceTree = "<group>"; };
 		1EB8CACF0EA1AC6C00984CD7 /* TVRageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVRageOperation.m; sourceTree = "<group>"; };
-		1EB8CADF0EA1ACC300984CD7 /* TCTVRagePlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCTVRagePlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EB8CADF0EA1ACC300984CD7 /* TCTVRagePlugin.tcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCTVRagePlugin.tcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EB8CAE00EA1ACC300984CD7 /* TCTVRagePlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TCTVRagePlugin-Info.plist"; sourceTree = "<group>"; };
 		1EB8CB0F0EA1B00800984CD7 /* TCCalendarPlugin.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = TCCalendarPlugin.xcdatamodel; sourceTree = "<group>"; };
 		1EE3EE750E53CF590099684C /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
@@ -132,7 +144,7 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		2F7446980DB6B7EA00F9684A /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Technicolor_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Technicolor_Prefix.pch; sourceTree = "<group>"; };
-		770B37EC0679A11B001EADE2 /* Technicolor_DataModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = Technicolor_DataModel.xcdatamodel; sourceTree = "<group>"; };
+		770B37EC0679A11B001EADE2 /* Technicolor_DataModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; name = Technicolor_DataModel.xcdatamodel; path = ../../Technicolor_DataModel.xcdatamodel; sourceTree = "<group>"; };
 		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		77C8280B06725ACE000B614F /* Technicolor_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Technicolor_AppDelegate.h; sourceTree = "<group>"; };
 		77C8280C06725ACE000B614F /* Technicolor_AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Technicolor_AppDelegate.m; sourceTree = "<group>"; };
@@ -198,9 +210,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1EB8C95E0EA1AB0A00984CD7 /* Controllers */,
-				1EB8C95D0EA1AAF500984CD7 /* Utilities */,
-				1EB8C93A0EA1AA3400984CD7 /* Core Types */,
+				1E6369150EA2592C0003034E /* App */,
+				1E63690F0EA2591D0003034E /* TCCore */,
 				1EB8C9320EA1A9D500984CD7 /* Plugins */,
 			);
 			path = Classes;
@@ -223,8 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* Technicolor.app */,
-				1EB8C9630EA1AB4000984CD7 /* TCCalendarPlugin.bundle */,
-				1EB8CADF0EA1ACC300984CD7 /* TCTVRagePlugin.bundle */,
+				1EB8C9630EA1AB4000984CD7 /* TCCalendarPlugin.tcplugin */,
+				1EB8CADF0EA1ACC300984CD7 /* TCTVRagePlugin.tcplugin */,
 				1E63689E0EA253590003034E /* TCCore.framework */,
 			);
 			name = Products;
@@ -238,6 +249,23 @@
 				1EE3EE890E53D0470099684C /* libbz2.1.0.4.dylib */,
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		1E63690F0EA2591D0003034E /* TCCore */ = {
+			isa = PBXGroup;
+			children = (
+				1EB8C95D0EA1AAF500984CD7 /* Utilities */,
+				1EB8C93A0EA1AA3400984CD7 /* Core Types */,
+			);
+			name = TCCore;
+			sourceTree = "<group>";
+		};
+		1E6369150EA2592C0003034E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1EB8C95E0EA1AB0A00984CD7 /* Controllers */,
+			);
+			name = App;
 			sourceTree = "<group>";
 		};
 		1EB8C9320EA1A9D500984CD7 /* Plugins */ = {
@@ -268,6 +296,7 @@
 		1EB8C93A0EA1AA3400984CD7 /* Core Types */ = {
 			isa = PBXGroup;
 			children = (
+				770B37EC0679A11B001EADE2 /* Technicolor_DataModel.xcdatamodel */,
 				1EB8C94A0EA1AAA500984CD7 /* TCMovie.h */,
 				1EB8C94B0EA1AAA500984CD7 /* TCMovie.m */,
 				1EB8C94C0EA1AAA500984CD7 /* TCMovieVideo.h */,
@@ -280,6 +309,8 @@
 				1EB8C9530EA1AAA500984CD7 /* TCVideo.m */,
 				1EB8C9540EA1AAA500984CD7 /* TCVideoFile.h */,
 				1EB8C9550EA1AAA500984CD7 /* TCVideoFile.m */,
+				1E63692B0EA26EE60003034E /* TCOrganizationPlugin.h */,
+				1E63692C0EA26EE60003034E /* TCOrganizationPlugin.m */,
 			);
 			path = "Core Types";
 			sourceTree = "<group>";
@@ -289,6 +320,8 @@
 			children = (
 				1E5979300E6CD60E004AC648 /* TNSWDownload.h */,
 				1E5979310E6CD60E004AC648 /* TNSWDownload.m */,
+				1E6369180EA25A3C0003034E /* TCDownload.h */,
+				1E6369190EA25A3C0003034E /* TCDownload.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -314,6 +347,8 @@
 				1EB8CAC60EA1AC2500984CD7 /* TCCalendarEvent.h */,
 				1EB8CAC70EA1AC2500984CD7 /* TCCalendarEvent.m */,
 				1EB8CB0F0EA1B00800984CD7 /* TCCalendarPlugin.xcdatamodel */,
+				1E63692F0EA270970003034E /* TCCalendarPlugin.h */,
+				1E6369300EA270970003034E /* TCCalendarPlugin.m */,
 			);
 			name = Calendar;
 			path = TCCalendarPlugin;
@@ -327,6 +362,8 @@
 				1EB8CACD0EA1AC6C00984CD7 /* TVRageController.m */,
 				1EB8CACE0EA1AC6C00984CD7 /* TVRageOperation.h */,
 				1EB8CACF0EA1AC6C00984CD7 /* TVRageOperation.m */,
+				1E6369320EA270CC0003034E /* TCTVRagePlugin.h */,
+				1E6369330EA270CC0003034E /* TCTVRagePlugin.m */,
 			);
 			name = TVRage;
 			path = TCTVRagePlugin;
@@ -335,7 +372,6 @@
 		29B97314FDCFA39411CA2CEA /* Technicolor */ = {
 			isa = PBXGroup;
 			children = (
-				7756732906782D8800D1FEB8 /* Models */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -378,14 +414,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7756732906782D8800D1FEB8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				770B37EC0679A11B001EADE2 /* Technicolor_DataModel.xcdatamodel */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -393,13 +421,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E6368D30EA2545C0003034E /* TNSWDownload.h in Headers */,
 				1E6368A90EA253A70003034E /* TCMovie.h in Headers */,
 				1E6368AA0EA253A70003034E /* TCMovieVideo.h in Headers */,
 				1E6368AB0EA253A70003034E /* TCTVEpisode.h in Headers */,
 				1E6368AC0EA253A70003034E /* TCTVShow.h in Headers */,
 				1E6368AD0EA253A70003034E /* TCVideo.h in Headers */,
 				1E6368AE0EA253A70003034E /* TCVideoFile.h in Headers */,
+				1E63691A0EA25A3C0003034E /* TCDownload.h in Headers */,
+				1E63692D0EA26EE60003034E /* TCOrganizationPlugin.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +468,7 @@
 			);
 			name = TCCalendarPlugin;
 			productName = TCCalendarPlugin;
-			productReference = 1EB8C9630EA1AB4000984CD7 /* TCCalendarPlugin.bundle */;
+			productReference = 1EB8C9630EA1AB4000984CD7 /* TCCalendarPlugin.tcplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 		1EB8CADE0EA1ACC300984CD7 /* TCTVRagePlugin */ = {
@@ -457,7 +486,7 @@
 			);
 			name = TCTVRagePlugin;
 			productName = TCTVRagePlugin;
-			productReference = 1EB8CADF0EA1ACC300984CD7 /* TCTVRagePlugin.bundle */;
+			productReference = 1EB8CADF0EA1ACC300984CD7 /* TCTVRagePlugin.tcplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 		8D1107260486CEB800E47090 /* Technicolor */ = {
@@ -538,7 +567,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E6368D20EA2545A0003034E /* TNSWDownload.m in Sources */,
 				1E6368CE0EA254180003034E /* Technicolor_DataModel.xcdatamodel in Sources */,
 				1E6368AF0EA253BF0003034E /* TCMovie.m in Sources */,
 				1E6368B00EA253BF0003034E /* TCMovieVideo.m in Sources */,
@@ -546,6 +574,8 @@
 				1E6368B20EA253BF0003034E /* TCTVShow.m in Sources */,
 				1E6368B30EA253BF0003034E /* TCVideo.m in Sources */,
 				1E6368B40EA253BF0003034E /* TCVideoFile.m in Sources */,
+				1E63691B0EA25A3C0003034E /* TCDownload.m in Sources */,
+				1E63692E0EA26EE60003034E /* TCOrganizationPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +586,7 @@
 				1EB8CAD00EA1AC7B00984CD7 /* TCCalendar.m in Sources */,
 				1EB8CAD10EA1AC7B00984CD7 /* TCCalendarEvent.m in Sources */,
 				1EB8CB100EA1B00800984CD7 /* TCCalendarPlugin.xcdatamodel in Sources */,
+				1E6369310EA270970003034E /* TCCalendarPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +596,7 @@
 			files = (
 				1EB8CAF90EA1ACFB00984CD7 /* TVRageController.m in Sources */,
 				1EB8CAFB0EA1ACFB00984CD7 /* TVRageOperation.m in Sources */,
+				1E6369340EA270CC0003034E /* TCTVRagePlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,7 +734,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = TCCalendarPlugin;
-				WRAPPER_EXTENSION = bundle;
+				WRAPPER_EXTENSION = tcplugin;
 			};
 			name = Debug;
 		};
@@ -756,7 +788,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = TCTVRagePlugin;
-				WRAPPER_EXTENSION = bundle;
+				WRAPPER_EXTENSION = tcplugin;
 			};
 			name = Debug;
 		};

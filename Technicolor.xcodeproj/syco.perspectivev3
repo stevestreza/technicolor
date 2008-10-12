@@ -273,29 +273,27 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
-								<string>7756732906782D8800D1FEB8</string>
 								<string>080E96DDFE201D6D7F000001</string>
-								<string>1EB8C95D0EA1AAF500984CD7</string>
+								<string>1E63690F0EA2591D0003034E</string>
 								<string>1EB8C93A0EA1AA3400984CD7</string>
 								<string>1EB8C9320EA1A9D500984CD7</string>
 								<string>1EB8C9380EA1AA1D00984CD7</string>
-								<string>29B97323FDCFA39411CA2CEA</string>
-								<string>1058C7A0FEA54F0111CA2CBB</string>
+								<string>1EB8CACA0EA1AC3C00984CD7</string>
+								<string>1EB8CAC30EA1AC2500984CD7</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1E6368DA0EA254670003034E</string>
-								<string>1E6368DB0EA254670003034E</string>
-								<string>1E6368DC0EA254670003034E</string>
+								<string>1E6369370EA270E80003034E</string>
 								<string>1C77FABC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>59</integer>
 									<integer>44</integer>
-									<integer>38</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 151}, {260, 760}}</string>
+							<string>{{0, 441}, {260, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -312,7 +310,7 @@
 							<real>260</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>4 59 1440 819 0 0 1440 878 </string>
+						<string>0 59 1440 819 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -328,7 +326,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1E50D78C0E50013C00BDA918</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TNSWDownload.m</string>
+								<string>TVRageOperation.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -336,11 +334,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1E50D78D0E50013C00BDA918</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>TNSWDownload.m</string>
+										<string>TVRageOperation.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1E6368F40EA254950003034E</string>
+										<string>1E6369710EA2717D0003034E</string>
 										<key>history</key>
 										<array>
 											<string>1E735AAB0E514688004FAD1A</string>
@@ -356,7 +354,6 @@
 											<string>1EB8CB190EA24EC400984CD7</string>
 											<string>1EB8CB1A0EA24EC400984CD7</string>
 											<string>1EB8CB1B0EA24EC400984CD7</string>
-											<string>1EB8CB1C0EA24EC400984CD7</string>
 											<string>1EB8CB1D0EA24EC400984CD7</string>
 											<string>1EB8CB1E0EA24EC400984CD7</string>
 											<string>1E6368C30EA254030003034E</string>
@@ -366,9 +363,16 @@
 											<string>1E6368DE0EA254670003034E</string>
 											<string>1E6368DF0EA254670003034E</string>
 											<string>1E6368E00EA254670003034E</string>
-											<string>1E6368E10EA254670003034E</string>
 											<string>1E6368E20EA254670003034E</string>
-											<string>1E6368E30EA254670003034E</string>
+											<string>1E6369390EA270E80003034E</string>
+											<string>1E63693A0EA270E80003034E</string>
+											<string>1E63693B0EA270E80003034E</string>
+											<string>1E63693C0EA270E80003034E</string>
+											<string>1E63693D0EA270E80003034E</string>
+											<string>1E63693E0EA270E80003034E</string>
+											<string>1E63693F0EA270E80003034E</string>
+											<string>1E6369630EA270FE0003034E</string>
+											<string>1E6369640EA270FE0003034E</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -403,6 +407,39 @@
 											<string>1E6368E80EA254670003034E</string>
 											<string>1E6368E90EA254670003034E</string>
 											<string>1E6368EA0EA254670003034E</string>
+											<string>1E6369410EA270E80003034E</string>
+											<string>1E6369420EA270E80003034E</string>
+											<string>1E6369430EA270E80003034E</string>
+											<string>1E6369440EA270E80003034E</string>
+											<string>1E6369450EA270E80003034E</string>
+											<string>1E6369460EA270E80003034E</string>
+											<string>1E6369470EA270E80003034E</string>
+											<string>1E6369480EA270E80003034E</string>
+											<string>1E6369490EA270E80003034E</string>
+											<string>1E63694A0EA270E80003034E</string>
+											<string>1E63694B0EA270E80003034E</string>
+											<string>1E63694C0EA270E80003034E</string>
+											<string>1E63694D0EA270E80003034E</string>
+											<string>1E63694E0EA270E80003034E</string>
+											<string>1E63694F0EA270E80003034E</string>
+											<string>1E6369500EA270E80003034E</string>
+											<string>1E6369510EA270E80003034E</string>
+											<string>1E6369520EA270E80003034E</string>
+											<string>1E6369530EA270E80003034E</string>
+											<string>1E6369540EA270E80003034E</string>
+											<string>1E6369550EA270E80003034E</string>
+											<string>1E6369560EA270E80003034E</string>
+											<string>1E6369570EA270E80003034E</string>
+											<string>1E6369580EA270E80003034E</string>
+											<string>1E6369590EA270E80003034E</string>
+											<string>1E63695A0EA270E80003034E</string>
+											<string>1E63695B0EA270E80003034E</string>
+											<string>1E63695C0EA270E80003034E</string>
+											<string>1E63695D0EA270E80003034E</string>
+											<string>1E63695E0EA270E80003034E</string>
+											<string>1E63695F0EA270E80003034E</string>
+											<string>1E6369600EA270E80003034E</string>
+											<string>1E6369650EA270FE0003034E</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -418,7 +455,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1158, 400}}</string>
 								<key>RubberWindowFrame</key>
-								<string>4 59 1440 819 0 0 1440 878 </string>
+								<string>0 59 1440 819 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -443,7 +480,7 @@
 										<key>Frame</key>
 										<string>{{10, 27}, {1158, 346}}</string>
 										<key>RubberWindowFrame</key>
-										<string>4 59 1440 819 0 0 1440 878 </string>
+										<string>0 59 1440 819 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -459,7 +496,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1158, 519}}</string>
+										<string>{{10, 27}, {1158, 346}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXProjectFindModule</string>
@@ -717,7 +754,7 @@
 		<string>/Users/syco/Projects/Technicolor/Technicolor.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>4 59 1440 819 0 0 1440 878 </string>
+	<string>0 59 1440 819 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

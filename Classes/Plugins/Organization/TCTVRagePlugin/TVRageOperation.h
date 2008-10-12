@@ -11,7 +11,7 @@
 #import "TCTVShow.h"
 #import <WebKit/WebKit.h>
 #import "TCTVRageImports.h"
-#import "TNSWDownload.h"
+#import "TCDownload.h"
 
 @class TVRageController;
 

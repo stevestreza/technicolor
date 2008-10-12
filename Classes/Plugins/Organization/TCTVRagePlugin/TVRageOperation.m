@@ -51,10 +51,10 @@
 
 -(void)loadCurrentDaySchedule{
 //	NSURL *url = [NSURL URLWithString:kTVRageQuickInfoScheduleString];
-//	NSData *data = [TNSWDownload loadResourceDataForURL:url];
+//	NSData *data = [TCDownload loadResourceDataForURL:url];
 //	NSString *urlContents = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
 //	NSLog(@"Loading current");
-	NSString *urlContents = [TNSWDownload loadResourceStringForURL:[NSURL URLWithString:kTVRageQuickInfoScheduleString] encoding:NSUTF8StringEncoding];
+	NSString *urlContents = [TCDownload loadResourceStringForURL:[NSURL URLWithString:kTVRageQuickInfoScheduleString] encoding:NSUTF8StringEncoding];
 	
 	NSString *dateString = nil;
 	NSCalendarDate *currentTime = nil;
@@ -187,7 +187,7 @@
 
 -(NSDictionary *)quickInfoForURL:(NSURL *)url{
 //	NSData *data = [url resourceDataUsingCache:NO];
-	NSString *contents = [TNSWDownload loadResourceStringForURL:url encoding:NSASCIIStringEncoding];
+	NSString *contents = [TCDownload loadResourceStringForURL:url encoding:NSASCIIStringEncoding];
 	
 	NSMutableDictionary *dict = [NSMutableDictionary dictionary];
 	
