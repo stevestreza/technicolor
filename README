@@ -1,0 +1,10 @@
+Technicolor
+===========
+
+Introduction to Technicolor
+---------------------------
+Technicolor is a video organizing application designed around large sized libraries of video. Using file based approaches is difficult to scale easily across multiple drives or with multiple copies of a record. Instead of organizing by file, Technicolor organizes by record (movie, show episode, trailer, etc.). Each record may have multiple files associated with it. Transcoding is simple enough to automate.
+
+TCCore.framework
+----------------
+The framework contains a list of core object types for creating video objects. More forthcoming.

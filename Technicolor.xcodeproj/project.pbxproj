@@ -79,14 +79,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1E63689D0EA253590003034E /* TCCore */;
+			remoteGlobalIDString = 1E63689D0EA253590003034E;
 			remoteInfo = TCCore;
 		};
 		1E5E389C0EA2FD4400FD67A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1E5E38600EA2FBA100FD67A3 /* TCProcessingQueuePlugin */;
+			remoteGlobalIDString = 1E5E38600EA2FBA100FD67A3;
 			remoteInfo = TCProcessingQueuePlugin;
 		};
 		1E6368B90EA253D60003034E /* PBXContainerItemProxy */ = {
@@ -377,6 +377,7 @@
 		1E636A6D0EA29C030003034E /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				1E5E38620EA2FBA100FD67A3 /* TCProcessingQueuePlugin-Info.plist */,
 				1EB8C9640EA1AB4000984CD7 /* TCCalendarPlugin-Info.plist */,
 				1EB8CAE00EA1ACC300984CD7 /* TCTVRagePlugin-Info.plist */,
 			);
@@ -501,7 +502,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				1E5E38620EA2FBA100FD67A3 /* TCProcessingQueuePlugin-Info.plist */,
 				1E5E38690EA2FBB700FD67A3 /* CoreData.framework */,
 				1E5E386B0EA2FBB700FD67A3 /* Foundation.framework */,
 			);
@@ -865,7 +865,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "TCProcessingQueuePlugin-Info.plist";
+				INFOPLIST_FILE = "Resources/Plugins/TCProcessingQueuePlugin-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
