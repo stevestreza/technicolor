@@ -10,7 +10,7 @@
 #define TCUUID(__uuid) static CFUUIDRef sUUID = NULL; \
 -(CFUUIDRef)uuid{ \
 	if(!sUUID){ \
-		sUUID = CFUUIDCreateFromString(NULL, (__uuid) ); \
+		sUUID = CFUUIDCreateFromString(NULL, ((CFStringRef)(__uuid)) ); \
 	} \
 	return sUUID; \
 } \
