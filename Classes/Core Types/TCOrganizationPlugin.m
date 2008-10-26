@@ -21,6 +21,11 @@ static NSMutableArray *pluginArray;
 	return [NSManagedObjectModel mergedModelFromBundles:[NSArray arrayWithObject:[NSBundle bundleForClass:self]]];
 }
 
++(CFUUIDRef)generateUUID{
+	CFUUIDRef ref = CFUUIDCreate(NULL);
+	return ref;
+}
+
 -(id)init{
 	if(self = [super init]){
 		
@@ -30,6 +35,13 @@ static NSMutableArray *pluginArray;
 
 -(void)awake{
 	
+}
+
+-(CFUUIDRef)uuid{
+	CFUUIDRef uuid = [TCOrganizationPlugin generateUUID];
+	NSString *uuidString = (NSString *)CFUUIDCreateString(NULL, uuid);
+	NSLog(@"Store this UUID! %@",uuidString);
+	return uuid;
 }
 
 @end

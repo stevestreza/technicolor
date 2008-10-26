@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1E10D8080E6C459900C69D38 /* TCProcessingQueueController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E10D8070E6C459900C69D38 /* TCProcessingQueueController.m */; };
+		1E4916140EABFB76005CEC4F /* Technicolor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E4916130EABFB76005CEC4F /* Technicolor.h */; };
 		1E50D7D60E5010ED00BDA918 /* Wizard.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1E50D7D40E5010ED00BDA918 /* Wizard.nib */; };
 		1E5E38680EA2FBB700FD67A3 /* TCCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E63689E0EA253590003034E /* TCCore.framework */; };
 		1E5E386A0EA2FBB700FD67A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5E38690EA2FBB700FD67A3 /* CoreData.framework */; };
-		1E5E386C0EA2FBB700FD67A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5E386B0EA2FBB700FD67A3 /* Foundation.framework */; };
 		1E5E38750EA2FBD400FD67A3 /* TCProcessingQueuePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5E38740EA2FBD400FD67A3 /* TCProcessingQueuePlugin.m */; };
 		1E5E38810EA2FC1200FD67A3 /* TCCore.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1E63689E0EA253590003034E /* TCCore.framework */; };
+		1E5EFA4E0EAC33FC006F064E /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5EFA450EAC33F8006F064E /* JavaScriptCore.framework */; };
+		1E5EFA5B0EAC3434006F064E /* TCJSContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5EFA5A0EAC3434006F064E /* TCJSContext.m */; };
+		1E5EFA5E0EAC3459006F064E /* TCJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5EFA5D0EAC3459006F064E /* TCJSObject.m */; };
+		1E5EFA640EAC363F006F064E /* TCJSPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5EFA630EAC363F006F064E /* TCJSPlugin.m */; };
+		1E5EFB010EAC36C4006F064E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E49162D0EABFBF3005CEC4F /* CoreFoundation.framework */; };
+		1E5EFB5A0EAC3792006F064E /* TCCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E63689E0EA253590003034E /* TCCore.framework */; };
+		1E5EFB5C0EAC3799006F064E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
 		1E6367DA0EA252DD0003034E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		1E6367DB0EA252DD0003034E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C82804067257F0000B614F /* CoreData.framework */; };
 		1E6367DC0EA252DD0003034E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
@@ -89,6 +96,13 @@
 			remoteGlobalIDString = 1E5E38600EA2FBA100FD67A3;
 			remoteInfo = TCProcessingQueuePlugin;
 		};
+		1E5EFA570EAC3405006F064E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E5EF99C0EAC33BC006F064E /* TCJSPlugin */;
+			remoteInfo = TCJSPlugin;
+		};
 		1E6368B90EA253D60003034E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -146,13 +160,23 @@
 		1E10D8060E6C459900C69D38 /* TCProcessingQueueController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCProcessingQueueController.h; sourceTree = "<group>"; };
 		1E10D8070E6C459900C69D38 /* TCProcessingQueueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCProcessingQueueController.m; sourceTree = "<group>"; };
 		1E3BA36A0E8F070200585E21 /* CalendarStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalendarStore.framework; path = System/Library/Frameworks/CalendarStore.framework; sourceTree = SDKROOT; };
+		1E4916130EABFB76005CEC4F /* Technicolor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Technicolor.h; sourceTree = "<group>"; };
+		1E49162D0EABFBF3005CEC4F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		1E50D7D50E5010ED00BDA918 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Wizard.nib; sourceTree = "<group>"; };
 		1E5E38610EA2FBA100FD67A3 /* TCProcessingQueuePlugin.tcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCProcessingQueuePlugin.tcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5E38620EA2FBA100FD67A3 /* TCProcessingQueuePlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TCProcessingQueuePlugin-Info.plist"; sourceTree = "<group>"; };
 		1E5E38690EA2FBB700FD67A3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		1E5E386B0EA2FBB700FD67A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1E5E38730EA2FBD400FD67A3 /* TCProcessingQueuePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCProcessingQueuePlugin.h; sourceTree = "<group>"; };
 		1E5E38740EA2FBD400FD67A3 /* TCProcessingQueuePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCProcessingQueuePlugin.m; sourceTree = "<group>"; };
+		1E5EF99D0EAC33BC006F064E /* TCJSPlugin.tcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCJSPlugin.tcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E5EF99E0EAC33BC006F064E /* TCJSPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TCJSPlugin-Info.plist"; sourceTree = "<group>"; };
+		1E5EFA450EAC33F8006F064E /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = /System/Library/Frameworks/JavaScriptCore.framework; sourceTree = "<absolute>"; };
+		1E5EFA590EAC3434006F064E /* TCJSContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCJSContext.h; sourceTree = "<group>"; };
+		1E5EFA5A0EAC3434006F064E /* TCJSContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCJSContext.m; sourceTree = "<group>"; };
+		1E5EFA5C0EAC3459006F064E /* TCJSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCJSObject.h; sourceTree = "<group>"; };
+		1E5EFA5D0EAC3459006F064E /* TCJSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCJSObject.m; sourceTree = "<group>"; };
+		1E5EFA620EAC363F006F064E /* TCJSPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCJSPlugin.h; sourceTree = "<group>"; };
+		1E5EFA630EAC363F006F064E /* TCJSPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCJSPlugin.m; sourceTree = "<group>"; };
 		1E63689E0EA253590003034E /* TCCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TCCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E63689F0EA253590003034E /* TCCore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TCCore-Info.plist"; sourceTree = "<group>"; };
 		1E6369180EA25A3C0003034E /* TCDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDownload.h; sourceTree = "<group>"; };
@@ -221,7 +245,16 @@
 			files = (
 				1E5E38680EA2FBB700FD67A3 /* TCCore.framework in Frameworks */,
 				1E5E386A0EA2FBB700FD67A3 /* CoreData.framework in Frameworks */,
-				1E5E386C0EA2FBB700FD67A3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E5EF99B0EAC33BC006F064E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E5EFB5C0EAC3799006F064E /* Foundation.framework in Frameworks */,
+				1E5EFB5A0EAC3792006F064E /* TCCore.framework in Frameworks */,
+				1E5EFA4E0EAC33FC006F064E /* JavaScriptCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +262,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E5EFB010EAC36C4006F064E /* CoreFoundation.framework in Frameworks */,
 				1E6368B60EA253CC0003034E /* CoreData.framework in Frameworks */,
 				1E6368B70EA253CC0003034E /* Foundation.framework in Frameworks */,
 			);
@@ -292,6 +326,9 @@
 		1058C7A0FEA54F0111CA2CBB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1E5E38690EA2FBB700FD67A3 /* CoreData.framework */,
+				1E49162D0EABFBF3005CEC4F /* CoreFoundation.framework */,
+				1E5EFA450EAC33F8006F064E /* JavaScriptCore.framework */,
 				1E83CC750E6B74CB00987FC1 /* WebKit.framework */,
 				1E3BA36A0E8F070200585E21 /* CalendarStore.framework */,
 				77C82804067257F0000B614F /* CoreData.framework */,
@@ -310,6 +347,7 @@
 				1EB8CADF0EA1ACC300984CD7 /* TCTVRagePlugin.tcplugin */,
 				1E63689E0EA253590003034E /* TCCore.framework */,
 				1E5E38610EA2FBA100FD67A3 /* TCProcessingQueuePlugin.tcplugin */,
+				1E5EF99D0EAC33BC006F064E /* TCJSPlugin.tcplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -322,6 +360,19 @@
 			);
 			name = "Processing Queue";
 			path = TCProcessingQueuePlugin;
+			sourceTree = "<group>";
+		};
+		1E5EF9590EAC33A5006F064E /* JSPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				1E5EFA590EAC3434006F064E /* TCJSContext.h */,
+				1E5EFA5A0EAC3434006F064E /* TCJSContext.m */,
+				1E5EFA5C0EAC3459006F064E /* TCJSObject.h */,
+				1E5EFA5D0EAC3459006F064E /* TCJSObject.m */,
+				1E5EFA620EAC363F006F064E /* TCJSPlugin.h */,
+				1E5EFA630EAC363F006F064E /* TCJSPlugin.m */,
+			);
+			name = JSPlugin;
 			sourceTree = "<group>";
 		};
 		1E6367DF0EA252F60003034E /* Libraries */ = {
@@ -404,6 +455,7 @@
 		1EB8C9380EA1AA1D00984CD7 /* Organization */ = {
 			isa = PBXGroup;
 			children = (
+				1E5EF9590EAC33A5006F064E /* JSPlugin */,
 				1E5E384E0EA2FB6E00FD67A3 /* Processing Queue */,
 				1EB8CACA0EA1AC3C00984CD7 /* TVRage */,
 				1EB8CAC30EA1AC2500984CD7 /* Calendar */,
@@ -443,6 +495,7 @@
 		1EB8C95D0EA1AAF500984CD7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				1E4916130EABFB76005CEC4F /* Technicolor.h */,
 				1E6369180EA25A3C0003034E /* TCDownload.h */,
 				1E6369190EA25A3C0003034E /* TCDownload.m */,
 				1E636A000EA290200003034E /* TCCore.h */,
@@ -502,8 +555,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				1E5E38690EA2FBB700FD67A3 /* CoreData.framework */,
-				1E5E386B0EA2FBB700FD67A3 /* Foundation.framework */,
+				1E5EF99E0EAC33BC006F064E /* TCJSPlugin-Info.plist */,
 			);
 			name = Technicolor;
 			sourceTree = "<group>";
@@ -552,6 +604,7 @@
 				1E63691A0EA25A3C0003034E /* TCDownload.h in Headers */,
 				1E63692D0EA26EE60003034E /* TCOrganizationPlugin.h in Headers */,
 				1E636A020EA290200003034E /* TCCore.h in Headers */,
+				1E4916140EABFB76005CEC4F /* Technicolor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +627,23 @@
 			name = TCProcessingQueuePlugin;
 			productName = TCProcessingQueuePlugin;
 			productReference = 1E5E38610EA2FBA100FD67A3 /* TCProcessingQueuePlugin.tcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		1E5EF99C0EAC33BC006F064E /* TCJSPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E5EF9A10EAC33BD006F064E /* Build configuration list for PBXNativeTarget "TCJSPlugin" */;
+			buildPhases = (
+				1E5EF9990EAC33BC006F064E /* Resources */,
+				1E5EF99A0EAC33BC006F064E /* Sources */,
+				1E5EF99B0EAC33BC006F064E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TCJSPlugin;
+			productName = TCJSPlugin;
+			productReference = 1E5EF99D0EAC33BC006F064E /* TCJSPlugin.tcplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 		1E63689D0EA253590003034E /* TCCore */ = {
@@ -644,6 +714,7 @@
 			dependencies = (
 				1E6368BA0EA253D60003034E /* PBXTargetDependency */,
 				1E636A7A0EA29D090003034E /* PBXTargetDependency */,
+				1E5EFA580EAC3405006F064E /* PBXTargetDependency */,
 				1E636A7C0EA29D090003034E /* PBXTargetDependency */,
 				1E5E389D0EA2FD4400FD67A3 /* PBXTargetDependency */,
 			);
@@ -670,12 +741,20 @@
 				1EB8C9620EA1AB4000984CD7 /* TCCalendarPlugin */,
 				1EB8CADE0EA1ACC300984CD7 /* TCTVRagePlugin */,
 				1E5E38600EA2FBA100FD67A3 /* TCProcessingQueuePlugin */,
+				1E5EF99C0EAC33BC006F064E /* TCJSPlugin */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1E5E385D0EA2FBA100FD67A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E5EF9990EAC33BC006F064E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -724,6 +803,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E5E38750EA2FBD400FD67A3 /* TCProcessingQueuePlugin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E5EF99A0EAC33BC006F064E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E5EFA5B0EAC3434006F064E /* TCJSContext.m in Sources */,
+				1E5EFA5E0EAC3459006F064E /* TCJSObject.m in Sources */,
+				1E5EFA640EAC363F006F064E /* TCJSPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,6 +878,11 @@
 			isa = PBXTargetDependency;
 			target = 1E5E38600EA2FBA100FD67A3 /* TCProcessingQueuePlugin */;
 			targetProxy = 1E5E389C0EA2FD4400FD67A3 /* PBXContainerItemProxy */;
+		};
+		1E5EFA580EAC3405006F064E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E5EF99C0EAC33BC006F064E /* TCJSPlugin */;
+			targetProxy = 1E5EFA570EAC3405006F064E /* PBXContainerItemProxy */;
 		};
 		1E6368BA0EA253D60003034E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -899,6 +993,56 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = TCProcessingQueuePlugin;
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		1E5EF99F0EAC33BD006F064E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "TCJSPlugin-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TCJSPlugin;
+				WRAPPER_EXTENSION = tcplugin;
+			};
+			name = Debug;
+		};
+		1E5EF9A00EAC33BD006F064E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "TCJSPlugin-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TCJSPlugin;
 				WRAPPER_EXTENSION = bundle;
 				ZERO_LINK = NO;
 			};
@@ -1162,6 +1306,15 @@
 			buildConfigurations = (
 				1E5E38630EA2FBA100FD67A3 /* Debug */,
 				1E5E38640EA2FBA100FD67A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E5EF9A10EAC33BD006F064E /* Build configuration list for PBXNativeTarget "TCJSPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E5EF99F0EAC33BD006F064E /* Debug */,
+				1E5EF9A00EAC33BD006F064E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

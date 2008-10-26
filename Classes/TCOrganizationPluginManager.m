@@ -10,6 +10,7 @@
 #import "Technicolor_AppDelegate.h"
 #import "TCCore.h"
 #import "TCOrganizationPlugin.h"
+#import <CoreFoundation/CoreFoundation.h>
 
 @interface TCOrganizationPluginManager (Private)
 -(void)_addClass:(Class)pluginClass;
@@ -72,6 +73,8 @@
 		[self _addBundle:bundle];
 		
 		id pluginInstance = [[pluginClass alloc] init];
+		CFUUIDRef uuid = [(TCOrganizationPlugin *)pluginInstance uuid];
+		
 		[self addPluginInstance:pluginInstance];
 		[pluginInstance release];
 	}	

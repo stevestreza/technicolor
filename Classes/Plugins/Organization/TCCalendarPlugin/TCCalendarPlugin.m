@@ -11,6 +11,8 @@
 
 @implementation TCCalendarPlugin
 
+TCUUID("90FAD8EB-FE51-48E3-9783-5BBE81CEFBAC")
+
 -(void)awake{
 	NSLog(@"CALENDAR IS AWAKE MWAHAHAHAHAHA");
 }

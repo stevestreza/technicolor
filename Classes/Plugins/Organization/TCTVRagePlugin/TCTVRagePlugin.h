@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Technicolor.h"
 #import "TCOrganizationPlugin.h"
 
 @interface TCTVRagePlugin : TCOrganizationPlugin {

@@ -7,10 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import <CoreFoundation/CoreFoundation.h>
 
 @interface TCOrganizationPlugin : NSObject {
 
 }
-
++(CFUUIDRef)generateUUID;
 @end
