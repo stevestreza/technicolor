@@ -373,6 +373,7 @@
 				1E5EFA630EAC363F006F064E /* TCJSPlugin.m */,
 			);
 			name = JSPlugin;
+			path = TCJSPlugin;
 			sourceTree = "<group>";
 		};
 		1E6367DF0EA252F60003034E /* Libraries */ = {
