@@ -110,12 +110,12 @@
 
 -(NSArray *)allBundles{
 	NSArray *paths = [NSArray arrayWithObjects:
-						[(Technicolor_AppDelegate *)[NSApp delegate] applicationSupportFolder],
+						[[(Technicolor_AppDelegate *)[NSApp delegate] applicationSupportFolder] stringByAppendingPathComponent:@"Plugins"],
 						[@"~/Projects/Technicolor/build/Debug/" stringByExpandingTildeInPath],
 					  nil];
 
 	NSMutableArray *bundles = [NSMutableArray array];
-	
+
 	for(NSString *path in paths){
 		NSArray *bundleNames = [[NSFileManager defaultManager] directoryContentsAtPath:path];
 		for(NSString *bundleName in bundleNames){

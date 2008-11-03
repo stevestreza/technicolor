@@ -28,4 +28,9 @@
 
 @implementation TCVideo
 
+-(void)addFile:(TCVideoFile *)videoFile{
+	NSMutableSet *files = [self mutableSetValueForKey:@"videoFiles"];
+	[files addObject:videoFile];
+}
+
 @end

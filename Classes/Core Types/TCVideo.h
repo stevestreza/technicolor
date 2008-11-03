@@ -24,10 +24,10 @@
  */
 
 #import <Cocoa/Cocoa.h>
-
+#import "TCVideoFile.h"
 
 @interface TCVideo : NSManagedObject {
 
 }
-
+-(void)addFile:(TCVideoFile *)videoFile;
 @end

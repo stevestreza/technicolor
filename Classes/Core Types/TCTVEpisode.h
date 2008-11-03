@@ -30,7 +30,7 @@
 //#import "TCCalendar.h"
 //#import "TCCalendarEvent.h"
 
-@interface TCTVEpisode : NSManagedObject {
+@interface TCTVEpisode : TCVideo {
 
 }
 

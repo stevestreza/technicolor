@@ -28,5 +28,5 @@
 @interface TCTVShow : NSManagedObject {
 
 }
-
++(TCTVShow *)showWithName:(NSString *)name;
 @end

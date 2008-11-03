@@ -25,7 +25,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-
 @interface TCMovie : NSManagedObject {
 
 }

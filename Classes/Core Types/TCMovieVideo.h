@@ -24,9 +24,9 @@
  */
 
 #import <Cocoa/Cocoa.h>
+#import "TCVideo.h"
 
-
-@interface TCMovieVideo : NSManagedObject {
+@interface TCMovieVideo : TCVideo {
 
 }
 
