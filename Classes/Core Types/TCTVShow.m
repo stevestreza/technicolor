@@ -31,24 +31,17 @@
 
 +(TCTVShow *)showWithName:(NSString *)name{
 	NSManagedObjectContext *moc = [[NSApp delegate] managedObjectContext];
-	
-	NSEntityDescription *entityDescription = [NSEntityDescription
-											  entityForName:@"TVShow" inManagedObjectContext:moc];
-	NSFetchRequest *request = [[[NSFetchRequest alloc] init] autorelease];
-	[request setEntity:entityDescription];
-	
-	// Set example predicate and sort orderings...
 	NSPredicate *predicate = [NSPredicate predicateWithFormat:
 							  @"(showName == %@)", name];
-	[request setPredicate:predicate];
 	
 	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
 										initWithKey:@"showName" ascending:YES];
-	[request setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+	NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
 	[sortDescriptor release];
 	
 	NSError *error = nil;
-	NSArray *array = [moc executeFetchRequest:request error:&error];
+	NSArray *array = [TCTVShow arrayForPredicate:predicate sortDescriptors:sortDescriptors error:&error];
+	
 	if (array == nil || array.count == 0)
 	{
 //		NSLog(@"Creating show on %@ thread",([NSThread isMainThread] ? @"main" : @"NOT MAIN"));
@@ -90,6 +83,42 @@
 -(void)loadEpisodeMetadata{
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://tvrage.com/%@/episode_list/all",[self valueForKey:@"showName"]]];
 	
+}
+
+
+#pragma mark Common Queries
+
++(NSArray *)allShows:(BOOL)onlyWithFiles{
+	NSPredicate *pred = nil;
+	if(onlyWithFiles){
+		pred = [NSPredicate predicateWithFormat:@"episodes.videoFiles.@count > 0"];
+	}
+	
+	NSError *err = nil;
+	NSArray *allShows = [TCTVShow arrayForPredicate:pred sortDescriptors:nil error:&err];
+	if(err) NSLog(@"OMGWTF %@",err);
+	return allShows;
+}
+
++(NSArray *)arrayForPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors error:(NSError **)errPtr{
+	NSManagedObjectContext *moc = [[NSApp delegate] managedObjectContext];
+	
+	NSEntityDescription *entityDescription = [NSEntityDescription
+											  entityForName:@"TVShow" inManagedObjectContext:moc];
+	NSFetchRequest *request = [[[NSFetchRequest alloc] init] autorelease];
+	[request setEntity:entityDescription];
+	
+	[request setPredicate:predicate];
+	[request setSortDescriptors:sortDescriptors];
+	
+	NSError *error = nil;
+	NSArray *array = [moc executeFetchRequest:request error:&error];
+	if(error){
+		*errPtr = error;
+		return nil;
+	}else{
+		return array;
+	}
 }
 
 @end

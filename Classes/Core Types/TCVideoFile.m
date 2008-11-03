@@ -50,20 +50,10 @@
 	NSArray *array = [moc executeFetchRequest:request error:&error];
 	if (array == nil || array.count == 0)
 	{
-		TCVideoFile *newVideoFile = nil;
-		if([[path lastPathComponent] isEqualToString:@"VIDEO_TS"]){
-			newVideoFile = [NSEntityDescription insertNewObjectForEntityForName:@"DVDVideo" 
-														 inManagedObjectContext:moc];
-		}else{
-			newVideoFile = [NSEntityDescription insertNewObjectForEntityForName:@"FFMPEGVideo" 
-														 inManagedObjectContext:moc];
-		}
+		TCVideoFile *newVideoFile = [NSEntityDescription insertNewObjectForEntityForName:@"VideoFile" 
+																  inManagedObjectContext:moc];
 		[newVideoFile setValue:path forKey:@"path"];
 
-		if([[[newVideoFile entity] name] isEqualToString:@"FFMPEGVideo"]){
-			[(TCFFMPEGVideo *)newVideoFile addInfoJob];
-		}
-		
 		return newVideoFile;
 	}
 	else return [array objectAtIndex:0];

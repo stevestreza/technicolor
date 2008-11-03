@@ -29,4 +29,6 @@
 
 }
 +(TCTVShow *)showWithName:(NSString *)name;
++(NSArray *)allShows:(BOOL)onlyWithFiles;
++(NSArray *)arrayForPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors error:(NSError **)errPtr;
 @end

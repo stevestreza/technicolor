@@ -108,6 +108,7 @@
 	return [NSPredicate predicateWithFormat:@"(airDate >= %@) AND (airDate <= %@)",startOfToday,endOfToday];
 }
 
+#ifdef TCTVEpisodeFavoritesEnabled
 +(NSPredicate *)predicateForFavoriteShowsOnToday{
 	NSDate *startOfToday = nil;
 	NSDate *endOfToday = nil;
@@ -123,6 +124,7 @@
 	
 	return [NSPredicate predicateWithFormat:@"(show.favorite == FALSE) AND (airDate >= %@) AND (airDate <= %@)",startOfToday,endOfToday];	
 }
+#endif 
 
 -(id)copyWithZone:(NSZone *)zone{
 	NSLog(@"CopyWithZone!");
@@ -137,9 +139,17 @@
 	[request setEntity:entityDescription];
 	[request setPredicate:predicate];
 	
+#ifdef TCTVEpisodeFavoritesEnabled
 	NSSortDescriptor *favoriteDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"show.favorite" ascending:NO] autorelease];
+#endif
+	
 	NSSortDescriptor *dateDescriptor     = [[[NSSortDescriptor alloc] initWithKey:@"airDate" ascending:YES] autorelease];
-	[request setSortDescriptors:[NSArray arrayWithObjects:favoriteDescriptor, dateDescriptor,nil]];
+	
+	[request setSortDescriptors:[NSArray arrayWithObjects:
+#ifdef TCTVEpisodeFavoritesEnabled
+								 favoriteDescriptor, 
+#endif
+								 dateDescriptor,nil]];
 	
 	NSArray *items = [moc executeFetchRequest:request error:nil];
 	return items;
@@ -168,13 +178,16 @@
 }
 
 -(void)addObservers{
+#ifdef TCTVEpisodeFavoritesEnabled
 	[self addObserver:self
 		   forKeyPath:@"show.favorite"
 			  options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
 			  context:nil];
+#endif
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
+#ifdef TCTVEpisodeFavoritesEnabled
 	if([keyPath isEqualToString:@"show.favorite"]){
 //		NSLog(@"Favorite changed for %@ - %@",[[self show] showName],change);
 		id oldVal = [change valueForKey:NSKeyValueChangeNewKey];
@@ -191,8 +204,11 @@
 			}
 		}
 	}else{
+#endif
 		[super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+#ifdef TCTVEpisodeFavoritesEnabled
 	}
+#endif
 }
 
 -(void)deleteCalendarEvent{

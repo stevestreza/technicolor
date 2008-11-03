@@ -37,8 +37,11 @@
 +(TCTVEpisode *)showVideoWithEpisodeName:(NSString *)name season:(int)season episodeNumber:(int)episode show:(TCTVShow *)show;
 
 +(NSPredicate *)predicateForEpisodesOnToday;
++(NSArray *)episodesOnToday;
+
+#ifdef TCTVEpisodeFavoritesEnabled
 +(NSPredicate *)predicateForFavoriteShowsOnToday;
 +(NSPredicate *)predicateForNonfavoriteShowsOnToday;
+#endif
 
-+(NSArray *)episodesOnToday;
 @end
