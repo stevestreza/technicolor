@@ -44,4 +44,6 @@
 +(NSPredicate *)predicateForNonfavoriteShowsOnToday;
 #endif
 
++(NSArray *)allEpisodes:(BOOL)onlyWithFiles;
++(NSArray *)arrayForPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors error:(NSError **)errPtr;
 @end

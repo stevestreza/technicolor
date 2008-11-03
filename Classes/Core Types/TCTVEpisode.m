@@ -34,24 +34,19 @@
 	}	
 	
 	NSManagedObjectContext *moc = [[NSApp delegate] managedObjectContext];
-	
-	NSEntityDescription *entityDescription = [NSEntityDescription
-											  entityForName:@"TVEpisode" inManagedObjectContext:moc];
-	NSFetchRequest *request = [[[NSFetchRequest alloc] init] autorelease];
-	[request setEntity:entityDescription];
-	
+		
 	// Set example predicate and sort orderings...
 	NSPredicate *predicate = [NSPredicate predicateWithFormat:
 							  @"((show.showName == %@) AND (seasonNumber == %i) AND (episodeNumber == %i))", [show showName], season, episode];
-	[request setPredicate:predicate];
 	
 	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
 										initWithKey:@"season" ascending:YES];
-	[request setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+	NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
 	[sortDescriptor release];
 	
 	NSError *error = nil;
-	NSArray *array = [moc executeFetchRequest:request error:&error];
+	NSArray *array = [TCTVEpisode arrayForPredicate:predicate sortDescriptors:sortDescriptors error:&error];
+	
 	if (array == nil || array.count == 0)
 	{
 //		NSLog(@"Creating episode on %@ thread",([NSThread isMainThread] ? @"main" : @"NOT MAIN"));
@@ -211,26 +206,38 @@
 #endif
 }
 
--(void)deleteCalendarEvent{
-	if(![self calendarEvent]) return;
-	return;
++(NSArray *)allEpisodes:(BOOL)onlyWithFiles{
+	NSPredicate *pred = nil;
+	if(onlyWithFiles){
+		pred = [NSPredicate predicateWithFormat:@"videoFiles.@count > 0"];
+	}
+	
+	NSError *err = nil;
+	NSArray *allShows = [TCTVEpisode arrayForPredicate:pred sortDescriptors:nil error:&err];
+	if(err) NSLog(@"OMGWTF %@",err);
+	return allShows;
 }
 
--(void)createCalendarEvent{
-	/*
-	if([self calendarEvent]) return;
++(NSArray *)arrayForPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors error:(NSError **)errPtr{
+	NSManagedObjectContext *moc = [[NSApp delegate] managedObjectContext];
 	
-	TCCalendarEvent *event = [TCCalendarEvent calendarEventWithName:[NSString stringWithFormat:@"%@ - %@",[[self show] showName], [self episodeName]]
-														forCalendar:TCCommonCalendar 
-													 createIfNeeded:YES];
+	NSEntityDescription *entityDescription = [NSEntityDescription
+											  entityForName:@"TVEpisode" inManagedObjectContext:moc];
+	NSFetchRequest *request = [[[NSFetchRequest alloc] init] autorelease];
+	[request setEntity:entityDescription];
 	
-	NSDate *airDate = [self airDate];
-	[[event calendarEvent] setStartDate:airDate];
-	[[event calendarEvent] setEndDate:[[[NSDate alloc] initWithTimeInterval:60*30 sinceDate:airDate] autorelease]];
-	[event saveCalendarEvent];
+	[request setPredicate:predicate];
+	[request setSortDescriptors:sortDescriptors];
 	
-	[self setValue:event forKey:@"calendarEvent"];
-	 */
+	NSError *error = nil;
+	NSArray *array = [moc executeFetchRequest:request error:&error];
+	if(error){
+		*errPtr = error;
+		return nil;
+	}else{
+		return array;
+	}
 }
+
 
 @end
