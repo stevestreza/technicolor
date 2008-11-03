@@ -233,6 +233,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -290,22 +292,16 @@
 								<string>1058C7A0FEA54F0111CA2CBB</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
-								<string>1E10DB100EB4DAEA00867393</string>
 								<string>1C77FABC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>64</integer>
-									<integer>57</integer>
-									<integer>38</integer>
-									<integer>36</integer>
-									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 381}, {260, 760}}</string>
+							<string>{{0, 0}, {260, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -333,8 +329,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -352,7 +346,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1E10DB3E0EB4DBA300867393</string>
+										<string>1EF27CDC0EBE9EB500BFC961</string>
 										<key>history</key>
 										<array>
 											<string>1E735AAB0E514688004FAD1A</string>
@@ -412,7 +406,7 @@
 											<string>1E10DB290EB4DB1900867393</string>
 											<string>1E10DB3A0EB4DBA300867393</string>
 											<string>1E10DB3B0EB4DBA300867393</string>
-											<string>1E10DB260EB4DB1900867393</string>
+											<string>1E662ECA0EB800AF00B76051</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -472,14 +466,7 @@
 											<string>1E5EFB2A0EAC3765006F064E</string>
 											<string>1E5EFC230EAC387E006F064E</string>
 											<string>1E5EFC600EAC39F3006F064E</string>
-											<string>1E10DB130EB4DAEA00867393</string>
-											<string>1E10DB140EB4DAEA00867393</string>
-											<string>1E10DB2B0EB4DB1900867393</string>
 											<string>1E10DB2C0EB4DB1900867393</string>
-											<string>1E10DB2D0EB4DB1900867393</string>
-											<string>1E10DB2E0EB4DB1900867393</string>
-											<string>1E10DB3C0EB4DBA300867393</string>
-											<string>1E10DB3D0EB4DBA300867393</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -519,6 +506,8 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1158, 324}}</string>
+										<key>RubberWindowFrame</key>
+										<string>4 59 1440 819 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -561,7 +550,7 @@
 									<key>ContentConfiguration</key>
 									<dict>
 										<key>PBXBuildLogShowsTranscriptDefaultKey</key>
-										<string>{{0, 67}, {1158, 257}}</string>
+										<string>{{0, -64}, {1158, 388}}</string>
 										<key>PBXProjectModuleGUID</key>
 										<string>XCMainBuildResultsModuleGUID</string>
 										<key>PBXProjectModuleLabel</key>
@@ -575,8 +564,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1158, 324}}</string>
-										<key>RubberWindowFrame</key>
-										<string>4 59 1440 819 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -604,11 +591,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>1E10DB160EB4DAEA00867393</string>
+				<string>1EF27CDD0EBE9EB500BFC961</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>1E10DB170EB4DAEA00867393</string>
+				<string>1EF27CDE0EBE9EB500BFC961</string>
 				<string>1E50D78C0E50013C00BDA918</string>
-				<string>1E10DB180EB4DAEA00867393</string>
+				<string>1EF27CDF0EBE9EB500BFC961</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -791,8 +778,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1E10DB310EB4DB1C00867393</string>
-		<string>1E10DB320EB4DB1C00867393</string>
 		<string>/Users/syco/Projects/technicolor/Technicolor.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
