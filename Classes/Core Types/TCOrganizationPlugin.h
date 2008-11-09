@@ -30,4 +30,5 @@
 
 }
 +(CFUUIDRef)generateUUID;
+-(void)addViewController:(NSViewController *)controller forType:(NSString *)type;
 @end

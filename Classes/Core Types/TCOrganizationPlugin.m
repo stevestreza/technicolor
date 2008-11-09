@@ -54,6 +54,9 @@ static NSMutableArray *pluginArray;
 	
 }
 
+-(void)addViewController:(NSViewController *)controller forType:(NSString *)type{
+	[[NSApp delegate] addViewController:controller forType:type];
+}
 -(CFUUIDRef)uuid{
 	CFUUIDRef uuid = [TCOrganizationPlugin generateUUID];
 	NSString *uuidString = (NSString *)CFUUIDCreateString(NULL, uuid);

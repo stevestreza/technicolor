@@ -28,4 +28,42 @@
 
 @implementation TCMovieVideo
 
++(NSArray *)allMovies:(BOOL)onlyWithFiles{
+	NSPredicate *pred = nil;
+	if(onlyWithFiles){
+		pred = [NSPredicate predicateWithFormat:@"videoFiles.@count > 0"];
+	}
+	
+//	NSSortDescriptor *sortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"movie.name" ascending:YES] autorelease];
+	
+	NSError *err = nil;
+	NSArray *allShows = [TCMovieVideo arrayForPredicate:pred 
+//										sortDescriptors:[NSArray arrayWithObject:sortDescriptor] 
+										sortDescriptors:nil
+												  error:&err];
+	if(err) NSLog(@"OMGWTF %@",err);
+	return allShows;
+}
+
++(NSArray *)arrayForPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors error:(NSError **)errPtr{
+	NSManagedObjectContext *moc = [[NSApp delegate] managedObjectContext];
+	
+	NSEntityDescription *entityDescription = [NSEntityDescription
+											  entityForName:@"MovieVideo" inManagedObjectContext:moc];
+	NSFetchRequest *request = [[[NSFetchRequest alloc] init] autorelease];
+	[request setEntity:entityDescription];
+	
+	[request setPredicate:predicate];
+	[request setSortDescriptors:sortDescriptors];
+	
+	NSError *error = nil;
+	NSArray *array = [moc executeFetchRequest:request error:&error];
+	if(error){
+		*errPtr = error;
+		return nil;
+	}else{
+		return array;
+	}
+}
+
 @end

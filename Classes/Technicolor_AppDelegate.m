@@ -161,6 +161,7 @@
 	if([array indexOfObject:controller] == NSNotFound){
 		[array addObject:controller];
 	}
+	[viewSelectionList reloadItem:array];
 }
 
 -(void)awakeFromNib{

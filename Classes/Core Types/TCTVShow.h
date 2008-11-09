@@ -31,4 +31,8 @@
 +(TCTVShow *)showWithName:(NSString *)name;
 +(NSArray *)allShows:(BOOL)onlyWithFiles;
 +(NSArray *)arrayForPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors error:(NSError **)errPtr;
+
+-(NSArray *)episodesInSeason:(NSUInteger)seasonNumber;
+-(NSArray *)episodesInSeason:(NSUInteger)seasonNumber withFiles:(BOOL)withFiles;
+
 @end

@@ -85,6 +85,27 @@
 	
 }
 
+-(NSArray *)episodesInSeason:(NSUInteger)seasonNumber{
+	return [self episodesInSeason:seasonNumber withFiles:YES];
+}
+
+-(NSArray *)episodesInSeason:(NSUInteger)seasonNumber withFiles:(BOOL)withFiles{
+	NSPredicate *pred = [NSPredicate predicateWithFormat:@"show == %@",self];
+	if(withFiles){
+		pred = [NSCompoundPredicate andPredicateWithSubpredicates:
+				[NSArray arrayWithObjects:
+				 pred,
+				 [NSPredicate predicateWithFormat:@"videoFiles.@count > 0"],
+				 nil]
+				];
+	}
+	
+	NSError *err = nil;
+	NSArray *allShows = [TCTVEpisode arrayForPredicate:pred sortDescriptors:nil error:&err];
+	if(err) NSLog(@"OMGWTF %@",err);
+	return allShows;	
+}
+
 
 #pragma mark Common Queries
 
