@@ -90,7 +90,7 @@
 }
 
 -(NSArray *)episodesInSeason:(NSUInteger)seasonNumber withFiles:(BOOL)withFiles{
-	NSPredicate *pred = [NSPredicate predicateWithFormat:@"show == %@",self];
+	NSPredicate *pred = [NSPredicate predicateWithFormat:@"(show == %@) AND (seasonNumber == %i)",self,seasonNumber];
 	if(withFiles){
 		pred = [NSCompoundPredicate andPredicateWithSubpredicates:
 				[NSArray arrayWithObjects:
