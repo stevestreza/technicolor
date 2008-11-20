@@ -41,6 +41,10 @@
 	[super dealloc];
 }
 
+-(TCJSObject *)rootObject{
+	return JSContextGetGlobalObject(context);
+}
+
 -(void)collectGarbage{
 	JSGarbageCollect(context);
 }

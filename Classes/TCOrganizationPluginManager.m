@@ -86,15 +86,30 @@
 
 -(void)addPluginClass:(Class)pluginClass forBundle:(NSBundle *)bundle{
 	if(pluginClass && [self classIsValidPlugin:pluginClass]){
-		[self _addClass:pluginClass];
-		[self _addBundle:bundle];
+		if([self loadAllDependenciesForBundle:bundle]){
+			[self _addClass:pluginClass];
+			[self _addBundle:bundle];
 		
-		id pluginInstance = [[pluginClass alloc] init];
-		CFUUIDRef uuid = [(TCOrganizationPlugin *)pluginInstance uuid];
+			id pluginInstance = [[pluginClass alloc] init];
 		
-		[self addPluginInstance:pluginInstance];
-		[pluginInstance release];
+			CFUUIDRef uuid = [(TCOrganizationPlugin *)pluginInstance uuid];
+		
+			[self addPluginInstance:pluginInstance];
+			[pluginInstance release];
+		}
 	}	
+}
+
+-(BOOL)loadAllDependenciesForBundle:(NSBundle *)bundle{
+	NSArray *uuids = [[bundle infoDictionary] valueForKey:@"dependencies"];
+	return YES;
+}
+
+-(NSMutableDictionary *)_uuidDictionary{
+	if(!mUUIDDictionary){
+		mUUIDDictionary = [[NSMutableDictionary alloc] init];
+	}
+	return mUUIDDictionary;
 }
 
 -(void)addPluginInstance:(id)pluginInstance{
@@ -105,6 +120,7 @@
 }
 			
 -(BOOL)classIsValidPlugin:(Class)pluginClass{
+	return YES;
 	return [pluginClass isSubclassOfClass:[TCOrganizationPlugin class]];
 }
 
@@ -130,6 +146,10 @@
 	}
 	
 	return [[bundles copy] autorelease];
+}
+
+-(NSBundle *)bundleForUUID:(NSString *)uuid{
+	
 }
 
 @end

@@ -60,7 +60,7 @@ static NSMutableArray *pluginArray;
 -(CFUUIDRef)uuid{
 	CFUUIDRef uuid = [TCOrganizationPlugin generateUUID];
 	NSString *uuidString = (NSString *)CFUUIDCreateString(NULL, uuid);
-	NSLog(@"Store this UUID! %@",uuidString);
+	NSLog(@"Add this line to your %@ .m file\n\nTCUUID(\@\"%@\")",[self className],uuidString);
 	return uuid;
 }
 

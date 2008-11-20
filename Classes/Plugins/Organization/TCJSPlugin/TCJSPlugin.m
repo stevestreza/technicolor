@@ -30,4 +30,9 @@
 
 TCUUID(@"B040A569-DE2C-4CAF-9905-DB327C876C41")
 
+-(void)awake{
+	interpreter = [[JSXObjCInterpreter alloc] init];
+	NSLog(@"Created the interpreter %@",interpreter);
+}
+
 @end

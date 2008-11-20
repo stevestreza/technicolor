@@ -14,9 +14,6 @@
 		1E5E386A0EA2FBB700FD67A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5E38690EA2FBB700FD67A3 /* CoreData.framework */; };
 		1E5E38750EA2FBD400FD67A3 /* TCProcessingQueuePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5E38740EA2FBD400FD67A3 /* TCProcessingQueuePlugin.m */; };
 		1E5E38810EA2FC1200FD67A3 /* TCCore.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1E63689E0EA253590003034E /* TCCore.framework */; };
-		1E5EFA4E0EAC33FC006F064E /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5EFA450EAC33F8006F064E /* JavaScriptCore.framework */; };
-		1E5EFA5B0EAC3434006F064E /* TCJSContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5EFA5A0EAC3434006F064E /* TCJSContext.m */; };
-		1E5EFA5E0EAC3459006F064E /* TCJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5EFA5D0EAC3459006F064E /* TCJSObject.m */; };
 		1E5EFA640EAC363F006F064E /* TCJSPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5EFA630EAC363F006F064E /* TCJSPlugin.m */; };
 		1E5EFB010EAC36C4006F064E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E49162D0EABFBF3005CEC4F /* CoreFoundation.framework */; };
 		1E5EFB5A0EAC3792006F064E /* TCCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E63689E0EA253590003034E /* TCCore.framework */; };
@@ -63,6 +60,8 @@
 		1E83CCD90E6B890D00987FC1 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE3EE750E53CF590099684C /* libz.1.2.3.dylib */; };
 		1E83CCDA0E6B890D00987FC1 /* libbz2.1.0.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE3EE890E53D0470099684C /* libbz2.1.0.4.dylib */; };
 		1E95DBF90E57BD9600B6A7E9 /* TCTVShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E95DBF80E57BD9600B6A7E9 /* TCTVShowController.m */; };
+		1EA094890EC8072A004C7397 /* JSXObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA0947D0EC80715004C7397 /* JSXObjC.framework */; };
+		1EA094920EC8073E004C7397 /* JSXObjC.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA0947D0EC80715004C7397 /* JSXObjC.framework */; };
 		1EB8CAB10EA1ABDC00984CD7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		1EB8CAB20EA1ABDC00984CD7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C82804067257F0000B614F /* CoreData.framework */; };
 		1EB8CAB30EA1ABDC00984CD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
@@ -74,6 +73,20 @@
 		1EB8CAFB0EA1ACFB00984CD7 /* TVRageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB8CACF0EA1AC6C00984CD7 /* TVRageOperation.m */; };
 		1EB8CB080EA1AD7F00984CD7 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E83CC750E6B74CB00987FC1 /* WebKit.framework */; };
 		1EB8CB100EA1B00800984CD7 /* TCCalendarPlugin.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 1EB8CB0F0EA1B00800984CD7 /* TCCalendarPlugin.xcdatamodel */; };
+		1EFAF7570ED25E1500A8B55E /* TCXMLRPCServerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAF7560ED25E1500A8B55E /* TCXMLRPCServerPlugin.m */; };
+		1EFAF7760ED25E5B00A8B55E /* TCCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E63689E0EA253590003034E /* TCCore.framework */; };
+		1EFAF7840ED25E5D00A8B55E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		1EFAF7E50ED25FA200A8B55E /* XMLRPCConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAF7D60ED25FA200A8B55E /* XMLRPCConnection.m */; };
+		1EFAF7E60ED25FA200A8B55E /* XMLRPCDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAF7D80ED25FA200A8B55E /* XMLRPCDecoder.m */; };
+		1EFAF7E70ED25FA200A8B55E /* XMLRPCEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAF7DA0ED25FA200A8B55E /* XMLRPCEncoder.m */; };
+		1EFAF7E80ED25FA200A8B55E /* XMLRPCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAF7DC0ED25FA200A8B55E /* XMLRPCExtensions.m */; };
+		1EFAF7E90ED25FA200A8B55E /* XMLRPCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAF7DE0ED25FA200A8B55E /* XMLRPCRequest.m */; };
+		1EFAF7EA0ED25FA200A8B55E /* XMLRPCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAF7E00ED25FA200A8B55E /* XMLRPCResponse.m */; };
+		1EFAF7EB0ED25FA200A8B55E /* XMLRPCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAF7E20ED25FA200A8B55E /* XMLRPCClient.m */; };
+		1EFAF7EC0ED25FA200A8B55E /* XMLValueDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAF7E40ED25FA200A8B55E /* XMLValueDecoder.m */; };
+		1EFAF7F30ED2625E00A8B55E /* SimpleHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAF7F00ED2625E00A8B55E /* SimpleHTTPServer.m */; };
+		1EFAF7F40ED2625E00A8B55E /* SimpleHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAF7F20ED2625E00A8B55E /* SimpleHTTPConnection.m */; };
+		1EFAF7F70ED2642D00A8B55E /* XMLRPCServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAF7F60ED2642D00A8B55E /* XMLRPCServer.m */; };
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
 		77C8280E06725ACE000B614F /* Technicolor_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* Technicolor_AppDelegate.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -131,6 +144,55 @@
 			remoteGlobalIDString = 1EB8CADE0EA1ACC300984CD7;
 			remoteInfo = TCTVRagePlugin;
 		};
+		1EA094780EC80715004C7397 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DD76FA10486AA7600D96B5E;
+			remoteInfo = jsxi;
+		};
+		1EA0947A0EC80715004C7397 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3A6623C20DA7D3A800FEBFAA;
+			remoteInfo = JSXlib;
+		};
+		1EA0947C0EC80715004C7397 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3A66254F0DA7D7FD00FEBFAA;
+			remoteInfo = JSXObjC;
+		};
+		1EA0947E0EC80715004C7397 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3A6623F00DA7D52700FEBFAA;
+			remoteInfo = JSXurtle;
+		};
+		1EA094800EC80715004C7397 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3A6F2FC80DF6399700F70283;
+			remoteInfo = JSXObjCCoreGraphics;
+		};
+		1EA094C60EC80972004C7397 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E5EF99C0EAC33BC006F064E;
+			remoteInfo = TCJSPlugin;
+		};
+		1EFAF76F0ED25E4300A8B55E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EFAF74F0ED25DF500A8B55E;
+			remoteInfo = TCXMLRPCServerPlugin;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -141,6 +203,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				1E5E38810EA2FC1200FD67A3 /* TCCore.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EA094980EC8075F004C7397 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1EA094920EC8073E004C7397 /* JSXObjC.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,18 +229,14 @@
 		1E4916130EABFB76005CEC4F /* Technicolor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Technicolor.h; sourceTree = "<group>"; };
 		1E49162D0EABFBF3005CEC4F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		1E50D7D50E5010ED00BDA918 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Wizard.nib; sourceTree = "<group>"; };
-		1E5E38610EA2FBA100FD67A3 /* TCProcessingQueuePlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCProcessingQueuePlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E5E38610EA2FBA100FD67A3 /* TCProcessingQueuePlugin.tcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCProcessingQueuePlugin.tcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5E38620EA2FBA100FD67A3 /* TCProcessingQueuePlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TCProcessingQueuePlugin-Info.plist"; sourceTree = "<group>"; };
 		1E5E38690EA2FBB700FD67A3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1E5E38730EA2FBD400FD67A3 /* TCProcessingQueuePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCProcessingQueuePlugin.h; sourceTree = "<group>"; };
 		1E5E38740EA2FBD400FD67A3 /* TCProcessingQueuePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCProcessingQueuePlugin.m; sourceTree = "<group>"; };
-		1E5EF99D0EAC33BC006F064E /* TCJSPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCJSPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E5EF99D0EAC33BC006F064E /* TCJSPlugin.tcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCJSPlugin.tcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5EF99E0EAC33BC006F064E /* TCJSPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TCJSPlugin-Info.plist"; sourceTree = "<group>"; };
 		1E5EFA450EAC33F8006F064E /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = /System/Library/Frameworks/JavaScriptCore.framework; sourceTree = "<absolute>"; };
-		1E5EFA590EAC3434006F064E /* TCJSContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCJSContext.h; sourceTree = "<group>"; };
-		1E5EFA5A0EAC3434006F064E /* TCJSContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCJSContext.m; sourceTree = "<group>"; };
-		1E5EFA5C0EAC3459006F064E /* TCJSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCJSObject.h; sourceTree = "<group>"; };
-		1E5EFA5D0EAC3459006F064E /* TCJSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCJSObject.m; sourceTree = "<group>"; };
 		1E5EFA620EAC363F006F064E /* TCJSPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCJSPlugin.h; sourceTree = "<group>"; };
 		1E5EFA630EAC363F006F064E /* TCJSPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCJSPlugin.m; sourceTree = "<group>"; };
 		1E63689E0EA253590003034E /* TCCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TCCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +259,7 @@
 		1E83CC750E6B74CB00987FC1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1E95DBF70E57BD9600B6A7E9 /* TCTVShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTVShowController.h; sourceTree = "<group>"; };
 		1E95DBF80E57BD9600B6A7E9 /* TCTVShowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTVShowController.m; sourceTree = "<group>"; };
+		1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSXObjC.xcodeproj; path = ../../Packages/jsxobjc/JSXObjC.xcodeproj; sourceTree = SOURCE_ROOT; };
 		1EB8C94A0EA1AAA500984CD7 /* TCMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMovie.h; sourceTree = "<group>"; };
 		1EB8C94B0EA1AAA500984CD7 /* TCMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCMovie.m; sourceTree = "<group>"; };
 		1EB8C94C0EA1AAA500984CD7 /* TCMovieVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMovieVideo.h; sourceTree = "<group>"; };
@@ -202,7 +272,7 @@
 		1EB8C9530EA1AAA500984CD7 /* TCVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCVideo.m; sourceTree = "<group>"; };
 		1EB8C9540EA1AAA500984CD7 /* TCVideoFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCVideoFile.h; sourceTree = "<group>"; };
 		1EB8C9550EA1AAA500984CD7 /* TCVideoFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCVideoFile.m; sourceTree = "<group>"; };
-		1EB8C9630EA1AB4000984CD7 /* TCCalendarPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCCalendarPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EB8C9630EA1AB4000984CD7 /* TCCalendarPlugin.tcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCCalendarPlugin.tcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EB8C9640EA1AB4000984CD7 /* TCCalendarPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TCCalendarPlugin-Info.plist"; sourceTree = "<group>"; };
 		1EB8CAC40EA1AC2500984CD7 /* TCCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCCalendar.h; sourceTree = "<group>"; };
 		1EB8CAC50EA1AC2500984CD7 /* TCCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCCalendar.m; sourceTree = "<group>"; };
@@ -213,11 +283,38 @@
 		1EB8CACD0EA1AC6C00984CD7 /* TVRageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVRageController.m; sourceTree = "<group>"; };
 		1EB8CACE0EA1AC6C00984CD7 /* TVRageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVRageOperation.h; sourceTree = "<group>"; };
 		1EB8CACF0EA1AC6C00984CD7 /* TVRageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVRageOperation.m; sourceTree = "<group>"; };
-		1EB8CADF0EA1ACC300984CD7 /* TCTVRagePlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCTVRagePlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EB8CADF0EA1ACC300984CD7 /* TCTVRagePlugin.tcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCTVRagePlugin.tcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EB8CAE00EA1ACC300984CD7 /* TCTVRagePlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TCTVRagePlugin-Info.plist"; sourceTree = "<group>"; };
 		1EB8CB0F0EA1B00800984CD7 /* TCCalendarPlugin.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = TCCalendarPlugin.xcdatamodel; sourceTree = "<group>"; };
 		1EE3EE750E53CF590099684C /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		1EE3EE890E53D0470099684C /* libbz2.1.0.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.1.0.4.dylib; path = usr/lib/libbz2.1.0.4.dylib; sourceTree = SDKROOT; };
+		1EFAF7500ED25DF500A8B55E /* TCXMLRPCServerPlugin.tcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCXMLRPCServerPlugin.tcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EFAF7510ED25DF500A8B55E /* TCXMLRPCServerPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TCXMLRPCServerPlugin-Info.plist"; sourceTree = "<group>"; };
+		1EFAF7550ED25E1500A8B55E /* TCXMLRPCServerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXMLRPCServerPlugin.h; sourceTree = "<group>"; };
+		1EFAF7560ED25E1500A8B55E /* TCXMLRPCServerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXMLRPCServerPlugin.m; sourceTree = "<group>"; };
+		1EFAF7D40ED25FA200A8B55E /* XMLRPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPC.h; sourceTree = "<group>"; };
+		1EFAF7D50ED25FA200A8B55E /* XMLRPCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCConnection.h; sourceTree = "<group>"; };
+		1EFAF7D60ED25FA200A8B55E /* XMLRPCConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCConnection.m; sourceTree = "<group>"; };
+		1EFAF7D70ED25FA200A8B55E /* XMLRPCDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCDecoder.h; sourceTree = "<group>"; };
+		1EFAF7D80ED25FA200A8B55E /* XMLRPCDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCDecoder.m; sourceTree = "<group>"; };
+		1EFAF7D90ED25FA200A8B55E /* XMLRPCEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCEncoder.h; sourceTree = "<group>"; };
+		1EFAF7DA0ED25FA200A8B55E /* XMLRPCEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCEncoder.m; sourceTree = "<group>"; };
+		1EFAF7DB0ED25FA200A8B55E /* XMLRPCExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCExtensions.h; sourceTree = "<group>"; };
+		1EFAF7DC0ED25FA200A8B55E /* XMLRPCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCExtensions.m; sourceTree = "<group>"; };
+		1EFAF7DD0ED25FA200A8B55E /* XMLRPCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCRequest.h; sourceTree = "<group>"; };
+		1EFAF7DE0ED25FA200A8B55E /* XMLRPCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCRequest.m; sourceTree = "<group>"; };
+		1EFAF7DF0ED25FA200A8B55E /* XMLRPCResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCResponse.h; sourceTree = "<group>"; };
+		1EFAF7E00ED25FA200A8B55E /* XMLRPCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCResponse.m; sourceTree = "<group>"; };
+		1EFAF7E10ED25FA200A8B55E /* XMLRPCClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCClient.h; sourceTree = "<group>"; };
+		1EFAF7E20ED25FA200A8B55E /* XMLRPCClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCClient.m; sourceTree = "<group>"; };
+		1EFAF7E30ED25FA200A8B55E /* XMLValueDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLValueDecoder.h; sourceTree = "<group>"; };
+		1EFAF7E40ED25FA200A8B55E /* XMLValueDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLValueDecoder.m; sourceTree = "<group>"; };
+		1EFAF7EF0ED2625E00A8B55E /* SimpleHTTPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleHTTPServer.h; path = ../SimpleHTTPServer.h; sourceTree = "<group>"; };
+		1EFAF7F00ED2625E00A8B55E /* SimpleHTTPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleHTTPServer.m; path = ../SimpleHTTPServer.m; sourceTree = "<group>"; };
+		1EFAF7F10ED2625E00A8B55E /* SimpleHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleHTTPConnection.h; path = ../SimpleHTTPConnection.h; sourceTree = "<group>"; };
+		1EFAF7F20ED2625E00A8B55E /* SimpleHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleHTTPConnection.m; path = ../SimpleHTTPConnection.m; sourceTree = "<group>"; };
+		1EFAF7F50ED2642D00A8B55E /* XMLRPCServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLRPCServer.h; path = Classes/Plugins/Organization/TCXMLRPCServerPlugin/XMLRPCServer.h; sourceTree = SOURCE_ROOT; };
+		1EFAF7F60ED2642D00A8B55E /* XMLRPCServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLRPCServer.m; path = Classes/Plugins/Organization/TCXMLRPCServerPlugin/XMLRPCServer.m; sourceTree = SOURCE_ROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -246,8 +343,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E5EFB5C0EAC3799006F064E /* Foundation.framework in Frameworks */,
+				1EA094890EC8072A004C7397 /* JSXObjC.framework in Frameworks */,
 				1E5EFB5A0EAC3792006F064E /* TCCore.framework in Frameworks */,
-				1E5EFA4E0EAC33FC006F064E /* JavaScriptCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +381,15 @@
 				1E6367DD0EA252DD0003034E /* AppKit.framework in Frameworks */,
 				1EB8CB080EA1AD7F00984CD7 /* WebKit.framework in Frameworks */,
 				1E6368BF0EA253EA0003034E /* TCCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EFAF74E0ED25DF500A8B55E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EFAF7840ED25E5D00A8B55E /* Cocoa.framework in Frameworks */,
+				1EFAF7760ED25E5B00A8B55E /* TCCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,11 +442,12 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* Technicolor.app */,
-				1EB8C9630EA1AB4000984CD7 /* TCCalendarPlugin.bundle */,
-				1EB8CADF0EA1ACC300984CD7 /* TCTVRagePlugin.bundle */,
+				1EB8C9630EA1AB4000984CD7 /* TCCalendarPlugin.tcplugin */,
+				1EB8CADF0EA1ACC300984CD7 /* TCTVRagePlugin.tcplugin */,
 				1E63689E0EA253590003034E /* TCCore.framework */,
-				1E5E38610EA2FBA100FD67A3 /* TCProcessingQueuePlugin.bundle */,
-				1E5EF99D0EAC33BC006F064E /* TCJSPlugin.bundle */,
+				1E5E38610EA2FBA100FD67A3 /* TCProcessingQueuePlugin.tcplugin */,
+				1E5EF99D0EAC33BC006F064E /* TCJSPlugin.tcplugin */,
+				1EFAF7500ED25DF500A8B55E /* TCXMLRPCServerPlugin.tcplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -358,12 +465,9 @@
 		1E5EF9590EAC33A5006F064E /* JSPlugin */ = {
 			isa = PBXGroup;
 			children = (
-				1E5EFA590EAC3434006F064E /* TCJSContext.h */,
-				1E5EFA5A0EAC3434006F064E /* TCJSContext.m */,
-				1E5EFA5C0EAC3459006F064E /* TCJSObject.h */,
-				1E5EFA5D0EAC3459006F064E /* TCJSObject.m */,
 				1E5EFA620EAC363F006F064E /* TCJSPlugin.h */,
 				1E5EFA630EAC363F006F064E /* TCJSPlugin.m */,
+				1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */,
 			);
 			name = JSPlugin;
 			path = TCJSPlugin;
@@ -422,6 +526,7 @@
 		1E636A6D0EA29C030003034E /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				1E5EF99E0EAC33BC006F064E /* TCJSPlugin-Info.plist */,
 				1E5E38620EA2FBA100FD67A3 /* TCProcessingQueuePlugin-Info.plist */,
 				1EB8C9640EA1AB4000984CD7 /* TCCalendarPlugin-Info.plist */,
 				1EB8CAE00EA1ACC300984CD7 /* TCTVRagePlugin-Info.plist */,
@@ -437,6 +542,39 @@
 			path = Framework;
 			sourceTree = "<group>";
 		};
+		1E943E630ED5124A00615A61 /* XMLRPCServer */ = {
+			isa = PBXGroup;
+			children = (
+				1EFAF7F50ED2642D00A8B55E /* XMLRPCServer.h */,
+				1EFAF7F60ED2642D00A8B55E /* XMLRPCServer.m */,
+				1E943E640ED5125400615A61 /* HTTPServer */,
+			);
+			name = XMLRPCServer;
+			sourceTree = "<group>";
+		};
+		1E943E640ED5125400615A61 /* HTTPServer */ = {
+			isa = PBXGroup;
+			children = (
+				1EFAF7EF0ED2625E00A8B55E /* SimpleHTTPServer.h */,
+				1EFAF7F00ED2625E00A8B55E /* SimpleHTTPServer.m */,
+				1EFAF7F10ED2625E00A8B55E /* SimpleHTTPConnection.h */,
+				1EFAF7F20ED2625E00A8B55E /* SimpleHTTPConnection.m */,
+			);
+			name = HTTPServer;
+			sourceTree = "<group>";
+		};
+		1EA094710EC80715004C7397 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EA094790EC80715004C7397 /* jsxi */,
+				1EA0947B0EC80715004C7397 /* libJSXlib.a */,
+				1EA0947D0EC80715004C7397 /* JSXObjC.framework */,
+				1EA0947F0EC80715004C7397 /* JSXurtle.app */,
+				1EA094810EC80715004C7397 /* JSXObjCCoreGraphics.jsxext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		1EB8C9320EA1A9D500984CD7 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +587,7 @@
 		1EB8C9380EA1AA1D00984CD7 /* Organization */ = {
 			isa = PBXGroup;
 			children = (
+				1EFAF7490ED25DC700A8B55E /* XML-RPC Server */,
 				1E5EF9590EAC33A5006F064E /* JSPlugin */,
 				1E5E384E0EA2FB6E00FD67A3 /* Processing Queue */,
 				1EB8CACA0EA1AC3C00984CD7 /* TVRage */,
@@ -541,6 +680,42 @@
 			path = TCTVRagePlugin;
 			sourceTree = "<group>";
 		};
+		1EFAF7490ED25DC700A8B55E /* XML-RPC Server */ = {
+			isa = PBXGroup;
+			children = (
+				1EFAF7D30ED25FA200A8B55E /* XMLRPC */,
+				1EFAF7550ED25E1500A8B55E /* TCXMLRPCServerPlugin.h */,
+				1EFAF7560ED25E1500A8B55E /* TCXMLRPCServerPlugin.m */,
+			);
+			name = "XML-RPC Server";
+			path = TCXMLRPCServerPlugin;
+			sourceTree = "<group>";
+		};
+		1EFAF7D30ED25FA200A8B55E /* XMLRPC */ = {
+			isa = PBXGroup;
+			children = (
+				1E943E630ED5124A00615A61 /* XMLRPCServer */,
+				1EFAF7D40ED25FA200A8B55E /* XMLRPC.h */,
+				1EFAF7D50ED25FA200A8B55E /* XMLRPCConnection.h */,
+				1EFAF7D60ED25FA200A8B55E /* XMLRPCConnection.m */,
+				1EFAF7D70ED25FA200A8B55E /* XMLRPCDecoder.h */,
+				1EFAF7D80ED25FA200A8B55E /* XMLRPCDecoder.m */,
+				1EFAF7D90ED25FA200A8B55E /* XMLRPCEncoder.h */,
+				1EFAF7DA0ED25FA200A8B55E /* XMLRPCEncoder.m */,
+				1EFAF7DB0ED25FA200A8B55E /* XMLRPCExtensions.h */,
+				1EFAF7DC0ED25FA200A8B55E /* XMLRPCExtensions.m */,
+				1EFAF7DD0ED25FA200A8B55E /* XMLRPCRequest.h */,
+				1EFAF7DE0ED25FA200A8B55E /* XMLRPCRequest.m */,
+				1EFAF7DF0ED25FA200A8B55E /* XMLRPCResponse.h */,
+				1EFAF7E00ED25FA200A8B55E /* XMLRPCResponse.m */,
+				1EFAF7E10ED25FA200A8B55E /* XMLRPCClient.h */,
+				1EFAF7E20ED25FA200A8B55E /* XMLRPCClient.m */,
+				1EFAF7E30ED25FA200A8B55E /* XMLValueDecoder.h */,
+				1EFAF7E40ED25FA200A8B55E /* XMLValueDecoder.m */,
+			);
+			path = XMLRPC;
+			sourceTree = "<group>";
+		};
 		29B97314FDCFA39411CA2CEA /* Technicolor */ = {
 			isa = PBXGroup;
 			children = (
@@ -549,7 +724,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				1E5EF99E0EAC33BC006F064E /* TCJSPlugin-Info.plist */,
+				1EFAF7510ED25DF500A8B55E /* TCXMLRPCServerPlugin-Info.plist */,
 			);
 			name = Technicolor;
 			sourceTree = "<group>";
@@ -620,13 +795,14 @@
 			);
 			name = TCProcessingQueuePlugin;
 			productName = TCProcessingQueuePlugin;
-			productReference = 1E5E38610EA2FBA100FD67A3 /* TCProcessingQueuePlugin.bundle */;
+			productReference = 1E5E38610EA2FBA100FD67A3 /* TCProcessingQueuePlugin.tcplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 		1E5EF99C0EAC33BC006F064E /* TCJSPlugin */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E5EF9A10EAC33BD006F064E /* Build configuration list for PBXNativeTarget "TCJSPlugin" */;
 			buildPhases = (
+				1EA094980EC8075F004C7397 /* Copy Frameworks */,
 				1E5EF9990EAC33BC006F064E /* Resources */,
 				1E5EF99A0EAC33BC006F064E /* Sources */,
 				1E5EF99B0EAC33BC006F064E /* Frameworks */,
@@ -637,7 +813,7 @@
 			);
 			name = TCJSPlugin;
 			productName = TCJSPlugin;
-			productReference = 1E5EF99D0EAC33BC006F064E /* TCJSPlugin.bundle */;
+			productReference = 1E5EF99D0EAC33BC006F064E /* TCJSPlugin.tcplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 		1E63689D0EA253590003034E /* TCCore */ = {
@@ -673,7 +849,7 @@
 			);
 			name = TCCalendarPlugin;
 			productName = TCCalendarPlugin;
-			productReference = 1EB8C9630EA1AB4000984CD7 /* TCCalendarPlugin.bundle */;
+			productReference = 1EB8C9630EA1AB4000984CD7 /* TCCalendarPlugin.tcplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 		1EB8CADE0EA1ACC300984CD7 /* TCTVRagePlugin */ = {
@@ -691,7 +867,24 @@
 			);
 			name = TCTVRagePlugin;
 			productName = TCTVRagePlugin;
-			productReference = 1EB8CADF0EA1ACC300984CD7 /* TCTVRagePlugin.bundle */;
+			productReference = 1EB8CADF0EA1ACC300984CD7 /* TCTVRagePlugin.tcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		1EFAF74F0ED25DF500A8B55E /* TCXMLRPCServerPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EFAF7540ED25DF600A8B55E /* Build configuration list for PBXNativeTarget "TCXMLRPCServerPlugin" */;
+			buildPhases = (
+				1EFAF74C0ED25DF500A8B55E /* Resources */,
+				1EFAF74D0ED25DF500A8B55E /* Sources */,
+				1EFAF74E0ED25DF500A8B55E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TCXMLRPCServerPlugin;
+			productName = TCXMLRPCServerPlugin;
+			productReference = 1EFAF7500ED25DF500A8B55E /* TCXMLRPCServerPlugin.tcplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 		8D1107260486CEB800E47090 /* Technicolor */ = {
@@ -710,6 +903,8 @@
 				1E636A7A0EA29D090003034E /* PBXTargetDependency */,
 				1E636A7C0EA29D090003034E /* PBXTargetDependency */,
 				1E5E389D0EA2FD4400FD67A3 /* PBXTargetDependency */,
+				1EA094C70EC80972004C7397 /* PBXTargetDependency */,
+				1EFAF7700ED25E4300A8B55E /* PBXTargetDependency */,
 			);
 			name = Technicolor;
 			productInstallPath = "$(HOME)/Applications";
@@ -727,6 +922,12 @@
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Technicolor */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1EA094710EC80715004C7397 /* Products */;
+					ProjectRef = 1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* Technicolor */,
@@ -735,9 +936,48 @@
 				1EB8CADE0EA1ACC300984CD7 /* TCTVRagePlugin */,
 				1E5E38600EA2FBA100FD67A3 /* TCProcessingQueuePlugin */,
 				1E5EF99C0EAC33BC006F064E /* TCJSPlugin */,
+				1EFAF74F0ED25DF500A8B55E /* TCXMLRPCServerPlugin */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1EA094790EC80715004C7397 /* jsxi */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = jsxi;
+			remoteRef = 1EA094780EC80715004C7397 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1EA0947B0EC80715004C7397 /* libJSXlib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libJSXlib.a;
+			remoteRef = 1EA0947A0EC80715004C7397 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1EA0947D0EC80715004C7397 /* JSXObjC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSXObjC.framework;
+			remoteRef = 1EA0947C0EC80715004C7397 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1EA0947F0EC80715004C7397 /* JSXurtle.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = JSXurtle.app;
+			remoteRef = 1EA0947E0EC80715004C7397 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1EA094810EC80715004C7397 /* JSXObjCCoreGraphics.jsxext */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = JSXObjCCoreGraphics.jsxext;
+			remoteRef = 1EA094800EC80715004C7397 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1E5E385D0EA2FBA100FD67A3 /* Resources */ = {
@@ -776,6 +1016,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1EFAF74C0ED25DF500A8B55E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D1107290486CEB800E47090 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -803,8 +1050,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E5EFA5B0EAC3434006F064E /* TCJSContext.m in Sources */,
-				1E5EFA5E0EAC3459006F064E /* TCJSObject.m in Sources */,
 				1E5EFA640EAC363F006F064E /* TCJSPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -844,6 +1089,25 @@
 				1EB8CAF90EA1ACFB00984CD7 /* TVRageController.m in Sources */,
 				1EB8CAFB0EA1ACFB00984CD7 /* TVRageOperation.m in Sources */,
 				1E6369340EA270CC0003034E /* TCTVRagePlugin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EFAF74D0ED25DF500A8B55E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EFAF7570ED25E1500A8B55E /* TCXMLRPCServerPlugin.m in Sources */,
+				1EFAF7E50ED25FA200A8B55E /* XMLRPCConnection.m in Sources */,
+				1EFAF7E60ED25FA200A8B55E /* XMLRPCDecoder.m in Sources */,
+				1EFAF7E70ED25FA200A8B55E /* XMLRPCEncoder.m in Sources */,
+				1EFAF7E80ED25FA200A8B55E /* XMLRPCExtensions.m in Sources */,
+				1EFAF7E90ED25FA200A8B55E /* XMLRPCRequest.m in Sources */,
+				1EFAF7EA0ED25FA200A8B55E /* XMLRPCResponse.m in Sources */,
+				1EFAF7EB0ED25FA200A8B55E /* XMLRPCClient.m in Sources */,
+				1EFAF7EC0ED25FA200A8B55E /* XMLValueDecoder.m in Sources */,
+				1EFAF7F30ED2625E00A8B55E /* SimpleHTTPServer.m in Sources */,
+				1EFAF7F40ED2625E00A8B55E /* SimpleHTTPConnection.m in Sources */,
+				1EFAF7F70ED2642D00A8B55E /* XMLRPCServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,6 +1160,16 @@
 			isa = PBXTargetDependency;
 			target = 1EB8CADE0EA1ACC300984CD7 /* TCTVRagePlugin */;
 			targetProxy = 1E636A7B0EA29D090003034E /* PBXContainerItemProxy */;
+		};
+		1EA094C70EC80972004C7397 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E5EF99C0EAC33BC006F064E /* TCJSPlugin */;
+			targetProxy = 1EA094C60EC80972004C7397 /* PBXContainerItemProxy */;
+		};
+		1EFAF7700ED25E4300A8B55E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EFAF74F0ED25DF500A8B55E /* TCXMLRPCServerPlugin */;
+			targetProxy = 1EFAF76F0ED25E4300A8B55E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -997,7 +1271,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "TCJSPlugin-Info.plist";
+				INFOPLIST_FILE = "Resources/Plugins/TCJSPlugin-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -1021,7 +1295,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "TCJSPlugin-Info.plist";
+				INFOPLIST_FILE = "Resources/Plugins/TCJSPlugin-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -1198,6 +1472,56 @@
 			};
 			name = Release;
 		};
+		1EFAF7520ED25DF600A8B55E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "TCXMLRPCServerPlugin-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TCXMLRPCServerPlugin;
+				WRAPPER_EXTENSION = tcplugin;
+			};
+			name = Debug;
+		};
+		1EFAF7530ED25DF600A8B55E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "TCXMLRPCServerPlugin-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TCXMLRPCServerPlugin;
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		26FC0A850875C7B200E6366F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1331,6 +1655,15 @@
 			buildConfigurations = (
 				1EB8CAE10EA1ACC400984CD7 /* Debug */,
 				1EB8CAE20EA1ACC400984CD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EFAF7540ED25DF600A8B55E /* Build configuration list for PBXNativeTarget "TCXMLRPCServerPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EFAF7520ED25DF600A8B55E /* Debug */,
+				1EFAF7530ED25DF600A8B55E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

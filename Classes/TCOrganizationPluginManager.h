@@ -27,6 +27,8 @@
 
 
 @interface TCOrganizationPluginManager : NSObject {
+	NSMutableDictionary *mUUIDDictionary;
+	
 	NSMutableArray *mClasses;
 	NSMutableArray *mInstances;
 	NSMutableArray *mBundles;
@@ -36,5 +38,5 @@
 -(BOOL)classIsValidPlugin:(Class)pluginClass;
 -(void)addPluginClass:(Class)pluginClass forBundle:(NSBundle *)bundle;
 -(void)addPluginInstance:(id)pluginInstance;
-
+-(BOOL)loadAllDependenciesForBundle:(NSBundle *)bundle;
 @end

@@ -25,6 +25,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <CoreFoundation/CoreFoundation.h>
+#import "Technicolor.h"
 
 @interface TCOrganizationPlugin : NSObject {
 

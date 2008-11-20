@@ -26,6 +26,8 @@
 #import <Foundation/Foundation.h>
 #import <JavaScriptCore/JSContextRef.h>
 
+@class TCJSObject;
+
 @interface TCJSContext : NSObject {
 	JSGlobalContextRef context;
 }

@@ -27,8 +27,10 @@
 #import "Technicolor.h"
 #import "TCOrganizationPlugin.h"
 
-@interface TCJSPlugin : TCOrganizationPlugin {
+@class JSXObjCInterpreter;
 
+@interface TCJSPlugin : TCOrganizationPlugin {
+	JSXObjCInterpreter *interpreter;
 }
 
 @end
