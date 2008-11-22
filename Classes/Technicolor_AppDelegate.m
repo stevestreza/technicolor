@@ -27,7 +27,7 @@
 #import "TCWizardController.h"
 #import "TCTVShowController.h"
 #import "TCProcessingQueueController.h"
-#import "TCCore.h"
+#import "TCCoreUtils.h"
 
 @implementation Technicolor_AppDelegate
 @synthesize viewControllers, jobQueue;
@@ -60,7 +60,7 @@
         return managedObjectModel;
     }
 	
-    NSManagedObjectModel *coreModel = [TCCore coreModel];
+    NSManagedObjectModel *coreModel = [TCCoreUtils coreModel];
 	NSManagedObjectModel *pluginModel = [[self organizationPluginManager] pluginModel];
 	
 	managedObjectModel = [[NSManagedObjectModel modelByMergingModels:[NSArray arrayWithObjects:coreModel,pluginModel,nil]] retain];

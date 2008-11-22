@@ -9,10 +9,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "SimpleHTTPServer.h"
+#import "TCHTTPServer.h"
 
-@interface SimpleHTTPConnection : NSObject {
-	SimpleHTTPServer *server;
+@interface TCHTTPConnection : NSObject {
+	TCHTTPServer *server;
 	
     NSFileHandle *fileHandle;
     id delegate;
@@ -24,7 +24,7 @@
 
 - (id)initWithFileHandle:(NSFileHandle *)fh delegate:(id)dl;
 - (NSFileHandle *)fileHandle;
-- (SimpleHTTPServer *)server;
+- (TCHTTPServer *)server;
 
 - (void)setAddress:(NSString *)value;
 - (NSString *)address;

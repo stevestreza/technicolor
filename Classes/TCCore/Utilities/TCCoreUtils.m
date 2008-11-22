@@ -23,21 +23,21 @@
  
  */
 
-#import "TCCore.h"
+#import "TCCoreUtils.h"
 
 
-@implementation TCCore
+@implementation TCCoreUtils
 
 static NSBundle *coreBundle = nil;
 +(NSBundle *)coreBundle{
 	if(!coreBundle){
-		coreBundle = [[NSBundle bundleForClass:[TCCore class]] retain];
+		coreBundle = [[NSBundle bundleForClass:[TCCoreUtils class]] retain];
 	}
 	return coreBundle;
 }
 
 +(NSManagedObjectModel *)coreModel{
-	return [NSManagedObjectModel mergedModelFromBundles:[NSArray arrayWithObject:[TCCore coreBundle]]];
+	return [NSManagedObjectModel mergedModelFromBundles:[NSArray arrayWithObject:[TCCoreUtils coreBundle]]];
 }
 
 @end

@@ -10,9 +10,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class SimpleHTTPConnection;
+@class TCHTTPConnection;
 
-@interface SimpleHTTPServer : NSObject {
+@interface TCHTTPServer : NSObject {
     unsigned port;
     id delegate;
 
@@ -21,6 +21,9 @@
     NSMutableArray *connections;
     NSMutableArray *requests;    
     NSDictionary *currentRequest;
+	
+	NSOperationQueue *handlerQueue;
+	NSMutableDictionary *handlers;
 }
 
 - (id)initWithTCPPort:(unsigned)po delegate:(id)dl;
@@ -28,8 +31,8 @@
 - (NSArray *)connections;
 - (NSArray *)requests;
 
-- (void)closeConnection:(SimpleHTTPConnection *)connection;
-- (void)newRequestWithURL:(NSURL *)url connection:(SimpleHTTPConnection *)connection;
+- (void)closeConnection:(TCHTTPConnection *)connection;
+- (void)newRequestWithURL:(NSURL *)url connection:(TCHTTPConnection *)connection;
 
 // Request currently being processed
 // Note: this need not be the most recently received request

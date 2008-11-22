@@ -18,5 +18,7 @@
 	<string>1.0</string>
 	<key>NSPrincipalClass</key>
 	<string>TCJSPlugin</string>
+	<key>UUID</key>
+	<string>B040A569-DE2C-4CAF-9905-DB327C876C41</string>
 </dict>
 </plist>

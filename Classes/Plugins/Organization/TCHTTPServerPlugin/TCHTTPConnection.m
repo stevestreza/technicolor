@@ -8,13 +8,13 @@
 //           http://creativecommons.org/licenses/by/2.5/
 //
 
-#import "SimpleHTTPConnection.h"
-#import "SimpleHTTPServer.h"
+#import "TCHTTPConnection.h"
+#import "TCHTTPServer.h"
 #import <netinet/in.h>      // for sockaddr_in
 #import <arpa/inet.h>       // for inet_ntoa
 
 
-@implementation SimpleHTTPConnection
+@implementation TCHTTPConnection
 
 - (id)initWithFileHandle:(NSFileHandle *)fh delegate:(id)dl
 {
@@ -149,11 +149,11 @@
 	[[self server] connectionDidClose:self];
 }
 
-- (SimpleHTTPServer *)server{
+- (TCHTTPServer *)server{
 	return server;
 }
 
--(void)_setServer:(SimpleHTTPServer *)srv{
+-(void)_setServer:(TCHTTPServer *)srv{
 	[srv retain];
 	[server release];
 	server = srv;

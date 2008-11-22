@@ -18,5 +18,11 @@
 	<string>1.0</string>
 	<key>NSPrincipalClass</key>
 	<string>TCXMLRPCServerPlugin</string>
+	<key>UUID</key>
+	<string>67049703-4944-4B96-9F5D-6BE83B954821</string>
+	<key>Dependencies</key>
+	<array>
+		<string>EDD4962D-4BCC-4CF5-A7B0-35FC22E85B09</string>
+	</array>
 </dict>
 </plist>

@@ -26,7 +26,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface TCCore : NSObject {
+@interface TCCoreUtils : NSObject {
 
 }
 

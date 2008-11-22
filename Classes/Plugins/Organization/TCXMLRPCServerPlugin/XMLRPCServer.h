@@ -7,9 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "SimpleHTTPServer.h"
+//#import "SimpleHTTPServer.h"
 
-@interface XMLRPCServer : SimpleHTTPServer {
+@interface XMLRPCServer : NSObject {
 	NSDictionary *methodDictionary;
 	
 	NSOperationQueue *handlerQueue;
@@ -18,4 +18,5 @@
 - (id)initWithTCPPort:(unsigned)po;
 
 -(NSString *)methodNameForXMLDocument:(NSXMLDocument *)document error:(NSError **)err;
+-(NSDictionary *)namespaceForPath:(NSString *)namespacePath createIfNecessary:(BOOL)createIfNecessary;
 @end

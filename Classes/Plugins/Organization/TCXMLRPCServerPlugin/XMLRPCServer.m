@@ -75,6 +75,10 @@
 	return self;
 }
 
+-(NSMutableDictionary *)addNamespaceNamed:(NSString *)namespacePath{
+	return [self namespaceForPath:namespacePath createIfNecessary:YES];
+}
+
 -(void)addMethodNamed:(NSString *)methodName 
 			forTarget:(id)target
 			 selector:(SEL)selector{
@@ -108,17 +112,10 @@
 		goto METHOD_FOUND;
 	}
 	
-	id currentNamespace = methodDictionary;
-	NSArray *pieces = [methodSelector componentsSeparatedByString:@"."];
-	NSUInteger pieceIndex = 0;
-	for(pieceIndex = 0; pieceIndex < pieces.count - 1; pieceIndex++){
-		NSString *namespace = [pieces objectAtIndex:pieceIndex];
-		currentNamespace = [currentNamespace valueForKey:namespace];
-		
-		if(!currentNamespace) goto METHOD_FOUND;
+	NSDictionary *currentNamespace = [self namespaceForPath:methodSelector createIfNecessary:NO];
+	if(currentNamespace){
+		value = [currentNamespace valueForKey:[[methodSelector componentsSeparatedByString:@"."] lastObject]];
 	}
-	
-	value = [currentNamespace valueForKey:[pieces lastObject]];
 	
 METHOD_FOUND:
 	
@@ -127,6 +124,27 @@ METHOD_FOUND:
 	}
 	
 	return value;
+}
+
+-(NSDictionary *)namespaceForPath:(NSString *)namespacePath createIfNecessary:(BOOL)createIfNecessary{
+	NSMutableDictionary *currentNamespace = methodDictionary;
+	NSArray *pieces = [namespacePath componentsSeparatedByString:@"."];
+	NSUInteger pieceIndex = 0;
+	for(pieceIndex = 0; pieceIndex < pieces.count - 1; pieceIndex++){
+		NSString *namespace = [pieces objectAtIndex:pieceIndex];
+		currentNamespace = [currentNamespace valueForKey:namespace];
+		
+		if(!currentNamespace){
+			if(createIfNecessary){
+				id newDict = [NSMutableDictionary dictionary];
+				[currentNamespace setValue:newDict forKey:namespace];
+				currentNamespace = newDict;
+			}else{
+				return nil;
+			}
+		}
+	}
+	return currentNamespace;
 }
 
 -(NSString *)methodNameForXMLDocument:(NSXMLDocument *)document error:(NSError **)err{

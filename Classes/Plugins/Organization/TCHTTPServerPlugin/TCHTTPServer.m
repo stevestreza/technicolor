@@ -8,18 +8,20 @@
 //           http://creativecommons.org/licenses/by/2.5/
 //
 
-#import "SimpleHTTPServer.h"
-#import "SimpleHTTPConnection.h"
+#import "TCHTTPServer.h"
+#import "TCHTTPConnection.h"
 #import <sys/socket.h>   // for AF_INET, PF_INET, SOCK_STREAM, SOL_SOCKET, SO_REUSEADDR
 #import <netinet/in.h>   // for IPPROTO_TCP, sockaddr_in
 //#import <unistd.h>
+#import "TCRegex.h"
+#import "TCHTTPHandler.h"
 
-@interface SimpleHTTPServer (PrivateMethods)
+@interface TCHTTPServer (PrivateMethods)
 - (void)setCurrentRequest:(NSDictionary *)value;
 - (void)processNextRequestIfNecessary;
 @end
 
-@implementation SimpleHTTPServer
+@implementation TCHTTPServer
 
 - (id)initWithTCPPort:(unsigned)po delegate:(id)dl
 {
@@ -28,11 +30,15 @@
         delegate = [dl retain];
         connections = [[NSMutableArray alloc] init];
         requests = [[NSMutableArray alloc] init];
+
+		handlerQueue = [[NSOperationQueue    alloc] init];
+		handlers     = [[NSMutableDictionary alloc] init];
+		
         [self setCurrentRequest:nil];
         
         NSAssert(delegate != nil, @"Please specify a delegate");
-        NSAssert([delegate respondsToSelector:@selector(processURL:connection:)],
-                  @"Delegate needs to implement 'processURL:connection:'");
+//        NSAssert([delegate respondsToSelector:@selector(processURL:connection:)],
+//                  @"Delegate needs to implement 'processURL:connection:'");
         NSAssert([delegate respondsToSelector:@selector(stopProcessing)],
                  @"Delegate needs to implement 'stopProcessing'");
 
@@ -80,6 +86,10 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+	
+	[handlerQueue release];
+	[handlers     release];
+	
     [fileHandle release];
     [socketPort release];
     [currentRequest release];
@@ -89,6 +99,16 @@
     [super dealloc];
 }
 
+#pragma mark Managing handlers
+
+-(void)addHandlerForRegex:(NSString *)regexPath
+				   target:(id)target
+				 selector:(SEL)selector{
+	TCHTTPHandler *handler = [[[TCHTTPHandler alloc] initWithRegex:regexPath 
+															target:target 
+														  selector:selector] autorelease];
+	[handlers setValue:handler forKey:regexPath];
+}
 
 #pragma mark Managing connections
 
@@ -108,7 +128,7 @@
     [fileHandle acceptConnectionInBackgroundAndNotify];
 
     if( remoteFileHandle ) {
-        SimpleHTTPConnection *connection = [[SimpleHTTPConnection alloc] initWithFileHandle:remoteFileHandle delegate:self];
+        TCHTTPConnection *connection = [[TCHTTPConnection alloc] initWithFileHandle:remoteFileHandle delegate:self];
         if( connection ) {
             NSIndexSet *insertedIndexes = [NSIndexSet indexSetWithIndex:[connections count]];
             [self willChange:NSKeyValueChangeInsertion
@@ -121,7 +141,7 @@
     }
 }
 
-- (void)closeConnection:(SimpleHTTPConnection *)connection;
+- (void)closeConnection:(TCHTTPConnection *)connection;
 {
     unsigned connectionIndex = [connections indexOfObjectIdenticalTo:connection];
     if( connectionIndex == NSNotFound ) return;
@@ -162,7 +182,7 @@
 
 - (NSArray *)requests { return requests; }
 
-- (void)newRequestWithURL:(NSURL *)url connection:(SimpleHTTPConnection *)connection
+- (void)newRequestWithURL:(NSURL *)url connection:(TCHTTPConnection *)connection
 {
     //NSLog(@"requestWithURL:connection:");
     if( url == nil ) return;
@@ -188,9 +208,24 @@
 {
     if( [self currentRequest] == nil && [requests count] > 0 ) {
         [self setCurrentRequest:[requests objectAtIndex:0]];
-        [delegate processURL:[currentRequest objectForKey:@"url"]
-                  connection:[currentRequest objectForKey:@"connection"]];
+        [self processURL:[currentRequest objectForKey:@"url"]
+              connection:[currentRequest objectForKey:@"connection"]];
     }
+}
+
+-(void)processURL:(NSURL *)url connection:(TCHTTPConnection *)conn{
+	NSArray *allURLs = [handlers allKeys];
+	NSString *location = [url absoluteString];
+	NSLog(@"Processing url: %@",location);
+	for(NSString *regexPath in allURLs){
+		if([location matchedByPattern:regexPath]){
+			TCHTTPHandler *sourceHandler = [handlers valueForKey:regexPath];
+			TCHTTPHandler *handler = [[sourceHandler copy] autorelease];
+			handler.connection = conn;
+			
+			[handlerQueue addOperation:handler];
+		}
+	}
 }
 
 - (void)setCurrentRequest:(NSDictionary *)value
@@ -203,7 +238,7 @@
 
 #pragma mark Sending replies
 
--(void)connectionDidClose:(SimpleHTTPConnection *)conn{
+-(void)connectionDidClose:(TCHTTPConnection *)conn{
     // A reply indicates that the current request has been completed
     // (either successfully of by responding with an error message)
     // Hence we need to remove the current request:

@@ -7,7 +7,7 @@
 //
 
 #import "TCXMLRPCServerPlugin.h"
-#import "SimpleHTTPConnection.h"
+#import "TCHTTPConnection.h"
 
 
 @implementation TCXMLRPCServerPlugin
@@ -15,11 +15,33 @@
 TCUUID(@"67049703-4944-4B96-9F5D-6BE83B954821")
 
 -(void)awake{
-	server = [[XMLRPCServer alloc] initWithTCPPort:14156];
-	[server addMethodNamed:@"getShows" forTarget:self selector:@selector(getShows:)];
+//	server = [[XMLRPCServer alloc] initWithTCPPort:14156];
+//	[server addMethodNamed:@"getShows" forTarget:self selector:@selector(getShows:)];
+	
+//	[self loadHandlers];
 }
 
--(void)getShows:(SimpleHTTPConnection *)conn{
+-(void)loadHandlers{
+	if(!handlers){
+		handlers = [[NSArray arrayWithObjects:
+					 [[[TCXMLRPCTVEpisodeHandler alloc] init] autorelease],
+					 nil] retain];
+		
+		for(id handler in handlers){	
+			NSString *name = [handler name];
+			NSMutableDictionary *namespace = [server addNamespaceNamed:name];
+
+			NSArray *handlerNames = [handler methodNames];
+			for(NSString *handlerName in handlerNames){
+				[server addMethodNamed:[NSString stringWithFormat:@"%@.%@",name,handlerName] 
+							 forTarget:handler 
+							  selector:[handler selectorForMethodNamed:handlerName]];
+			}
+		}
+	}
+}
+
+-(void)getShows:(TCHTTPConnection *)conn{
 	[conn replyWithStatusCode:200 headers:nil body:[[NSString stringWithFormat:@"Epic win!\n"] dataUsingEncoding:NSUTF8StringEncoding]];
 }
 

@@ -9,10 +9,14 @@
 #import <Cocoa/Cocoa.h>
 #import "Technicolor.h"
 #import <TCCore/TCOrganizationPlugin.h>
-#import "XMLRPCServer.h"
+//#import "XMLRPCServer.h"
+
+#import "TCXMLRPCTVEpisodeHandler.h"
 
 @interface TCXMLRPCServerPlugin : TCOrganizationPlugin {
-	XMLRPCServer *server;
+	id server;
+	
+	NSArray *handlers;
 }
 
 @end

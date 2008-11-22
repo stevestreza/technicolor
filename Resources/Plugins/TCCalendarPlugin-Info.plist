@@ -18,5 +18,7 @@
 	<string>1.0</string>
 	<key>NSPrincipalClass</key>
 	<string>TCCalendarPlugin</string>
+	<key>UUID</key>
+	<string>90FAD8EB-FE51-48E3-9783-5BBE81CEFBAC</string>
 </dict>
 </plist>

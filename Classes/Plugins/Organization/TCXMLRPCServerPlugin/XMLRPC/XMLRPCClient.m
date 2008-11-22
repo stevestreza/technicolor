@@ -175,10 +175,10 @@
 			if(!error   ) error    = [NSNull null];
 			@try {
 				NSArray *selectorParts = [selectorName componentsSeparatedByString:@":"];
-//				NSLog(@"Calling -[self %@:%@ %@:%@ %@:%@];",
-//					  [selectorParts objectAtIndex:0], response,
-//					  [selectorParts objectAtIndex:1], request,
-//					  [selectorParts objectAtIndex:2], error);
+				NSLog(@"Calling -[self %@:%@ %@:%@ %@:%@];",
+					  [selectorParts objectAtIndex:0], response,
+					  [selectorParts objectAtIndex:1], request,
+					  [selectorParts objectAtIndex:2], error);
 				
 				NSMethodSignature *sig = [self methodSignatureForSelector:selector];
 				NSInvocation *inv = [NSInvocation invocationWithMethodSignature:sig];
