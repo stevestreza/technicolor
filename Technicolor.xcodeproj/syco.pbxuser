@@ -133,7 +133,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 69;
-		modificationTime = 249087313.001061;
+		modificationTime = 249087866.353365;
 		state = 0;
 	};
 	1E3842DD0ED535C800DD6F43 /* PBXTextBookmark */ = {
@@ -257,7 +257,7 @@
 		ignoreCount = 0;
 		lineNumber = 45;
 		location = TCXMLRPCServerPlugin;
-		modificationTime = 249087313.023938;
+		modificationTime = 249087866.360152;
 		state = 0;
 	};
 	1E3843930ED5404500DD6F43 /* XMLRPCServer.m:103 */ = {
@@ -273,7 +273,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 103;
-		modificationTime = 249087313.036602;
+		modificationTime = 249087866.374183;
 		state = 0;
 	};
 	1E3843BA0ED67BAF00DD6F43 /* TCXMLRPCTVEpisodeHandler.h */ = {
@@ -345,7 +345,7 @@
 		ignoreCount = 0;
 		lineNumber = 31;
 		location = TCXMLRPCServerPlugin;
-		modificationTime = 249087313.058297;
+		modificationTime = 249087866.380366;
 		state = 0;
 	};
 	1E3844650ED7D56800DD6F43 /* TCHTTPServerPlugin */ = {
@@ -661,7 +661,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		location = CoreFoundation;
-		modificationTime = 249087312.29164;
+		modificationTime = 249087865.364716;
 		state = 1;
 		symbolName = "-[NSException raise]";
 	};
@@ -676,7 +676,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		location = libobjc.A.dylib;
-		modificationTime = 249087312.291893;
+		modificationTime = 249087865.365164;
 		state = 1;
 		symbolName = objc_exception_throw;
 	};
@@ -1790,11 +1790,11 @@
 		delayBeforeContinue = 0;
 		fileReference = 1E3844730ED7D59900DD6F43 /* TCHTTPServerPlugin.m */;
 		functionName = "-handleTest:";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 23;
 		location = TCHTTPServerPlugin;
-		modificationTime = 249087326.163648;
+		modificationTime = 249087871.222736;
 		state = 1;
 	};
 	1E3846BD0ED8C31000DD6F43 /* PBXTextBookmark */ = {
@@ -1867,11 +1867,11 @@
 		delayBeforeContinue = 0;
 		fileReference = 1EFAF7F00ED2625E00A8B55E /* TCHTTPServer.m */;
 		functionName = "-processURL:connection:";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 223;
 		location = TCHTTPServerPlugin;
-		modificationTime = 249087319.668184;
+		modificationTime = 249087871.400543;
 		state = 1;
 	};
 	1E3846C70ED8C36D00DD6F43 /* PBXTextBookmark */ = {
@@ -2262,7 +2262,7 @@
 		ignoreCount = 0;
 		lineNumber = 63;
 		location = Technicolor;
-		modificationTime = 249087312.289138;
+		modificationTime = 249087865.347955;
 		state = 1;
 	};
 	1E3BA4070E8F28E000585E21 /* TCDVDVideo.m:27 */ = {
@@ -2278,7 +2278,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 27;
-		modificationTime = 249087312.974981;
+		modificationTime = 249087866.331259;
 		state = 0;
 	};
 	1E4916130EABFB76005CEC4F /* Technicolor.h */ = {
@@ -3055,7 +3055,7 @@
 	};
 	1E9430D60E69270F00EEA6B1 /* XDModelBookmark */ = {
 		isa = XDModelBookmark;
-		fRef = 770B37EC0679A11B001EADE2 /* Technicolor_DataModel.xcdatamodel */;
+		fRef = 770B37EC0679A11B001EADE2 /* Core Types */;
 		fallbackIsa = PBXBookmark;
 	};
 	1E9430EC0E69295E00EEA6B1 /* Technicolor_AppDelegate.m:301 */ = {
@@ -3072,7 +3072,7 @@
 		ignoreCount = 0;
 		lineNumber = 301;
 		location = Technicolor;
-		modificationTime = 249087312.288945;
+		modificationTime = 249087865.347698;
 		state = 1;
 	};
 	1E943E580ED511D200615A61 /* PBXTextBookmark */ = {
@@ -3142,7 +3142,7 @@
 	};
 	1EA0938B0EC7D9D6004C7397 /* XDModelBookmark */ = {
 		isa = XDModelBookmark;
-		fRef = 770B37EC0679A11B001EADE2 /* Technicolor_DataModel.xcdatamodel */;
+		fRef = 770B37EC0679A11B001EADE2 /* Core Types */;
 		fallbackIsa = PBXBookmark;
 	};
 	1EA094A30EC80768004C7397 /* PBXTextBookmark */ = {
@@ -3612,7 +3612,7 @@
 		ignoreCount = 0;
 		lineNumber = 54;
 		location = Technicolor;
-		modificationTime = 249087312.289519;
+		modificationTime = 249087865.348466;
 		state = 1;
 	};
 	1EE3EEAE0E53D19A0099684C /* TCVideo.m:16 */ = {
@@ -3628,7 +3628,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 16;
-		modificationTime = 249087312.865492;
+		modificationTime = 249087866.086869;
 		state = 0;
 	};
 	1EE3EEBA0E53D1B40099684C /* TCVideo.m:16 */ = {
@@ -3644,7 +3644,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 16;
-		modificationTime = 249087312.890061;
+		modificationTime = 249087866.09493;
 		state = 0;
 	};
 	1EF27D2C0EBEAE4700BFC961 /* PBXTextBookmark */ = {
@@ -4614,7 +4614,13 @@
 			sepNavWindowFrame = "{{15, -1}, {1439, 874}}";
 		};
 	};
-	770B37EC0679A11B001EADE2 /* Technicolor_DataModel.xcdatamodel */ = {
+	770B37EC0679A11B001EADE2 /* Core Types */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = folder;
+		name = "Core Types";
+		path = "/Users/syco/Projects/Technicolor/technicolor/Classes/TCCore/Core Types";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			"Xdesign Model Editor Bookmark Key" = {
 				UIContextForDetailArea = {

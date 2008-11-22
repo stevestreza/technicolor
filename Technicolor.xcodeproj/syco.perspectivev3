@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>ActivePerspectiveName</key>
-	<string>Project</string>
+	<string>Debug</string>
 	<key>AllowedModules</key>
 	<array>
 		<dict>
@@ -233,8 +233,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -276,9 +274,8 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>1E6369150EA2592C0003034E</string>
-								<string>1E6369720EA273370003034E</string>
 								<string>1E63690F0EA2591D0003034E</string>
-								<string>1EB8C95D0EA1AAF500984CD7</string>
+								<string>1EB8C93A0EA1AA3400984CD7</string>
 								<string>1EB8C9320EA1A9D500984CD7</string>
 								<string>1EB8C9380EA1AA1D00984CD7</string>
 								<string>1E38445F0ED7D54F00DD6F43</string>
@@ -292,40 +289,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>24</integer>
-									<integer>20</integer>
-									<integer>19</integer>
-									<integer>17</integer>
-									<integer>1</integer>
-									<integer>0</integer>
-								</array>
-								<array>
-									<integer>25</integer>
-									<integer>20</integer>
-									<integer>19</integer>
-									<integer>17</integer>
-									<integer>1</integer>
-									<integer>0</integer>
-								</array>
-								<array>
-									<integer>26</integer>
-									<integer>20</integer>
-									<integer>19</integer>
-									<integer>17</integer>
-									<integer>1</integer>
-									<integer>0</integer>
-								</array>
-								<array>
-									<integer>27</integer>
-									<integer>20</integer>
-									<integer>19</integer>
-									<integer>17</integer>
-									<integer>1</integer>
-									<integer>0</integer>
+									<integer>96</integer>
+									<integer>79</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 161}, {286, 760}}</string>
+							<string>{{0, 345}, {286, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -341,8 +310,6 @@
 							<string>MainColumn</string>
 							<real>286</real>
 						</array>
-						<key>RubberWindowFrame</key>
-						<string>-1 59 1440 819 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -574,8 +541,6 @@
 							<dict>
 								<key>Frame</key>
 								<string>{{0, 0}, {1132, 387}}</string>
-								<key>RubberWindowFrame</key>
-								<string>-1 59 1440 819 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -655,8 +620,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1132, 359}}</string>
-										<key>RubberWindowFrame</key>
-										<string>-1 59 1440 819 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -726,6 +689,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
@@ -737,6 +702,8 @@
 					<dict>
 						<key>Frame</key>
 						<string>{{0, 0}, {1440, 329}}</string>
+						<key>RubberWindowFrame</key>
+						<string>-1 59 1440 819 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugCLIModule</string>
@@ -811,7 +778,11 @@
 							</array>
 							<key>Frame</key>
 							<string>{{703, 0}, {737, 215}}</string>
+							<key>RubberWindowFrame</key>
+							<string>-1 59 1440 819 0 0 1440 878 </string>
 						</dict>
+						<key>RubberWindowFrame</key>
+						<string>-1 59 1440 819 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugSessionModule</string>
@@ -871,8 +842,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1E3846F10ED8C56300DD6F43</string>
-		<string>1E3846EE0ED8C55400DD6F43</string>
+		<string>1E3847110ED8C77D00DD6F43</string>
 		<string>1E3846640ED8C15C00DD6F43</string>
 		<string>1E3846650ED8C15C00DD6F43</string>
 		<string>/Users/syco/Projects/Technicolor/technicolor/Technicolor.xcodeproj</string>
