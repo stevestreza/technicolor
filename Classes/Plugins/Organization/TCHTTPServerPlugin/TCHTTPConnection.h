@@ -20,7 +20,11 @@
 
     CFHTTPMessageRef message;
     BOOL isMessageComplete;
+	
+	NSData *messageBody;
 }
+
+@property (readonly) NSData *messageBody;
 
 - (id)initWithFileHandle:(NSFileHandle *)fh delegate:(id)dl;
 - (NSFileHandle *)fileHandle;

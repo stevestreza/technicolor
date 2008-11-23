@@ -24,6 +24,7 @@
 		
         isMessageComplete = YES;
         message = NULL;
+		messageBody = [[NSMutableData data] retain];
 
         // Get IP address of remote client
         CFSocketRef socket;
@@ -88,9 +89,15 @@
         Boolean success = CFHTTPMessageAppendBytes(message,
                                                    [data bytes],
                                                    [data length]);
+		
         if( success ) {
             if( CFHTTPMessageIsHeaderComplete(message) ) {
                 isMessageComplete = YES;
+				
+				[messageBody release];
+				messageBody = nil;
+				[self messageBody];
+				
                 CFURLRef url = CFHTTPMessageCopyRequestURL(message);
                 [delegate newRequestWithURL:(NSURL *)url connection:self];
                 CFRelease(url);
@@ -160,9 +167,11 @@
 }
 
 -(NSData *)messageBody{
-	CFDataRef messageData = CFHTTPMessageCopyBody(message);
-	NSData *messageBody = (NSData *)messageData;
-	return [messageBody autorelease];
+	if(!messageBody){
+		CFDataRef messageData = CFHTTPMessageCopyBody(message);
+		messageBody = (NSData *)messageData;
+	}
+	return messageBody;
 }
 
 @end
