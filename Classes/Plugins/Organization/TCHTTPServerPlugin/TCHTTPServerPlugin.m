@@ -16,7 +16,7 @@ TCUUID(@"EDD4962D-4BCC-4CF5-A7B0-35FC22E85B09")
 -(void)awake{
 	server = [[TCHTTPServer alloc] initWithTCPPort:14156 delegate:self];
 	
-	[server addHandlerForRegex:@"^\/test\/.*$" target:self selector:@selector(handleTest:)];
+//	[server addHandlerForRegex:@"^\/test\/.*$" target:self selector:@selector(handleTest:)];
 }
 
 -(void)handleTest:(TCHTTPConnection *)connection{

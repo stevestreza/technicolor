@@ -44,4 +44,7 @@
 - (void)replyWithData:(NSData *)data MIMEType:(NSString *)type;
 - (void)replyWithStatusCode:(int)code message:(NSString *)message;
 
+-(void)addHandlerForRegex:(NSString *)regexPath
+				   target:(id)target
+				selector:(SEL)selector;
 @end

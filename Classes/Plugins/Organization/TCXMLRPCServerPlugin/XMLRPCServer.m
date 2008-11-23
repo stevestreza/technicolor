@@ -8,6 +8,8 @@
 
 #import "XMLRPCServer.h"
 #import "XMLRPCResponse.h"
+#import "TCHTTPConnection.h"
+
 
 @interface XMLRPCInvocation : NSInvocation {
 	NSString *methodName;
@@ -66,13 +68,20 @@
 
 @implementation XMLRPCServer
 
-- (id)initWithTCPPort:(unsigned)po{
-	if(self = [super initWithTCPPort:po delegate:self]){
+-(id)initWithHTTPServer:(id)server{	
+	if(self = [super init]){
+		rootServer = server;
+
 		methodDictionary = [[NSMutableDictionary alloc] init];
-		
 		handlerQueue = [[NSOperationQueue alloc] init];
+		
+		[self setupRootServer];
 	}
 	return self;
+}
+
+-(void)setupRootServer{
+	[rootServer addHandlerForRegex:@"^\/xmlrpc\/$" target:self selector:@selector(processConnection:)];
 }
 
 -(NSMutableDictionary *)addNamespaceNamed:(NSString *)namespacePath{
@@ -86,9 +95,7 @@
 						forKey:methodName];
 }
 
-- (void)processURL:(NSURL *)path connection:(SimpleHTTPConnection *)connection{
-	NSLog(@"Path: %@",path);
-
+- (void)processConnection:(TCHTTPConnection *)connection{
 	NSData *data = [connection messageBody];
 	NSString *dataBody = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
 	

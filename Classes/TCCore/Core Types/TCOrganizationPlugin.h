@@ -27,9 +27,15 @@
 #import <CoreFoundation/CoreFoundation.h>
 #import "Technicolor.h"
 
+@class TCOrganizationPluginManager;
+
 @interface TCOrganizationPlugin : NSObject {
 
 }
+
+-(CFUUIDRef)uuid;
+-(NSString *)uuidString;
+
 +(CFUUIDRef)generateUUID;
 -(void)addViewController:(NSViewController *)controller forType:(NSString *)type;
 @end

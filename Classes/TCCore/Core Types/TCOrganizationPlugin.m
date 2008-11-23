@@ -64,4 +64,12 @@ static NSMutableArray *pluginArray;
 	return uuid;
 }
 
+-(NSString *)uuidString{
+	CFUUIDRef uuid = [self uuid];
+	
+	CFStringRef uuidString = CFUUIDCreateString(NULL, uuid);
+	NSString *uuidStr = (NSString *)uuidString;
+	return [uuidStr autorelease];
+}
+
 @end

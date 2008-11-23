@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "TCHTTPConnection.h"
 
 @interface TCHTTPHandler : NSOperation {
 	NSString *mRegex;
@@ -14,10 +15,10 @@
 	id mTarget;
 	SEL mSelector;
 	
-	id mConnection;
+	TCHTTPConnection *mConnection;
 }
 
 @property (readonly) NSString     *regex;
 @property (readonly) NSInvocation *invocation;
-@property (assign  ) id            connection;
+@property (retain) TCHTTPConnection *connection;
 @end

@@ -24,10 +24,11 @@
  */
 
 #import <Cocoa/Cocoa.h>
-
+@class TCOrganizationPlugin;
 
 @interface TCOrganizationPluginManager : NSObject {
 	NSMutableDictionary *mUUIDDictionary;
+	NSMutableDictionary *mPluginsByUUID;
 	
 	NSMutableArray *mClasses;
 	NSMutableArray *mInstances;
@@ -35,8 +36,11 @@
 	NSManagedObjectModel *mPluginModel;
 }
 @property (readonly) NSManagedObjectModel *pluginModel;
+
++ ( TCOrganizationPluginManager * ) sharedPluginManager;
+
 -(BOOL)classIsValidPlugin:(Class)pluginClass;
 -(void)addPluginClass:(Class)pluginClass forBundle:(NSBundle *)bundle;
 -(void)addPluginInstance:(id)pluginInstance;
--(BOOL)loadAllDependenciesForBundle:(NSBundle *)bundle;
+-(TCOrganizationPlugin *)pluginWithUUID:(NSString *)uuid;
 @end

@@ -9,9 +9,11 @@
 #import <Cocoa/Cocoa.h>
 #import "Technicolor.h"
 #import <TCCore/TCOrganizationPlugin.h>
-//#import "XMLRPCServer.h"
+#import "XMLRPCServer.h"
 
 #import "TCXMLRPCTVEpisodeHandler.h"
+
+#define kTCHTTPServerPluginUUID @"EDD4962D-4BCC-4CF5-A7B0-35FC22E85B09"
 
 @interface TCXMLRPCServerPlugin : TCOrganizationPlugin {
 	id server;

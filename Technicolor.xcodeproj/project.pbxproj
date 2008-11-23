@@ -18,6 +18,9 @@
 		1E3845F60ED8BEDF00DD6F43 /* TCRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E3845F40ED8BEDF00DD6F43 /* TCRegex.h */; };
 		1E3845F70ED8BEDF00DD6F43 /* TCRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3845F50ED8BEDF00DD6F43 /* TCRegex.m */; };
 		1E38470B0ED8C72D00DD6F43 /* Technicolor_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 1E38470A0ED8C72D00DD6F43 /* Technicolor_DataModel.xcdatamodel */; };
+		1E38488A0ED8D99700DD6F43 /* XMLRPCServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAF7F60ED2642D00A8B55E /* XMLRPCServer.m */; };
+		1E3848930ED8DA1800DD6F43 /* TCOrganizationPluginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6369890EA2736E0003034E /* TCOrganizationPluginManager.m */; };
+		1E3848940ED8DA1800DD6F43 /* TCHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAF7F20ED2625E00A8B55E /* TCHTTPConnection.m */; };
 		1E4916140EABFB76005CEC4F /* Technicolor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E4916130EABFB76005CEC4F /* Technicolor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E50D7D60E5010ED00BDA918 /* Wizard.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1E50D7D40E5010ED00BDA918 /* Wizard.nib */; };
 		1E5E38680EA2FBB700FD67A3 /* TCCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E63689E0EA253590003034E /* TCCore.framework */; };
@@ -107,6 +110,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1E3844650ED7D56800DD6F43 /* TCHTTPServerPlugin */;
 			remoteInfo = TCHTTPServerPlugin;
+		};
+		1E3848540ED8D8BF00DD6F43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EFAF74F0ED25DF500A8B55E /* TCXMLRPCServerPlugin */;
+			remoteInfo = TCXMLRPCServerPlugin;
 		};
 		1E5E38660EA2FBA600FD67A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -945,6 +955,7 @@
 				1E636A7C0EA29D090003034E /* PBXTargetDependency */,
 				1E5E389D0EA2FD4400FD67A3 /* PBXTargetDependency */,
 				1E3846A50ED8C26600DD6F43 /* PBXTargetDependency */,
+				1E3848550ED8D8BF00DD6F43 /* PBXTargetDependency */,
 			);
 			name = Technicolor;
 			productInstallPath = "$(HOME)/Applications";
@@ -1163,6 +1174,9 @@
 				1EFAF7E80ED25FA200A8B55E /* XMLRPCExtensions.m in Sources */,
 				1EFAF7E90ED25FA200A8B55E /* XMLRPCRequest.m in Sources */,
 				1EFAF7EA0ED25FA200A8B55E /* XMLRPCResponse.m in Sources */,
+				1E38488A0ED8D99700DD6F43 /* XMLRPCServer.m in Sources */,
+				1E3848930ED8DA1800DD6F43 /* TCOrganizationPluginManager.m in Sources */,
+				1E3848940ED8DA1800DD6F43 /* TCHTTPConnection.m in Sources */,
 				1EFAF7EB0ED25FA200A8B55E /* XMLRPCClient.m in Sources */,
 				1EFAF7EC0ED25FA200A8B55E /* XMLValueDecoder.m in Sources */,
 				1E3843BC0ED67BAF00DD6F43 /* TCXMLRPCTVEpisodeHandler.m in Sources */,
@@ -1188,6 +1202,11 @@
 			isa = PBXTargetDependency;
 			target = 1E3844650ED7D56800DD6F43 /* TCHTTPServerPlugin */;
 			targetProxy = 1E3846A40ED8C26600DD6F43 /* PBXContainerItemProxy */;
+		};
+		1E3848550ED8D8BF00DD6F43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EFAF74F0ED25DF500A8B55E /* TCXMLRPCServerPlugin */;
+			targetProxy = 1E3848540ED8D8BF00DD6F43 /* PBXContainerItemProxy */;
 		};
 		1E5E38670EA2FBA600FD67A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

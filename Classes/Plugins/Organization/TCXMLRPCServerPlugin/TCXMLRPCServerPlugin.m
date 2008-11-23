@@ -8,17 +8,18 @@
 
 #import "TCXMLRPCServerPlugin.h"
 #import "TCHTTPConnection.h"
-
+#import "TCOrganizationPluginManager.h"
 
 @implementation TCXMLRPCServerPlugin
 
 TCUUID(@"67049703-4944-4B96-9F5D-6BE83B954821")
 
 -(void)awake{
-//	server = [[XMLRPCServer alloc] initWithTCPPort:14156];
-//	[server addMethodNamed:@"getShows" forTarget:self selector:@selector(getShows:)];
+	id plugin = [[TCOrganizationPluginManager sharedPluginManager] pluginWithUUID:kTCHTTPServerPluginUUID];
+	id rootServer = [plugin server];
+	server = [[XMLRPCServer alloc] initWithHTTPServer:rootServer];
 	
-//	[self loadHandlers];
+	[self loadHandlers];
 }
 
 -(void)loadHandlers{
@@ -26,6 +27,7 @@ TCUUID(@"67049703-4944-4B96-9F5D-6BE83B954821")
 		handlers = [[NSArray arrayWithObjects:
 					 [[[TCXMLRPCTVEpisodeHandler alloc] init] autorelease],
 					 nil] retain];
+					
 		
 		for(id handler in handlers){	
 			NSString *name = [handler name];

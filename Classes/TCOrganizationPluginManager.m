@@ -93,9 +93,56 @@
 		[self addPluginInstance:pluginInstance];
 		[pluginInstance release];		
 	}
+	[self awakeAllInstances];
+}
+
+-(void)awakeAllInstances{
+	NSMutableArray *instanceStack = [NSMutableArray arrayWithCapacity:mInstances.count];
+	NSMutableDictionary *uuidsActivated = [NSMutableDictionary dictionaryWithCapacity:mInstances.count];
 	
 	for(TCOrganizationPlugin *pluginInstance in mInstances){
-		[pluginInstance awake];
+		[instanceStack push:pluginInstance];
+	}
+	
+	printf("");
+	
+	while(instanceStack.count > 0){
+		BOOL shouldAwake = YES;
+		
+		TCOrganizationPlugin *plugin = [instanceStack pop];
+		NSString *uuid = [plugin uuidString];
+		
+		if([uuidsActivated valueForKey:uuid]){
+			shouldAwake = NO;
+			continue;
+		}
+		
+		NSBundle *bundle = [self bundleForUUID:uuid];
+		NSArray *dependencies = [[bundle infoDictionary] valueForKey:@"Dependencies"];
+		if(dependencies && dependencies.count > 0){
+			NSLog(@"Dependencies for %@ - %@",uuid,dependencies);
+			BOOL needsRepush = NO;
+			for(NSString *depUUID in dependencies){
+				NSLog(@"Pushing depID %@",depUUID);
+				if(![uuidsActivated valueForKey:depUUID]){
+					needsRepush = YES;
+					shouldAwake = NO;
+					[instanceStack push:[self pluginWithUUID:depUUID]];
+				}
+			}
+			if(needsRepush){
+				[instanceStack push:plugin];
+				continue;
+			}
+		}
+		
+		if(shouldAwake){
+		
+		[uuidsActivated setValue:kCFBooleanTrue forKey:uuid];
+		NSLog(@"Awaking %@",[plugin className]);
+		[plugin awake];
+		}
+		
 	}
 }
 
@@ -112,6 +159,15 @@
 	}
 	
 	[mInstances addObject:pluginInstance];	
+	
+	if(!mPluginsByUUID){
+		mPluginsByUUID = [[NSMutableDictionary dictionary] retain];
+	}
+	[mPluginsByUUID setValue:pluginInstance forKey:[pluginInstance uuidString]];
+}
+
+-(TCOrganizationPlugin *)pluginWithUUID:(NSString *)uuid{
+	return [mPluginsByUUID valueForKey:uuid];
 }
 
 -(void)_addBundle:(NSBundle *)pluginBundle{
@@ -233,5 +289,32 @@
 -(NSBundle *)bundleForUUID:(NSString *)uuid{
 	return [[self _uuidDictionary] valueForKey:uuid];
 }
+
+static TCOrganizationPluginManager * sSharedPluginManager = ((void *)0); 
+
++ ( TCOrganizationPluginManager * ) sharedPluginManager {
+	@synchronized(self) {
+		if ( sSharedPluginManager == nil) {
+			[[self alloc] init];
+		}
+	} 
+	return sSharedPluginManager;
+} 
+
++ (id)allocWithZone:(NSZone *)zone{
+	@synchronized(self){
+		if( sSharedPluginManager == nil) { 
+			sSharedPluginManager = [super allocWithZone:zone]; 
+			return sSharedPluginManager ;
+		}
+	} 
+	return nil;
+}
+
+- (id)copyWithZone:(NSZone *)zone{return self;}
+- (id)retain{return self;}
+- (unsigned)retainCount{return UINT_MAX;}
+- (void)release{}
+- (id)autorelease{return self;}
 
 @end

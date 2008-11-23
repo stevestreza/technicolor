@@ -219,11 +219,14 @@
 	NSLog(@"Processing url: %@",location);
 	for(NSString *regexPath in allURLs){
 		if([location matchedByPattern:regexPath]){
+			NSLog(@"Regex '%@' DID match %@",regexPath,location);
 			TCHTTPHandler *sourceHandler = [handlers valueForKey:regexPath];
 			TCHTTPHandler *handler = [[sourceHandler copy] autorelease];
 			handler.connection = conn;
 			
 			[handlerQueue addOperation:handler];
+		}else{
+			NSLog(@"Regex '%@' did not match %@",regexPath,location);
 		}
 	}
 }

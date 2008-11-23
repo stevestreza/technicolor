@@ -11,11 +11,9 @@
 
 @interface XMLRPCServer : NSObject {
 	NSDictionary *methodDictionary;
-	
+	id rootServer;
 	NSOperationQueue *handlerQueue;
 }
-
-- (id)initWithTCPPort:(unsigned)po;
 
 -(NSString *)methodNameForXMLDocument:(NSXMLDocument *)document error:(NSError **)err;
 -(NSDictionary *)namespaceForPath:(NSString *)namespacePath createIfNecessary:(BOOL)createIfNecessary;
