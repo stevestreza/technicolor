@@ -58,4 +58,49 @@
 	}
 	else return [array objectAtIndex:0];
 }
+
+-(NSString *)filename{
+	return [[[self path] lastPathComponent] stringByDeletingPathExtension];
+}
+
+-(id)copyWithZone:(id)whatev{
+	return self;
+}
+
+-(NSArray *)_filetypes{
+	return [NSArray arrayWithObjects:
+			@"bytes",
+			@"KB",
+			@"MB",
+			@"GB",
+			@"TB",
+			nil];
+}
+
+-(NSString *)fileSizeString{
+	unsigned long long filesize = [self filesize];
+	
+	NSArray *types = [self _filetypes];
+	NSUInteger typeIndex = 0;
+	for(typeIndex; typeIndex < types.count; typeIndex++){
+		if(pow(1024,typeIndex+1) >= filesize){
+			break;
+		}
+	}
+	
+	double finalValue = (filesize / pow(1024,typeIndex));
+	NSString *retValue = [NSString stringWithFormat:@"%0.1f %@",finalValue, [types objectAtIndex:typeIndex]];
+	return retValue;
+}
+
+-(unsigned long long)filesize{
+	NSString *path = [self path];
+	
+	NSDictionary *attrs = [[NSFileManager defaultManager] fileAttributesAtPath:path traverseLink:YES];
+	if(attrs){
+		return [[attrs objectForKey:NSFileSize] unsignedLongLongValue];
+	}
+	return 0;
+}
+
 @end

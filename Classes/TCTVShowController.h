@@ -26,10 +26,15 @@
 #import <Cocoa/Cocoa.h>
 #import "TVRageController.h"
 
-@interface TCTVShowController : NSViewController {
+#import "TCMasterDetailCell.h"
 
+@interface TCTVShowController : NSViewController {
+	IBOutlet NSTableView *episodesTable;
+	IBOutlet NSTableView *filesTable;
+	
+	TCMasterDetailCell *filesCell;
 }
 
 -(IBAction)import:(id)sender;
-
+- (BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex;
 @end

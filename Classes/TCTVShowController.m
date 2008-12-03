@@ -31,6 +31,15 @@
 
 @implementation TCTVShowController
 
+-(void)awakeFromNib{
+	filesCell = [[TCMasterDetailCell alloc] init];
+	
+	filesCell.primaryKey = @"filename";
+	filesCell.secondaryKey = @"fileSizeString";
+	
+	[[[filesTable tableColumns] objectAtIndex:1] setDataCell:filesCell];
+}
+
 -(IBAction)import:(id)sender{
 	NSOpenPanel *openPanel = [NSOpenPanel openPanel];
 	[openPanel setAllowsMultipleSelection:YES];
@@ -110,6 +119,15 @@
 	[TCJobQueue setSuspended:NO];
 	
 	[pool release];
+}
+
+- (BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex{
+	if(aTableView == episodesTable){
+		return YES;
+	}else if(aTableView == filesTable){
+		return NO;
+	}
+	return NO;
 }
 
 @end

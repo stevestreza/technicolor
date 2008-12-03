@@ -33,4 +33,11 @@
 
 +(TCVideoFile *)videoFileForPath:(NSString *)path;
 
+-(NSString *)filename;
+-(NSString *)fileSizeString;
+
+-(unsigned long long)filesize;
+
+@property (readonly) NSString *filename;
+@property (readonly) NSString *fileSizeString;
 @end
