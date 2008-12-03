@@ -28,7 +28,7 @@
 @class TCFFMPEGVideo;
 
 @interface TCVideoFile : NSManagedObject {
-
+	NSMutableDictionary *metadata;
 }
 
 +(TCVideoFile *)videoFileForPath:(NSString *)path;

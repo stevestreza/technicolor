@@ -13,6 +13,9 @@
 
 @synthesize primaryKey, secondaryKey;
 
+static NSDictionary *sPrimaryAttribtues   = nil;
+static NSDictionary *sSecondaryAttributes = nil;
+
 - (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView{
 	id obj = [self objectValue];
 	
@@ -31,8 +34,24 @@
 	
 	CGRectDivide(NSRectToCGRect(cellFrame), &primaryRect, &secondaryRect, (cellFrame.size.height/2.), CGRectMinYEdge);
 	
-	[primaryString drawInRect:NSRectFromCGRect(primaryRect) withAttributes:nil];
-	[secondaryString drawInRect:NSRectFromCGRect(secondaryRect) withAttributes:nil];
+	if(!sPrimaryAttribtues){
+		sPrimaryAttribtues = [[NSDictionary dictionaryWithObjectsAndKeys:
+							  [[NSFontManager sharedFontManager] convertFont:[NSFont systemFontOfSize:12.] toHaveTrait:NSBoldFontMask], NSFontAttributeName,
+							  nil] retain];
+	}
+	
+	if(!sSecondaryAttributes){
+		sSecondaryAttributes = [[NSDictionary dictionaryWithObjectsAndKeys:
+//								 [[NSFontManager sharedFontManager] convertFont:
+																				[NSFont systemFontOfSize:11.]
+//																	toHaveTrait:NSBoldFontMask]
+									, NSFontAttributeName,
+								 [NSColor colorWithCalibratedWhite:0.35 alpha:1], NSForegroundColorAttributeName,
+							  nil] retain];
+	}
+	
+	[primaryString drawInRect:NSRectFromCGRect(primaryRect) withAttributes:sPrimaryAttribtues];
+	[secondaryString drawInRect:NSRectFromCGRect(secondaryRect) withAttributes:sSecondaryAttributes];
 }
 
 - (void)setObjectValue:(id )object {

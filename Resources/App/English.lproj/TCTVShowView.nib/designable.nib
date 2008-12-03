@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">352.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="42"/>
+			<integer value="8"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -128,6 +128,32 @@
 																		<string key="NSColorName">controlTextColor</string>
 																		<reference key="NSColor" ref="875209129"/>
 																	</object>
+																</object>
+																<int key="NSResizingMask">3</int>
+																<bool key="NSIsResizeable">YES</bool>
+																<bool key="NSIsEditable">YES</bool>
+																<reference key="NSTableView" ref="82818966"/>
+															</object>
+															<object class="NSTableColumn" id="724681836">
+																<double key="NSWidth">6.500000e+01</double>
+																<double key="NSMinWidth">1.000000e+01</double>
+																<double key="NSMaxWidth">3.402823e+38</double>
+																<object class="NSTableHeaderCell" key="NSHeaderCell">
+																	<int key="NSCellFlags">75628032</int>
+																	<int key="NSCellFlags2">0</int>
+																	<string key="NSContents">Episode ID</string>
+																	<reference key="NSSupport" ref="26"/>
+																	<reference key="NSBackgroundColor" ref="521405801"/>
+																	<reference key="NSTextColor" ref="764476643"/>
+																</object>
+																<object class="NSTextFieldCell" key="NSDataCell" id="946172569">
+																	<int key="NSCellFlags">337772096</int>
+																	<int key="NSCellFlags2">2048</int>
+																	<string key="NSContents">Text Cell</string>
+																	<reference key="NSSupport" ref="130153606"/>
+																	<reference key="NSControlView" ref="82818966"/>
+																	<reference key="NSBackgroundColor" ref="1061955382"/>
+																	<reference key="NSTextColor" ref="447308990"/>
 																</object>
 																<int key="NSResizingMask">3</int>
 																<bool key="NSIsResizeable">YES</bool>
@@ -388,7 +414,7 @@
 															<bytes key="NSRGB">MC44MTk2MDc4NSAwLjg0MzEzNzI2IDAuODg2Mjc0NTIAA</bytes>
 														</object>
 														<reference key="NSGridColor" ref="807819771"/>
-														<double key="NSRowHeight">4.400000e+01</double>
+														<double key="NSRowHeight">3.400000e+01</double>
 														<int key="NSTvFlags">373293056</int>
 														<int key="NSColumnAutoresizingStyle">4</int>
 														<int key="NSDraggingSourceMaskForLocal">15</int>
@@ -430,7 +456,7 @@
 										<reference key="NSVScroller" ref="83966892"/>
 										<reference key="NSHScroller" ref="587620410"/>
 										<reference key="NSContentView" ref="169986471"/>
-										<bytes key="NSScrollAmts">QSAAAEEgAABCOAAAQjgAAA</bytes>
+										<bytes key="NSScrollAmts">QSAAAEEgAABCEAAAQhAAAA</bytes>
 									</object>
 									<object class="NSImageView" id="131311048">
 										<reference key="NSNextResponder" ref="981273785"/>
@@ -484,6 +510,7 @@
 					<string>show.showName</string>
 					<string>episodeName</string>
 					<string>videoFiles.@count</string>
+					<string>episodeID</string>
 				</object>
 				<string key="NSObjectClassName">TVEpisode</string>
 				<bool key="NSAutomaticallyPreparesContent">YES</bool>
@@ -682,6 +709,22 @@
 					</object>
 					<int key="connectionID">79</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: arrangedObjects.episodeID</string>
+						<reference key="source" ref="724681836"/>
+						<reference key="destination" ref="307165263"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="724681836"/>
+							<reference key="NSDestination" ref="307165263"/>
+							<string key="NSLabel">value: arrangedObjects.episodeID</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">arrangedObjects.episodeID</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">83</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -780,6 +823,7 @@
 							<reference ref="48493082"/>
 							<reference ref="470994379"/>
 							<reference ref="813166480"/>
+							<reference ref="724681836"/>
 						</object>
 						<reference key="parent" ref="871865680"/>
 					</object>
@@ -930,6 +974,20 @@
 						<reference key="parent" ref="1002"/>
 						<string key="objectName">Files</string>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">80</int>
+						<reference key="object" ref="724681836"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="946172569"/>
+						</object>
+						<reference key="parent" ref="82818966"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">81</int>
+						<reference key="object" ref="946172569"/>
+						<reference key="parent" ref="724681836"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -1013,7 +1071,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">79</int>
+			<int key="maxID">83</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

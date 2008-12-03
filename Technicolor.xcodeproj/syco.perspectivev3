@@ -279,6 +279,7 @@
 								<string>1E6C75750EE651000099140B</string>
 								<string>1E6C75760EE651090099140B</string>
 								<string>1E63690F0EA2591D0003034E</string>
+								<string>1EB8C93A0EA1AA3400984CD7</string>
 								<string>1EB8C9320EA1A9D500984CD7</string>
 								<string>1EB8C9380EA1AA1D00984CD7</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
@@ -295,14 +296,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>4</integer>
+									<integer>6</integer>
 									<integer>2</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 33}, {314, 760}}</string>
+							<string>{{0, 0}, {314, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -333,7 +334,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1E50D78C0E50013C00BDA918</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TCMasterDetailCell.m</string>
+								<string>TCVideoFile+PreviewImage.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -341,11 +342,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1E50D78D0E50013C00BDA918</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>TCMasterDetailCell.m</string>
+										<string>TCVideoFile+PreviewImage.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1E6C76A70EE6638D0099140B</string>
+										<string>1E6C76E30EE66C080099140B</string>
 										<key>history</key>
 										<array>
 											<string>1E735AAB0E514688004FAD1A</string>
@@ -381,7 +382,6 @@
 											<string>1E4D771A0EC66FF0005814A2</string>
 											<string>1E4D777F0EC675D2005814A2</string>
 											<string>1EA9D9060EC7550A0089B83F</string>
-											<string>1EA9D9070EC7550A0089B83F</string>
 											<string>1EA0938B0EC7D9D6004C7397</string>
 											<string>1EA094A30EC80768004C7397</string>
 											<string>1EFAF8030ED27B4C00A8B55E</string>
@@ -412,11 +412,12 @@
 											<string>1E6C76340EE65AE00099140B</string>
 											<string>1E6C76360EE65AE00099140B</string>
 											<string>1E6C76420EE65AF50099140B</string>
-											<string>1E6C768B0EE6611F0099140B</string>
 											<string>1E6C768C0EE6611F0099140B</string>
-											<string>1E6C768D0EE6611F0099140B</string>
-											<string>1E6C76A20EE663810099140B</string>
-											<string>1E6C76A30EE663810099140B</string>
+											<string>1E6C76BB0EE66B770099140B</string>
+											<string>1E6C76BC0EE66B770099140B</string>
+											<string>1E6C76BD0EE66B770099140B</string>
+											<string>1E6C76BE0EE66B770099140B</string>
+											<string>1E6C76D50EE66BCD0099140B</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -503,6 +504,13 @@
 											<string>1E6C76910EE6611F0099140B</string>
 											<string>1E6C76920EE6611F0099140B</string>
 											<string>1E6C76A40EE663810099140B</string>
+											<string>1E6C76C00EE66B770099140B</string>
+											<string>1E6C76C10EE66B770099140B</string>
+											<string>1E6C76C20EE66B770099140B</string>
+											<string>1E6C76C30EE66B770099140B</string>
+											<string>1E6C76C40EE66B770099140B</string>
+											<string>1E6C76C50EE66B770099140B</string>
+											<string>1E6C76C60EE66B770099140B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -818,6 +826,9 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1E6C76E40EE66C080099140B</string>
+		<string>1E6C76DD0EE66BEC0099140B</string>
+		<string>1E6C76D80EE66BD10099140B</string>
 		<string>1E6C764B0EE65B250099140B</string>
 		<string>1E6C764C0EE65B250099140B</string>
 		<string>/Users/syco/Projects/Technicolor/technicolor/Technicolor.xcodeproj</string>
@@ -1423,8 +1434,8 @@
 			<true/>
 			<key>TableOfContents</key>
 			<array>
-				<string>1E3845270ED7E10800DD6F43</string>
-				<string>1E3845280ED7E10800DD6F43</string>
+				<string>1E6C76DD0EE66BEC0099140B</string>
+				<string>1E6C76DE0EE66BEC0099140B</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
 				<string>1CA1AED706398EBD00589147</string>
 			</array>
@@ -1433,7 +1444,7 @@
 			<key>WindowString</key>
 			<string>31 446 744 409 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
-			<string>1E3845270ED7E10800DD6F43</string>
+			<string>1E6C76DD0EE66BEC0099140B</string>
 			<key>WindowToolIsVisible</key>
 			<false/>
 		</dict>

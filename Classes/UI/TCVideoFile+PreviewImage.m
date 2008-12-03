@@ -12,6 +12,28 @@
 @implementation  TCVideoFile (PreviewImage)
 
 -(NSImage *)previewImage{
+	if([metadata objectForKey:@"previewImage"]) return [metadata objectForKey:@"previewImage"];
+	
+	[NSThread detachNewThreadSelector:@selector(getPreviewImage:) toTarget:self withObject:self];
+	return [[NSWorkspace sharedWorkspace] iconForFile:[self path]];
+}
+
+-(void)getPreviewImage:(id)sender{
+	NSAutoreleasePool *pool = [NSAutoreleasePool new];
+	
+	NSImage *image = [self generatePreviewImage];
+	if(image){
+		NSLog(@"Saving image!");
+		[self willChangeValueForKey:@"previewImage"];
+		[metadata setObject:image forKey:@"previewImage"];
+		[self didChangeValueForKey:@"previewImage"];
+		NSLog(@"Done saving image!");
+	}
+	
+	[pool release];
+}
+
+-(NSImage *)generatePreviewImage{
 	NSSize size = NSMakeSize(512, 512);
 	
 	NSURL *fileURL = [NSURL fileURLWithPath:[self path]];

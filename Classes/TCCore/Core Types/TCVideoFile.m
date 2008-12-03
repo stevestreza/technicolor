@@ -59,6 +59,15 @@
 	else return [array objectAtIndex:0];
 }
 
+-(void)awakeFromFetch{
+	metadata = [[NSMutableDictionary dictionary] retain];
+}
+
+-(void)dealloc{
+	[metadata release];
+	[super dealloc];
+}
+
 -(NSString *)filename{
 	return [[[self path] lastPathComponent] stringByDeletingPathExtension];
 }
