@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1E10D8080E6C459900C69D38 /* TCProcessingQueueController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E10D8070E6C459900C69D38 /* TCProcessingQueueController.m */; };
+		1E23C8080EEFA3A100E6C373 /* JSXObjC.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1E23C6560EEFA06700E6C373 /* JSXObjC.framework */; };
+		1E23C82E0EEFA5FC00E6C373 /* TCJSInterpreterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E23C82D0EEFA5FC00E6C373 /* TCJSInterpreterController.m */; };
+		1E23C8300EEFA6C300E6C373 /* TCJSInterpreter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E23C82F0EEFA6C300E6C373 /* TCJSInterpreter.xib */; };
 		1E3845F60ED8BEDF00DD6F43 /* TCRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E3845F40ED8BEDF00DD6F43 /* TCRegex.h */; };
 		1E3845F70ED8BEDF00DD6F43 /* TCRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3845F50ED8BEDF00DD6F43 /* TCRegex.m */; };
 		1E38470B0ED8C72D00DD6F43 /* Technicolor_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 1E38470A0ED8C72D00DD6F43 /* Technicolor_DataModel.xcdatamodel */; };
@@ -75,8 +78,6 @@
 		1E83CCD90E6B890D00987FC1 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE3EE750E53CF590099684C /* libz.1.2.3.dylib */; };
 		1E83CCDA0E6B890D00987FC1 /* libbz2.1.0.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE3EE890E53D0470099684C /* libbz2.1.0.4.dylib */; };
 		1E95DBF90E57BD9600B6A7E9 /* TCTVShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E95DBF80E57BD9600B6A7E9 /* TCTVShowController.m */; };
-		1EA094890EC8072A004C7397 /* JSXObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA0947D0EC80715004C7397 /* JSXObjC.framework */; };
-		1EA094920EC8073E004C7397 /* JSXObjC.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA0947D0EC80715004C7397 /* JSXObjC.framework */; };
 		1EB8CAB10EA1ABDC00984CD7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		1EB8CAB20EA1ABDC00984CD7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C82804067257F0000B614F /* CoreData.framework */; };
 		1EB8CAB30EA1ABDC00984CD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
@@ -96,6 +97,48 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1E23C6510EEFA06700E6C373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DD76FA10486AA7600D96B5E;
+			remoteInfo = jsxi;
+		};
+		1E23C6530EEFA06700E6C373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3A6623C20DA7D3A800FEBFAA;
+			remoteInfo = JSXlib;
+		};
+		1E23C6550EEFA06700E6C373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3A66254F0DA7D7FD00FEBFAA;
+			remoteInfo = JSXObjC;
+		};
+		1E23C6570EEFA06700E6C373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3A6623F00DA7D52700FEBFAA;
+			remoteInfo = JSXurtle;
+		};
+		1E23C6590EEFA06700E6C373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3A6F2FC80DF6399700F70283;
+			remoteInfo = JSXObjCCoreGraphics;
+		};
+		1E23C8100EEFA3D800E6C373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E5EF99C0EAC33BC006F064E;
+			remoteInfo = TCJSPlugin;
+		};
 		1E5E38660EA2FBA600FD67A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -149,43 +192,15 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1E6C75970EE651F80099140B /* TCCoreUI */;
+			remoteGlobalIDString = 1E6C75970EE651F80099140B;
 			remoteInfo = TCCoreUI;
 		};
-		1EA094780EC80715004C7397 /* PBXContainerItemProxy */ = {
+		1E6C76F70EE66FA10099140B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8DD76FA10486AA7600D96B5E;
-			remoteInfo = jsxi;
-		};
-		1EA0947A0EC80715004C7397 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3A6623C20DA7D3A800FEBFAA;
-			remoteInfo = JSXlib;
-		};
-		1EA0947C0EC80715004C7397 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3A66254F0DA7D7FD00FEBFAA;
-			remoteInfo = JSXObjC;
-		};
-		1EA0947E0EC80715004C7397 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3A6623F00DA7D52700FEBFAA;
-			remoteInfo = JSXurtle;
-		};
-		1EA094800EC80715004C7397 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3A6F2FC80DF6399700F70283;
-			remoteInfo = JSXObjCCoreGraphics;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E63689D0EA253590003034E;
+			remoteInfo = TCCore;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -208,7 +223,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1EA094920EC8073E004C7397 /* JSXObjC.framework in Copy Frameworks */,
+				1E23C8080EEFA3A100E6C373 /* JSXObjC.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +235,29 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		1E10D8060E6C459900C69D38 /* TCProcessingQueueController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCProcessingQueueController.h; sourceTree = "<group>"; };
 		1E10D8070E6C459900C69D38 /* TCProcessingQueueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCProcessingQueueController.m; sourceTree = "<group>"; };
+		1E23C75A0EEFA2F600E6C373 /* JSXObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjC.h; path = ../../../Packages/jsxobjc/source/JSXore/JSXObjC.h; sourceTree = SOURCE_ROOT; };
+		1E23C75B0EEFA2F600E6C373 /* JSXObjCWrappers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCWrappers.h; path = ../../../Packages/jsxobjc/source/JSXore/JSXObjCWrappers.h; sourceTree = SOURCE_ROOT; };
+		1E23C75C0EEFA2F600E6C373 /* JSXObjCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCObject.h; path = ../../../Packages/jsxobjc/source/JSXore/JSXObjCObject.h; sourceTree = SOURCE_ROOT; };
+		1E23C75D0EEFA2F600E6C373 /* JSXObjCInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCInterpreter.h; path = ../../../Packages/jsxobjc/source/JSXore/JSXObjCInterpreter.h; sourceTree = SOURCE_ROOT; };
+		1E23C75E0EEFA2F600E6C373 /* JSXObjCBridgeFileHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCBridgeFileHandle.h; path = ../../../Packages/jsxobjc/source/Libraries/JSXObjCBridgeFileHandle.h; sourceTree = SOURCE_ROOT; };
+		1E23C75F0EEFA2F600E6C373 /* JSXObjCBridgeMemoryBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCBridgeMemoryBuffer.h; path = ../../../Packages/jsxobjc/source/Libraries/JSXObjCBridgeMemoryBuffer.h; sourceTree = SOURCE_ROOT; };
+		1E23C7600EEFA2F600E6C373 /* JSXObjCBridgeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCBridgeObject.h; path = ../../../Packages/jsxobjc/source/JSXore/JSXObjCBridgeObject.h; sourceTree = SOURCE_ROOT; };
+		1E23C7610EEFA2F600E6C373 /* JSXObjCException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCException.h; path = ../../../Packages/jsxobjc/source/JSXore/JSXObjCException.h; sourceTree = SOURCE_ROOT; };
+		1E23C7620EEFA2F600E6C373 /* JSXObjCInteractive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCInteractive.h; path = ../../../Packages/jsxobjc/source/JSXore/JSXObjCInteractive.h; sourceTree = SOURCE_ROOT; };
+		1E23C7630EEFA2F600E6C373 /* JSXObjCLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCLib.h; path = ../../../Packages/jsxobjc/source/JSXore/JSXObjCLib.h; sourceTree = SOURCE_ROOT; };
+		1E23C7640EEFA2F600E6C373 /* JSXObjCCocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCCocoa.h; path = ../../../Packages/jsxobjc/source/JSObjC/JSXObjCCocoa.h; sourceTree = SOURCE_ROOT; };
+		1E23C7650EEFA2F600E6C373 /* JSXObjCPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCPackage.h; path = ../../../Packages/jsxobjc/source/JSXore/JSXObjCPackage.h; sourceTree = SOURCE_ROOT; };
+		1E23C7660EEFA2F600E6C373 /* JSXObjCPackageStdIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCPackageStdIO.h; path = ../../../Packages/jsxobjc/source/Libraries/JSXObjCPackageStdIO.h; sourceTree = SOURCE_ROOT; };
+		1E23C7670EEFA2F600E6C373 /* JSXObjCPackageSys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCPackageSys.h; path = ../../../Packages/jsxobjc/source/Libraries/JSXObjCPackageSys.h; sourceTree = SOURCE_ROOT; };
+		1E23C7680EEFA2F600E6C373 /* JSXurtleApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXurtleApp.h; path = ../../../Packages/jsxobjc/source/Apps/jsxurtle/JSXurtleApp.h; sourceTree = SOURCE_ROOT; };
+		1E23C7690EEFA2F600E6C373 /* JSXObjCEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCEditor.h; path = ../../../Packages/jsxobjc/source/Utils/JSXObjCEditor.h; sourceTree = SOURCE_ROOT; };
+		1E23C76A0EEFA2F600E6C373 /* JSXObjCTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCTypes.h; path = ../../../Packages/jsxobjc/source/JSXore/JSXObjCTypes.h; sourceTree = SOURCE_ROOT; };
+		1E23C76B0EEFA2F600E6C373 /* JSXObjCInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCInternal.h; path = ../../../Packages/jsxobjc/source/JSXore/JSXObjCInternal.h; sourceTree = SOURCE_ROOT; };
+		1E23C76C0EEFA2F600E6C373 /* JSXObjCSourceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCSourceUtil.h; path = ../../../Packages/jsxobjc/source/Utils/JSXObjCSourceUtil.h; sourceTree = SOURCE_ROOT; };
+		1E23C76D0EEFA2F600E6C373 /* JSXObjCInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCInvocation.h; path = ../../../Packages/jsxobjc/source/JSXore/JSXObjCInvocation.h; sourceTree = SOURCE_ROOT; };
+		1E23C82C0EEFA5FC00E6C373 /* TCJSInterpreterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCJSInterpreterController.h; sourceTree = "<group>"; };
+		1E23C82D0EEFA5FC00E6C373 /* TCJSInterpreterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCJSInterpreterController.m; sourceTree = "<group>"; };
+		1E23C82F0EEFA6C300E6C373 /* TCJSInterpreter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TCJSInterpreter.xib; sourceTree = "<group>"; };
 		1E38446E0ED7D58400DD6F43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1E3845F40ED8BEDF00DD6F43 /* TCRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCRegex.h; sourceTree = "<group>"; };
 		1E3845F50ED8BEDF00DD6F43 /* TCRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCRegex.m; sourceTree = "<group>"; };
@@ -266,7 +304,7 @@
 		1E83CC750E6B74CB00987FC1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1E95DBF70E57BD9600B6A7E9 /* TCTVShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTVShowController.h; sourceTree = "<group>"; };
 		1E95DBF80E57BD9600B6A7E9 /* TCTVShowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTVShowController.m; sourceTree = "<group>"; };
-		1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSXObjC.xcodeproj; path = ../../Packages/jsxobjc/JSXObjC.xcodeproj; sourceTree = SOURCE_ROOT; };
+		1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSXObjC.xcodeproj; path = ../../../Packages/jsxobjc/JSXObjC.xcodeproj; sourceTree = SOURCE_ROOT; };
 		1EB8C94A0EA1AAA500984CD7 /* TCMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMovie.h; sourceTree = "<group>"; };
 		1EB8C94B0EA1AAA500984CD7 /* TCMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCMovie.m; sourceTree = "<group>"; };
 		1EB8C94C0EA1AAA500984CD7 /* TCMovieVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMovieVideo.h; sourceTree = "<group>"; };
@@ -322,7 +360,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E5EFB5C0EAC3799006F064E /* Foundation.framework in Frameworks */,
-				1EA094890EC8072A004C7397 /* JSXObjC.framework in Frameworks */,
 				1E5EFB5A0EAC3792006F064E /* TCCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +474,46 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		1E23C64A0EEFA06700E6C373 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E23C6520EEFA06700E6C373 /* jsxi */,
+				1E23C6540EEFA06700E6C373 /* libJSXlib.a */,
+				1E23C6560EEFA06700E6C373 /* JSXObjC.framework */,
+				1E23C6580EEFA06700E6C373 /* JSXurtle.app */,
+				1E23C65A0EEFA06700E6C373 /* JSXObjCCoreGraphics.jsxext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E23C7330EEFA22900E6C373 /* JSXObjC */ = {
+			isa = PBXGroup;
+			children = (
+				1E23C75A0EEFA2F600E6C373 /* JSXObjC.h */,
+				1E23C75B0EEFA2F600E6C373 /* JSXObjCWrappers.h */,
+				1E23C75C0EEFA2F600E6C373 /* JSXObjCObject.h */,
+				1E23C75D0EEFA2F600E6C373 /* JSXObjCInterpreter.h */,
+				1E23C75E0EEFA2F600E6C373 /* JSXObjCBridgeFileHandle.h */,
+				1E23C75F0EEFA2F600E6C373 /* JSXObjCBridgeMemoryBuffer.h */,
+				1E23C7600EEFA2F600E6C373 /* JSXObjCBridgeObject.h */,
+				1E23C7610EEFA2F600E6C373 /* JSXObjCException.h */,
+				1E23C7620EEFA2F600E6C373 /* JSXObjCInteractive.h */,
+				1E23C7630EEFA2F600E6C373 /* JSXObjCLib.h */,
+				1E23C7640EEFA2F600E6C373 /* JSXObjCCocoa.h */,
+				1E23C7650EEFA2F600E6C373 /* JSXObjCPackage.h */,
+				1E23C7660EEFA2F600E6C373 /* JSXObjCPackageStdIO.h */,
+				1E23C7670EEFA2F600E6C373 /* JSXObjCPackageSys.h */,
+				1E23C7680EEFA2F600E6C373 /* JSXurtleApp.h */,
+				1E23C7690EEFA2F600E6C373 /* JSXObjCEditor.h */,
+				1E23C76A0EEFA2F600E6C373 /* JSXObjCTypes.h */,
+				1E23C76B0EEFA2F600E6C373 /* JSXObjCInternal.h */,
+				1E23C76C0EEFA2F600E6C373 /* JSXObjCSourceUtil.h */,
+				1E23C76D0EEFA2F600E6C373 /* JSXObjCInvocation.h */,
+				1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */,
+			);
+			name = JSXObjC;
+			sourceTree = "<group>";
+		};
 		1E5E384E0EA2FB6E00FD67A3 /* Processing Queue */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,10 +528,13 @@
 		1E5EF9590EAC33A5006F064E /* JSPlugin */ = {
 			isa = PBXGroup;
 			children = (
+				1E23C7330EEFA22900E6C373 /* JSXObjC */,
 				1E5EF99E0EAC33BC006F064E /* TCJSPlugin-Info.plist */,
 				1E5EFA620EAC363F006F064E /* TCJSPlugin.h */,
 				1E5EFA630EAC363F006F064E /* TCJSPlugin.m */,
-				1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */,
+				1E23C82C0EEFA5FC00E6C373 /* TCJSInterpreterController.h */,
+				1E23C82D0EEFA5FC00E6C373 /* TCJSInterpreterController.m */,
+				1E23C82F0EEFA6C300E6C373 /* TCJSInterpreter.xib */,
 			);
 			name = JSPlugin;
 			path = TCJSPlugin;
@@ -552,18 +632,6 @@
 				1E6C767F0EE660A50099140B /* TCVideoFile+PreviewImage.m */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		1EA094710EC80715004C7397 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1EA094790EC80715004C7397 /* jsxi */,
-				1EA0947B0EC80715004C7397 /* libJSXlib.a */,
-				1EA0947D0EC80715004C7397 /* JSXObjC.framework */,
-				1EA0947F0EC80715004C7397 /* JSXurtle.app */,
-				1EA094810EC80715004C7397 /* JSXObjCCoreGraphics.jsxext */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		1EB8C9320EA1A9D500984CD7 /* Plugins */ = {
@@ -815,6 +883,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1E6C76F80EE66FA10099140B /* PBXTargetDependency */,
 			);
 			name = TCCoreUI;
 			productName = TCCore;
@@ -869,11 +938,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				1E6C75CC0EE652400099140B /* PBXTargetDependency */,
 				1E6368BA0EA253D60003034E /* PBXTargetDependency */,
+				1E6C75CC0EE652400099140B /* PBXTargetDependency */,
 				1E636A7A0EA29D090003034E /* PBXTargetDependency */,
 				1E636A7C0EA29D090003034E /* PBXTargetDependency */,
 				1E5E389D0EA2FD4400FD67A3 /* PBXTargetDependency */,
+				1E23C8110EEFA3D800E6C373 /* PBXTargetDependency */,
 			);
 			name = Technicolor;
 			productInstallPath = "$(HOME)/Applications";
@@ -893,7 +963,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 1EA094710EC80715004C7397 /* Products */;
+					ProductGroup = 1E23C64A0EEFA06700E6C373 /* Products */;
 					ProjectRef = 1EA094700EC80715004C7397 /* JSXObjC.xcodeproj */;
 				},
 			);
@@ -911,39 +981,39 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		1EA094790EC80715004C7397 /* jsxi */ = {
+		1E23C6520EEFA06700E6C373 /* jsxi */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = jsxi;
-			remoteRef = 1EA094780EC80715004C7397 /* PBXContainerItemProxy */;
+			remoteRef = 1E23C6510EEFA06700E6C373 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1EA0947B0EC80715004C7397 /* libJSXlib.a */ = {
+		1E23C6540EEFA06700E6C373 /* libJSXlib.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libJSXlib.a;
-			remoteRef = 1EA0947A0EC80715004C7397 /* PBXContainerItemProxy */;
+			remoteRef = 1E23C6530EEFA06700E6C373 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1EA0947D0EC80715004C7397 /* JSXObjC.framework */ = {
+		1E23C6560EEFA06700E6C373 /* JSXObjC.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = JSXObjC.framework;
-			remoteRef = 1EA0947C0EC80715004C7397 /* PBXContainerItemProxy */;
+			remoteRef = 1E23C6550EEFA06700E6C373 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1EA0947F0EC80715004C7397 /* JSXurtle.app */ = {
+		1E23C6580EEFA06700E6C373 /* JSXurtle.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = JSXurtle.app;
-			remoteRef = 1EA0947E0EC80715004C7397 /* PBXContainerItemProxy */;
+			remoteRef = 1E23C6570EEFA06700E6C373 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1EA094810EC80715004C7397 /* JSXObjCCoreGraphics.jsxext */ = {
+		1E23C65A0EEFA06700E6C373 /* JSXObjCCoreGraphics.jsxext */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = JSXObjCCoreGraphics.jsxext;
-			remoteRef = 1EA094800EC80715004C7397 /* PBXContainerItemProxy */;
+			remoteRef = 1E23C6590EEFA06700E6C373 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -960,6 +1030,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E23C8300EEFA6C300E6C373 /* TCJSInterpreter.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1021,6 +1092,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E5EFA640EAC363F006F064E /* TCJSPlugin.m in Sources */,
+				1E23C82E0EEFA5FC00E6C373 /* TCJSInterpreterController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1087,6 +1159,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1E23C8110EEFA3D800E6C373 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E5EF99C0EAC33BC006F064E /* TCJSPlugin */;
+			targetProxy = 1E23C8100EEFA3D800E6C373 /* PBXContainerItemProxy */;
+		};
 		1E5E38670EA2FBA600FD67A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E63689D0EA253590003034E /* TCCore */;
@@ -1126,6 +1203,11 @@
 			isa = PBXTargetDependency;
 			target = 1E6C75970EE651F80099140B /* TCCoreUI */;
 			targetProxy = 1E6C75CB0EE652400099140B /* PBXContainerItemProxy */;
+		};
+		1E6C76F80EE66FA10099140B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E63689D0EA253590003034E /* TCCore */;
+			targetProxy = 1E6C76F70EE66FA10099140B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1221,6 +1303,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "~/Packages/jsxobjc/build//**";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -1234,6 +1317,8 @@
 					Foundation,
 					"-framework",
 					AppKit,
+					"-weak_framework",
+					JSXObjC,
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = TCJSPlugin;

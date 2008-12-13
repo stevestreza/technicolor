@@ -26,10 +26,14 @@
 #import <Cocoa/Cocoa.h>
 #import "Technicolor.h"
 #import "TCOrganizationPlugin.h"
+#import "TCJSInterpreterController.h"
+#import "JSXObjCInterpreter.h"
 
 @class JSXObjCInterpreter;
 
 @interface TCJSPlugin : TCOrganizationPlugin {
+	TCJSInterpreterController *mInterpreterController;
+	
 	JSXObjCInterpreter *interpreter;
 }
 

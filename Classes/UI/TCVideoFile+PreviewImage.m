@@ -15,6 +15,8 @@
 	if([metadata objectForKey:@"previewImage"]) return [metadata objectForKey:@"previewImage"];
 	
 	[NSThread detachNewThreadSelector:@selector(getPreviewImage:) toTarget:self withObject:self];
+
+	if(![self path]) return nil;
 	return [[NSWorkspace sharedWorkspace] iconForFile:[self path]];
 }
 
@@ -36,7 +38,10 @@
 -(NSImage *)generatePreviewImage{
 	NSSize size = NSMakeSize(512, 512);
 	
-	NSURL *fileURL = [NSURL fileURLWithPath:[self path]];
+	NSString *thePath = [self path];
+	if(!thePath) return nil;
+	
+	NSURL *fileURL = [NSURL fileURLWithPath:thePath];
 	if (!fileURL) {
 		return nil;
 	}
@@ -66,7 +71,7 @@
 		CFRelease(ref);
 	} else {
 		// If we couldn't get a Quick Look preview, fall back on the file's Finder icon.
-		NSImage *icon = [[NSWorkspace sharedWorkspace] iconForFile:[self path]];
+		NSImage *icon = [[NSWorkspace sharedWorkspace] iconForFile:thePath];
 		if (icon) {
 			[icon setSize:size];
 		}

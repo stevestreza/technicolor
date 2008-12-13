@@ -33,7 +33,7 @@
 
 
 -(id)init{
-	if(self = [super initWithNibName:@"ProcessingQueue" bundle:nil]){
+	if(self = [super initWithNibName:@"ProcessingQueue" bundle:[NSBundle bundleForClass:self]]){
 		
 	}
 	return self;

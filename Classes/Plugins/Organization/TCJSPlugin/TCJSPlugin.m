@@ -28,11 +28,41 @@
 
 @implementation TCJSPlugin
 
++(void)initialize{
+	NSString *frameworkPath=[[[NSBundle bundleForClass:[self class]] bundlePath]
+							 stringByAppendingPathComponent:@"Contents/Frameworks/JSXObjC.framework"];
+	
+	NSBundle *framework=[NSBundle bundleWithPath:frameworkPath];
+	
+	if([framework load])
+		NSLog(@"Framework loaded");
+	else
+	{
+		NSLog(@"Error, framework failed to load\nAborting.");
+	}	
+}
+
 TCUUID(@"B040A569-DE2C-4CAF-9905-DB327C876C41")
 
 -(void)awake{
 	interpreter = [[JSXObjCInterpreter alloc] init];
+	[interpreter setDelegate:self];
 	NSLog(@"Created the interpreter %@",interpreter);
+	
+	mInterpreterController = [[TCJSInterpreterController alloc] initWithInterpreter:interpreter];
+	[self addViewController:mInterpreterController forType:@"Workers"];
+}
+
+- (void) jsxobjcInterpreter: (JSXObjCInterpreter *) interpreter log: (NSString *) message{
+	
+}
+
+- (void) jsxobjcInterpreter: (JSXObjCInterpreter *) interpreter print: (NSString *) message{
+	
+}
+
+- (BOOL) jsxobjcInterpreter: (JSXObjCInterpreter *) interpreter exception: (JSXObjCObject *) exception{
+	
 }
 
 @end

@@ -75,7 +75,7 @@
 	}
 	
 	NSManagedObjectModel *masterModel = [NSManagedObjectModel modelByMergingModels:models];
-	NSLog(@"Plugins loaded");
+//	NSLog(@"Plugins loaded");
 	
 	mPluginModel = [masterModel retain];
 	
@@ -120,10 +120,10 @@
 		NSBundle *bundle = [self bundleForUUID:uuid];
 		NSArray *dependencies = [[bundle infoDictionary] valueForKey:@"Dependencies"];
 		if(dependencies && dependencies.count > 0){
-			NSLog(@"Dependencies for %@ - %@",uuid,dependencies);
+//			NSLog(@"Dependencies for %@ - %@",uuid,dependencies);
 			BOOL needsRepush = NO;
 			for(NSString *depUUID in dependencies){
-				NSLog(@"Pushing depID %@",depUUID);
+//				NSLog(@"Pushing depID %@",depUUID);
 				if(![uuidsActivated valueForKey:depUUID]){
 					needsRepush = YES;
 					shouldAwake = NO;
@@ -139,7 +139,7 @@
 		if(shouldAwake){
 		
 		[uuidsActivated setValue:kCFBooleanTrue forKey:uuid];
-		NSLog(@"Awaking %@",[plugin className]);
+//		NSLog(@"Awaking %@",[plugin className]);
 		[plugin awake];
 		}
 		
@@ -221,12 +221,12 @@
 		[bundleUUIDStack push:[[bundle infoDictionary] valueForKey:@"UUID"]];
 	}
 
-	NSLog(@"------\nFetching dependencies for: %@\n-",bundleUUIDStack);
+//	NSLog(@"------\nFetching dependencies for: %@\n-",bundleUUIDStack);
 	
 	while(bundleUUIDStack.count > 0){
 		NSString *uuid = [bundleUUIDStack pop];
 		
-		NSLog(@"\n--%i UUIDs left - %@",(bundleUUIDStack.count+1),uuid);
+//		NSLog(@"\n--%i UUIDs left - %@",(bundleUUIDStack.count+1),uuid);
 		
 		if([allBundles valueForKey:uuid]){
 			continue;
@@ -238,13 +238,13 @@
 		NSArray *deps = [[bundle infoDictionary] valueForKey:@"Dependencies"];
 		for(NSString *depUUID in deps){
 			if(![allBundles valueForKey:depUUID]){
-				NSLog(@"Dependency found: %@ needs %@",uuid, depUUID);
+//				NSLog(@"Dependency found: %@ needs %@",uuid, depUUID);
 				[bundleUUIDStack push:depUUID];
 			}
 		}
 	}
 
-	NSLog(@"------\Finished deps: %@\n-",[allBundles allKeys]);
+//	NSLog(@"------\Finished deps: %@\n-",[allBundles allKeys]);
 	
 	return [[[allBundles allValues] copy] autorelease];
 }
@@ -272,7 +272,7 @@
 					
 					NSString *uuid = [bundleInfo valueForKey:@"UUID"];
 					if(!uuid){
-						NSLog(@"ERROR - Could not find UUID for %@",path);
+//						NSLog(@"ERROR - Could not find UUID for %@",path);
 					}else{
 						[mUUIDDictionary setValue:bundle forKey:uuid];
 					

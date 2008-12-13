@@ -155,12 +155,14 @@
 	if(!array){
 		array = [[NSMutableArray alloc] init];
 		[viewControllers setValue:array forKey:type];
+		[viewSelectionList reloadData];
 		[array autorelease];
 	}
 	
 	if([array indexOfObject:controller] == NSNotFound){
 		[array addObject:controller];
 	}
+	
 	[viewSelectionList reloadItem:array];
 }
 
@@ -362,7 +364,9 @@
 		return [NSNumber numberWithInt:index];
 	}
 	NSString *key = [self keyForIndex:[item intValue]];
-	return [[viewControllers valueForKey:key] objectAtIndex:index];
+	NSArray *controllers = [viewControllers valueForKey:key];
+	NSViewController *vc = [controllers objectAtIndex:index];
+	return vc;
 }
 
 -(NSString *)keyForIndex:(NSUInteger)index{
@@ -403,7 +407,7 @@
 		for(index; index < numberOfGroups; index++){
 			NSString *key = [self keyForIndex:index];
 			NSArray *vcArray = (NSArray *)[viewControllers valueForKey:key];
-			for(index2; index2 < [vcArray count]; index2++){
+			for(index2=0; index2 < [vcArray count]; index2++){
 				NSViewController *vc = [vcArray objectAtIndex:index2];
 				if(count == 0){
 					selectedViewController = vc;
