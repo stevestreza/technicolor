@@ -73,6 +73,7 @@
 		1E6C76800EE660A50099140B /* TCVideoFile+PreviewImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6C767E0EE660A50099140B /* TCVideoFile+PreviewImage.h */; };
 		1E6C76810EE660A50099140B /* TCVideoFile+PreviewImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C767F0EE660A50099140B /* TCVideoFile+PreviewImage.m */; };
 		1E6C76860EE660F40099140B /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6C76850EE660F40099140B /* QuickLook.framework */; };
+		1E7D03FC0EF47AAD00719C28 /* TCTVShowJSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D03FB0EF47AAD00719C28 /* TCTVShowJSBridge.m */; };
 		1E83CC760E6B74CB00987FC1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E83CC750E6B74CB00987FC1 /* WebKit.framework */; };
 		1E83CCD80E6B890D00987FC1 /* libpng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E735ADF0E5159D9004FAD1A /* libpng.dylib */; };
 		1E83CCD90E6B890D00987FC1 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE3EE750E53CF590099684C /* libz.1.2.3.dylib */; };
@@ -89,6 +90,9 @@
 		1EB8CAFB0EA1ACFB00984CD7 /* TVRageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB8CACF0EA1AC6C00984CD7 /* TVRageOperation.m */; };
 		1EB8CB080EA1AD7F00984CD7 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E83CC750E6B74CB00987FC1 /* WebKit.framework */; };
 		1EB8CB100EA1B00800984CD7 /* TCCalendarPlugin.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 1EB8CB0F0EA1B00800984CD7 /* TCCalendarPlugin.xcdatamodel */; };
+		1ED8D92D0EF5BD4C008EF249 /* TCTVEpisodeJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8D92C0EF5BD4C008EF249 /* TCTVEpisodeJSObject.m */; };
+		1ED8D96E0EF5C672008EF249 /* TCVideoFileJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8D96D0EF5C672008EF249 /* TCVideoFileJSObject.m */; };
+		1EE135730EF4AA0A00668132 /* TCTVShowJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE135720EF4AA0A00668132 /* TCTVShowJSObject.m */; };
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
 		77C8280E06725ACE000B614F /* Technicolor_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* Technicolor_AppDelegate.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -301,6 +305,8 @@
 		1E6C767F0EE660A50099140B /* TCVideoFile+PreviewImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TCVideoFile+PreviewImage.m"; sourceTree = "<group>"; };
 		1E6C76850EE660F40099140B /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		1E735ADF0E5159D9004FAD1A /* libpng.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng.dylib; path = usr/local/lib/libpng.dylib; sourceTree = SDKROOT; };
+		1E7D03FA0EF47AAD00719C28 /* TCTVShowJSBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTVShowJSBridge.h; sourceTree = "<group>"; };
+		1E7D03FB0EF47AAD00719C28 /* TCTVShowJSBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTVShowJSBridge.m; sourceTree = "<group>"; };
 		1E83CC750E6B74CB00987FC1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1E95DBF70E57BD9600B6A7E9 /* TCTVShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTVShowController.h; sourceTree = "<group>"; };
 		1E95DBF80E57BD9600B6A7E9 /* TCTVShowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTVShowController.m; sourceTree = "<group>"; };
@@ -331,6 +337,12 @@
 		1EB8CADF0EA1ACC300984CD7 /* TCTVRagePlugin.tcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCTVRagePlugin.tcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EB8CAE00EA1ACC300984CD7 /* TCTVRagePlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TCTVRagePlugin-Info.plist"; path = "../../../../Resources/Plugins/TCTVRagePlugin-Info.plist"; sourceTree = "<group>"; };
 		1EB8CB0F0EA1B00800984CD7 /* TCCalendarPlugin.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = TCCalendarPlugin.xcdatamodel; sourceTree = "<group>"; };
+		1ED8D92B0EF5BD4C008EF249 /* TCTVEpisodeJSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTVEpisodeJSObject.h; sourceTree = "<group>"; };
+		1ED8D92C0EF5BD4C008EF249 /* TCTVEpisodeJSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTVEpisodeJSObject.m; sourceTree = "<group>"; };
+		1ED8D96C0EF5C672008EF249 /* TCVideoFileJSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCVideoFileJSObject.h; sourceTree = "<group>"; };
+		1ED8D96D0EF5C672008EF249 /* TCVideoFileJSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCVideoFileJSObject.m; sourceTree = "<group>"; };
+		1EE135710EF4AA0A00668132 /* TCTVShowJSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTVShowJSObject.h; sourceTree = "<group>"; };
+		1EE135720EF4AA0A00668132 /* TCTVShowJSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTVShowJSObject.m; sourceTree = "<group>"; };
 		1EE3EE750E53CF590099684C /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		1EE3EE890E53D0470099684C /* libbz2.1.0.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.1.0.4.dylib; path = usr/lib/libbz2.1.0.4.dylib; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -528,6 +540,7 @@
 		1E5EF9590EAC33A5006F064E /* JSPlugin */ = {
 			isa = PBXGroup;
 			children = (
+				1E7D03F90EF47A9900719C28 /* Bridges */,
 				1E23C7330EEFA22900E6C373 /* JSXObjC */,
 				1E5EF99E0EAC33BC006F064E /* TCJSPlugin-Info.plist */,
 				1E5EFA620EAC363F006F064E /* TCJSPlugin.h */,
@@ -632,6 +645,21 @@
 				1E6C767F0EE660A50099140B /* TCVideoFile+PreviewImage.m */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		1E7D03F90EF47A9900719C28 /* Bridges */ = {
+			isa = PBXGroup;
+			children = (
+				1E7D03FA0EF47AAD00719C28 /* TCTVShowJSBridge.h */,
+				1E7D03FB0EF47AAD00719C28 /* TCTVShowJSBridge.m */,
+				1EE135710EF4AA0A00668132 /* TCTVShowJSObject.h */,
+				1EE135720EF4AA0A00668132 /* TCTVShowJSObject.m */,
+				1ED8D92B0EF5BD4C008EF249 /* TCTVEpisodeJSObject.h */,
+				1ED8D92C0EF5BD4C008EF249 /* TCTVEpisodeJSObject.m */,
+				1ED8D96C0EF5C672008EF249 /* TCVideoFileJSObject.h */,
+				1ED8D96D0EF5C672008EF249 /* TCVideoFileJSObject.m */,
+			);
+			name = Bridges;
 			sourceTree = "<group>";
 		};
 		1EB8C9320EA1A9D500984CD7 /* Plugins */ = {
@@ -1093,6 +1121,10 @@
 			files = (
 				1E5EFA640EAC363F006F064E /* TCJSPlugin.m in Sources */,
 				1E23C82E0EEFA5FC00E6C373 /* TCJSInterpreterController.m in Sources */,
+				1E7D03FC0EF47AAD00719C28 /* TCTVShowJSBridge.m in Sources */,
+				1EE135730EF4AA0A00668132 /* TCTVShowJSObject.m in Sources */,
+				1ED8D92D0EF5BD4C008EF249 /* TCTVEpisodeJSObject.m in Sources */,
+				1ED8D96E0EF5C672008EF249 /* TCVideoFileJSObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

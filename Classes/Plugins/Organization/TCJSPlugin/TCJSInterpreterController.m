@@ -29,7 +29,8 @@
 	NSString *script = [mTextView string];
 	NSError *err = nil;
 	
-	id retval = [mInterpreter evaluateScript:script error:&err];
+	id retval = [mInterpreter evaluateScript:script 
+									   error:&err];
 	
 	if(err){
 		NSLog(@"Error running script! %@",err);

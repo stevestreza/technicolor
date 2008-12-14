@@ -30,7 +30,10 @@
 @implementation TCTVShow
 
 +(TCTVShow *)showWithName:(NSString *)name{
-	NSManagedObjectContext *moc = [[NSApp delegate] managedObjectContext];
+	return [self showWithName:name inContext:[[NSApp delegate] managedObjectContext]];
+}
+
++(TCTVShow *)showWithName:(NSString *)name inContext:(NSManagedObjectContext *)moc{
 	NSPredicate *predicate = [NSPredicate predicateWithFormat:
 							  @"(showName == %@)", name];
 	

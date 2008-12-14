@@ -32,5 +32,6 @@
 
 +(NSBundle *)coreBundle;
 +(NSManagedObjectModel *)coreModel;
++(NSManagedObjectContext *)newStoreContext;
 
 @end

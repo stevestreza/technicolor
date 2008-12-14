@@ -25,6 +25,7 @@
 
 #import "TCJSPlugin.h"
 
+#import "TCTVShowJSBridge.h"
 
 @implementation TCJSPlugin
 
@@ -51,18 +52,20 @@ TCUUID(@"B040A569-DE2C-4CAF-9905-DB327C876C41")
 	
 	mInterpreterController = [[TCJSInterpreterController alloc] initWithInterpreter:interpreter];
 	[self addViewController:mInterpreterController forType:@"Workers"];
+	
+	[interpreter loadBridge:[TCTVShowJSBridge class]];
 }
 
 - (void) jsxobjcInterpreter: (JSXObjCInterpreter *) interpreter log: (NSString *) message{
-	
+	NSLog(@"jsxobjc Logging message %@",message);
 }
 
 - (void) jsxobjcInterpreter: (JSXObjCInterpreter *) interpreter print: (NSString *) message{
-	
+	NSLog(@"jsxobjc Printing message %@",message);	
 }
 
 - (BOOL) jsxobjcInterpreter: (JSXObjCInterpreter *) interpreter exception: (JSXObjCObject *) exception{
-	
+	NSLog(@"jsxobjc Exception object %@",exception);
 }
 
 @end

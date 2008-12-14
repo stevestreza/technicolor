@@ -40,4 +40,15 @@ static NSBundle *coreBundle = nil;
 	return [NSManagedObjectModel mergedModelFromBundles:[NSArray arrayWithObject:[TCCoreUtils coreBundle]]];
 }
 
++(NSManagedObjectContext *)newStoreContext{
+	NSManagedObjectContext *sharedContext = [[NSApp delegate] managedObjectContext];
+	NSPersistentStoreCoordinator *storeCoordinator = [sharedContext persistentStoreCoordinator];
+		
+	NSManagedObjectContext *ourContext = [[NSManagedObjectContext alloc] init];
+	[ourContext setPersistentStoreCoordinator:storeCoordinator];
+	[ourContext setUndoManager:nil];	
+	
+	return [ourContext autorelease];
+}
+
 @end
