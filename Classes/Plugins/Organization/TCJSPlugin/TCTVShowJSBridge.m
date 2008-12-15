@@ -26,7 +26,7 @@
 
 + (NSArray *) objectFunctionNames{
 //	NSLog(@"ObjectFunctionNames");
-	return [NSArray arrayWithObjects: @"createShow",@"createEpisode", @"showNamed",nil];
+	return [NSArray arrayWithObjects: @"createShow",@"createEpisode", @"showNamed",@"fileForPath",nil];
 }
 
 + (NSString *) constructorName{
@@ -73,6 +73,30 @@
 - (id) jsxobjcCallCreateEpisode: (NSArray *) args{
 	NSLog(@"Barf!");
 	return nil;
+}
+
+-(id) jsxobjcCallFileForPath: (NSArray *)args{
+	switch (args.count) {
+		case 0:
+			return nil;
+			break;
+		case 1:
+			return [self videoFileObjectForPath:[args objectAtIndex:0]];
+			break;
+		default:
+			return nil;
+			break;
+	}
+}
+
+-(TCVideoFileJSObject *)videoFileObjectForPath:(NSString *)path{
+	TCVideoFile *videoFile = [TCVideoFile videoFileForPath:path];
+
+	TCVideoFileJSObject *vfObject = [self bridgeObject:[TCVideoFileJSObject class]
+							  withConstructorArguments:nil];
+	[vfObject _setVideoFile:videoFile];
+	
+	return vfObject;
 }
 
 -(id) jsxobjcCallShowNamed: (NSArray *)args{

@@ -131,7 +131,7 @@
 		[vc release];
 		
 		vc = [[TCProcessingQueueController alloc] init];
-		[vc setTitle:@"Conversions"];
+		[vc setTitle:@"Unprocessed"];
 		[self addViewController:vc forType:@"Workers"];
 		[vc release];
 /*		
@@ -186,12 +186,12 @@
 -(void)selectViewController:(NSViewController *)vc{
 	NSView *view = [vc view];
 	
-	view.frame = contentView.bounds;
-	
 	if(contentView.subviews.count > 0){
 		[(NSView*)([[contentView subviews] objectAtIndex:0]) removeFromSuperview];
 	}
 	[contentView addSubview:view];
+
+	view.frame = contentView.bounds;
 }
 
 #define NSURLString(__str) [NSURL URLWithString:__str]
@@ -403,18 +403,20 @@
 		NSUInteger index2=0;
 		NSUInteger numberOfGroups = [self outlineView:viewSelectionList numberOfChildrenOfItem:nil];
 		
-		count --;
 		for(index; index < numberOfGroups; index++){
-			NSString *key = [self keyForIndex:index];
-			NSArray *vcArray = (NSArray *)[viewControllers valueForKey:key];
-			for(index2=0; index2 < [vcArray count]; index2++){
-				NSViewController *vc = [vcArray objectAtIndex:index2];
-				if(count == 0){
-					selectedViewController = vc;
-					index = numberOfGroups;
-					break;
+			count--; // for the group itself
+			if([viewSelectionList isItemExpanded:[NSNumber numberWithInt:index]]){
+				NSString *key = [self keyForIndex:index];
+				NSArray *vcArray = (NSArray *)[viewControllers valueForKey:key];
+				for(index2=0; index2 < [vcArray count]; index2++){
+					NSViewController *vc = [vcArray objectAtIndex:index2];
+					if(count == 0){
+						selectedViewController = vc;
+						index = numberOfGroups;
+						break;
+					}
+					count--;
 				}
-				count--;
 			}
 		}
 	}

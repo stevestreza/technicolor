@@ -25,33 +25,24 @@
 
 #import "TCProcessingQueueController.h"
 
+#import "TCMasterDetailCell.h"
+#import "TCVideoFile.h"
+
 @implementation TCProcessingQueueController
-
-+(void)initialize{
-	setenv("HB_DEBUG","true",1);
-}
-
 
 -(id)init{
 	if(self = [super initWithNibName:@"ProcessingQueue" bundle:[NSBundle bundleForClass:self]]){
-		
 	}
 	return self;
 }
 
--(NSView *)view{
-	id theView = [super view];
-	NSLog(@"View: %@",theView);
-	return theView;
-}
-
--(IBAction)go:(id)sender{
-	NSOpenPanel *openPanel = [NSOpenPanel openPanel];
-	[openPanel runModal];
+-(void)awakeFromNib{
+	TCMasterDetailCell *filesCell = [[TCMasterDetailCell alloc] init];
 	
-	NSString *path = [[openPanel filenames] objectAtIndex:0];
+	filesCell.primaryKey = @"filename";
+	filesCell.secondaryKey = @"fileSizeString";
 	
-	char *pathString = [path UTF8String];
+	[[[filesTable tableColumns] objectAtIndex:1] setDataCell:filesCell];
 }
 
 @end

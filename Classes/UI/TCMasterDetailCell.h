@@ -15,5 +15,5 @@
 }
 @property (copy) NSString *primaryKey;
 @property (copy) NSString *secondaryKey;
-
+-(void)drawBackgroundIfNeededInRect:(NSRect)drawRect;
 @end

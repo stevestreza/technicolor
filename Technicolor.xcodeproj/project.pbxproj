@@ -92,6 +92,15 @@
 		1EB8CB100EA1B00800984CD7 /* TCCalendarPlugin.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 1EB8CB0F0EA1B00800984CD7 /* TCCalendarPlugin.xcdatamodel */; };
 		1ED8D92D0EF5BD4C008EF249 /* TCTVEpisodeJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8D92C0EF5BD4C008EF249 /* TCTVEpisodeJSObject.m */; };
 		1ED8D96E0EF5C672008EF249 /* TCVideoFileJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8D96D0EF5C672008EF249 /* TCVideoFileJSObject.m */; };
+		1ED8D9B50EF5CD58008EF249 /* TCNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ED8D9B30EF5CD58008EF249 /* TCNavigationController.h */; };
+		1ED8D9B60EF5CD58008EF249 /* TCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8D9B40EF5CD58008EF249 /* TCNavigationController.m */; };
+		1ED8D9B90EF5CD68008EF249 /* TCNavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ED8D9B70EF5CD68008EF249 /* TCNavigationBar.h */; };
+		1ED8D9BA0EF5CD68008EF249 /* TCNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8D9B80EF5CD68008EF249 /* TCNavigationBar.m */; };
+		1ED8D9BD0EF5CEF0008EF249 /* TCNavigationItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ED8D9BB0EF5CEF0008EF249 /* TCNavigationItem.h */; };
+		1ED8D9BE0EF5CEF0008EF249 /* TCNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8D9BC0EF5CEF0008EF249 /* TCNavigationItem.m */; };
+		1ED8D9D90EF5D0A3008EF249 /* TCNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8D9D80EF5D0A3008EF249 /* TCNavigationController.xib */; };
+		1ED8D9E80EF5DCD4008EF249 /* TCAddFiles.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8D9E60EF5DCD4008EF249 /* TCAddFiles.xib */; };
+		1ED8DA3A0EF5EA0F008EF249 /* ProcessingQueue.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8DA380EF5EA0F008EF249 /* ProcessingQueue.nib */; };
 		1EE135730EF4AA0A00668132 /* TCTVShowJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE135720EF4AA0A00668132 /* TCTVShowJSObject.m */; };
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
 		77C8280E06725ACE000B614F /* Technicolor_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* Technicolor_AppDelegate.m */; };
@@ -341,6 +350,15 @@
 		1ED8D92C0EF5BD4C008EF249 /* TCTVEpisodeJSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTVEpisodeJSObject.m; sourceTree = "<group>"; };
 		1ED8D96C0EF5C672008EF249 /* TCVideoFileJSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCVideoFileJSObject.h; sourceTree = "<group>"; };
 		1ED8D96D0EF5C672008EF249 /* TCVideoFileJSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCVideoFileJSObject.m; sourceTree = "<group>"; };
+		1ED8D9B30EF5CD58008EF249 /* TCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCNavigationController.h; sourceTree = "<group>"; };
+		1ED8D9B40EF5CD58008EF249 /* TCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCNavigationController.m; sourceTree = "<group>"; };
+		1ED8D9B70EF5CD68008EF249 /* TCNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCNavigationBar.h; sourceTree = "<group>"; };
+		1ED8D9B80EF5CD68008EF249 /* TCNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCNavigationBar.m; sourceTree = "<group>"; };
+		1ED8D9BB0EF5CEF0008EF249 /* TCNavigationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCNavigationItem.h; sourceTree = "<group>"; };
+		1ED8D9BC0EF5CEF0008EF249 /* TCNavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCNavigationItem.m; sourceTree = "<group>"; };
+		1ED8D9D80EF5D0A3008EF249 /* TCNavigationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TCNavigationController.xib; path = Resources/Framework/TCNavigationController.xib; sourceTree = "<group>"; };
+		1ED8D9E70EF5DCD4008EF249 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/App/English.lproj/TCAddFiles.xib; sourceTree = "<group>"; };
+		1ED8DA390EF5EA0F008EF249 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../../Projects.old/Technicolor/English.lproj/ProcessingQueue.nib; sourceTree = SOURCE_ROOT; };
 		1EE135710EF4AA0A00668132 /* TCTVShowJSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTVShowJSObject.h; sourceTree = "<group>"; };
 		1EE135720EF4AA0A00668132 /* TCTVShowJSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTVShowJSObject.m; sourceTree = "<group>"; };
 		1EE3EE750E53CF590099684C /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
@@ -593,6 +611,7 @@
 		1E636A630EA29B750003034E /* App */ = {
 			isa = PBXGroup;
 			children = (
+				1ED8DA380EF5EA0F008EF249 /* ProcessingQueue.nib */,
 				1E636A540EA29B030003034E /* TCTVShowView.nib */,
 				1E636A710EA29CA10003034E /* whitebar-bg.png */,
 				1E50D7D40E5010ED00BDA918 /* Wizard.nib */,
@@ -622,6 +641,7 @@
 		1E6C75750EE651000099140B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1ED8D9E90EF5E788008EF249 /* Processing Queue */,
 				1E6C75760EE651090099140B /* TV Shows */,
 			);
 			name = "View Controllers";
@@ -639,6 +659,7 @@
 		1E6C75770EE651250099140B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1ED8D9B20EF5CD30008EF249 /* Navigation Controller */,
 				1E6C75F70EE653DB0099140B /* TCMasterDetailCell.h */,
 				1E6C75F80EE653DB0099140B /* TCMasterDetailCell.m */,
 				1E6C767E0EE660A50099140B /* TCVideoFile+PreviewImage.h */,
@@ -731,8 +752,6 @@
 				1E6C75750EE651000099140B /* View Controllers */,
 				77C8280B06725ACE000B614F /* Technicolor_AppDelegate.h */,
 				77C8280C06725ACE000B614F /* Technicolor_AppDelegate.m */,
-				1E10D8060E6C459900C69D38 /* TCProcessingQueueController.h */,
-				1E10D8070E6C459900C69D38 /* TCProcessingQueueController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -769,6 +788,28 @@
 			path = TCTVRagePlugin;
 			sourceTree = "<group>";
 		};
+		1ED8D9B20EF5CD30008EF249 /* Navigation Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1ED8D9B30EF5CD58008EF249 /* TCNavigationController.h */,
+				1ED8D9B40EF5CD58008EF249 /* TCNavigationController.m */,
+				1ED8D9B70EF5CD68008EF249 /* TCNavigationBar.h */,
+				1ED8D9B80EF5CD68008EF249 /* TCNavigationBar.m */,
+				1ED8D9BB0EF5CEF0008EF249 /* TCNavigationItem.h */,
+				1ED8D9BC0EF5CEF0008EF249 /* TCNavigationItem.m */,
+			);
+			name = "Navigation Controller";
+			sourceTree = "<group>";
+		};
+		1ED8D9E90EF5E788008EF249 /* Processing Queue */ = {
+			isa = PBXGroup;
+			children = (
+				1E10D8060E6C459900C69D38 /* TCProcessingQueueController.h */,
+				1E10D8070E6C459900C69D38 /* TCProcessingQueueController.m */,
+			);
+			name = "Processing Queue";
+			sourceTree = "<group>";
+		};
 		29B97314FDCFA39411CA2CEA /* Technicolor */ = {
 			isa = PBXGroup;
 			children = (
@@ -780,6 +821,8 @@
 				1E38446E0ED7D58400DD6F43 /* Foundation.framework */,
 				1E6C75BE0EE652090099140B /* AppKit.framework */,
 				1E6C76850EE660F40099140B /* QuickLook.framework */,
+				1ED8D9D80EF5D0A3008EF249 /* TCNavigationController.xib */,
+				1ED8D9E60EF5DCD4008EF249 /* TCAddFiles.xib */,
 			);
 			name = Technicolor;
 			sourceTree = "<group>";
@@ -839,6 +882,9 @@
 			files = (
 				1E6C75F90EE653DB0099140B /* TCMasterDetailCell.h in Headers */,
 				1E6C76800EE660A50099140B /* TCVideoFile+PreviewImage.h in Headers */,
+				1ED8D9B50EF5CD58008EF249 /* TCNavigationController.h in Headers */,
+				1ED8D9B90EF5CD68008EF249 /* TCNavigationBar.h in Headers */,
+				1ED8D9BD0EF5CEF0008EF249 /* TCNavigationItem.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1075,6 +1121,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E6C75E70EE653340099140B /* TCCoreUI-Info.plist in Resources */,
+				1ED8D9D90EF5D0A3008EF249 /* TCNavigationController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1101,6 +1148,8 @@
 				1E50D7D60E5010ED00BDA918 /* Wizard.nib in Resources */,
 				1E636A560EA29B030003034E /* TCTVShowView.nib in Resources */,
 				1E636A720EA29CA10003034E /* whitebar-bg.png in Resources */,
+				1ED8D9E80EF5DCD4008EF249 /* TCAddFiles.xib in Resources */,
+				1ED8DA3A0EF5EA0F008EF249 /* ProcessingQueue.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1152,6 +1201,9 @@
 			files = (
 				1E6C75FA0EE653DB0099140B /* TCMasterDetailCell.m in Sources */,
 				1E6C76810EE660A50099140B /* TCVideoFile+PreviewImage.m in Sources */,
+				1ED8D9B60EF5CD58008EF249 /* TCNavigationController.m in Sources */,
+				1ED8D9BA0EF5CD68008EF249 /* TCNavigationBar.m in Sources */,
+				1ED8D9BE0EF5CEF0008EF249 /* TCNavigationItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1267,6 +1319,22 @@
 			);
 			name = TCTVShowView.nib;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		1ED8D9E60EF5DCD4008EF249 /* TCAddFiles.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ED8D9E70EF5DCD4008EF249 /* English */,
+			);
+			name = TCAddFiles.xib;
+			sourceTree = "<group>";
+		};
+		1ED8DA380EF5EA0F008EF249 /* ProcessingQueue.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ED8DA390EF5EA0F008EF249 /* English */,
+			);
+			name = ProcessingQueue.nib;
 			sourceTree = "<group>";
 		};
 		2F7446970DB6B7EA00F9684A /* MainMenu.xib */ = {

@@ -10,6 +10,8 @@
 #import "JSXObjCBridgeObject.h"
 #import "JSXObjCObject.h"
 
+#import "TCVideoFileJSObject.h"
+
 @interface TCTVShowJSBridge : JSXObjCBridgeObject {
 	NSManagedObjectContext *storeContext;
 }

@@ -59,6 +59,29 @@
 	else return [array objectAtIndex:0];
 }
 
++(NSArray *)allFilesWithoutVideos{
+	NSManagedObjectContext *moc = [[NSApp delegate] managedObjectContext];
+	
+	NSEntityDescription *entityDescription = [NSEntityDescription
+											  entityForName:@"VideoFile" inManagedObjectContext:moc];
+	NSFetchRequest *request = [[[NSFetchRequest alloc] init] autorelease];
+	[request setEntity:entityDescription];
+	
+	// Set example predicate and sort orderings...
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:
+							  @"(video == nil)"];
+	[request setPredicate:predicate];
+	
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
+										initWithKey:@"showName" ascending:YES];
+	[request setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+	[sortDescriptor release];
+	
+	NSError *error = nil;
+	NSArray *array = [moc executeFetchRequest:request error:&error];
+	return array;
+}
+
 -(void)awakeFromFetch{
 	metadata = [[NSMutableDictionary dictionary] retain];
 }

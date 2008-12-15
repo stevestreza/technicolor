@@ -27,7 +27,7 @@
 
 
 @interface TCProcessingQueueController : NSViewController {
-
+	IBOutlet NSTableView *filesTable;
 }
 -(IBAction)go:(id)sender;
 @end

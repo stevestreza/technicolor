@@ -34,24 +34,62 @@ static NSDictionary *sSecondaryAttributes = nil;
 	
 	CGRectDivide(NSRectToCGRect(cellFrame), &primaryRect, &secondaryRect, (cellFrame.size.height/2.), CGRectMinYEdge);
 	
-	if(!sPrimaryAttribtues){
-		sPrimaryAttribtues = [[NSDictionary dictionaryWithObjectsAndKeys:
+//	if(!sPrimaryAttribtues){
+		sPrimaryAttribtues = [[[NSDictionary dictionaryWithObjectsAndKeys:
 							  [[NSFontManager sharedFontManager] convertFont:[NSFont systemFontOfSize:12.] toHaveTrait:NSBoldFontMask], NSFontAttributeName,
-							  nil] retain];
-	}
+								[self primaryColor], NSForegroundColorAttributeName,
+							  nil] retain] autorelease];
+//	}
 	
-	if(!sSecondaryAttributes){
-		sSecondaryAttributes = [[NSDictionary dictionaryWithObjectsAndKeys:
+//	if(!sSecondaryAttributes){
+		sSecondaryAttributes = [[[NSDictionary dictionaryWithObjectsAndKeys:
 //								 [[NSFontManager sharedFontManager] convertFont:
 																				[NSFont systemFontOfSize:11.]
 //																	toHaveTrait:NSBoldFontMask]
 									, NSFontAttributeName,
-								 [NSColor colorWithCalibratedWhite:0.35 alpha:1], NSForegroundColorAttributeName,
-							  nil] retain];
-	}
+								 [self secondaryColor], NSForegroundColorAttributeName,
+								  nil] retain] autorelease];
+//	}
+
+	[self drawBackgroundIfNeededInRect:cellFrame];
 	
 	[primaryString drawInRect:NSRectFromCGRect(primaryRect) withAttributes:sPrimaryAttribtues];
 	[secondaryString drawInRect:NSRectFromCGRect(secondaryRect) withAttributes:sSecondaryAttributes];
+}
+
+static NSGradient *sGradient = nil;
+-(void)drawBackgroundIfNeededInRect:(NSRect)drawRect{
+	if([self isHighlighted]){
+		if(!sGradient){
+			NSArray *colorArray = [NSArray arrayWithObjects:
+								   [NSColor colorWithCalibratedWhite:0.3008 alpha:1.0],
+								   [NSColor colorWithCalibratedWhite:0.2656 alpha:1.0],
+								   [NSColor colorWithCalibratedWhite:0.1367 alpha:1.0],
+								   [NSColor colorWithCalibratedWhite:0.0117 alpha:1.0],
+								   nil];
+			const CGFloat locations[] = { 0.0f, 0.49f, 0.5f, 1.0f };
+			sGradient = [[NSGradient alloc] initWithColors:colorArray
+											   atLocations:locations
+												colorSpace:[NSColorSpace deviceRGBColorSpace]];
+		}
+		[sGradient drawInRect:drawRect angle:90.f];
+	}
+}
+
+-(NSColor *)primaryColor{
+	if([self isHighlighted]){
+		return [NSColor whiteColor];
+	}else{
+		return [NSColor blackColor];
+	}
+}
+
+-(NSColor *)secondaryColor{
+	if([self isHighlighted]){
+		return [NSColor colorWithCalibratedWhite:0.85 alpha:1];
+	}else{
+		return [NSColor colorWithCalibratedWhite:0.35 alpha:1];
+	}
 }
 
 - (void)setObjectValue:(id )object {

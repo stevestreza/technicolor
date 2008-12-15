@@ -32,6 +32,7 @@
 }
 
 +(TCVideoFile *)videoFileForPath:(NSString *)path;
++(NSArray *)allFilesWithoutVideos;
 
 -(NSString *)filename;
 -(NSString *)fileSizeString;
