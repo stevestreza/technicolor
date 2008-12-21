@@ -296,20 +296,15 @@
 																		<string>WebURLsWithTitlesPboardType</string>
 																	</object>
 																</object>
-																<string key="NSFrameSize">{422, 238}</string>
+																<string key="NSFrameSize">{422, 126}</string>
 																<reference key="NSSuperview" ref="244885069"/>
 																<object class="NSTextContainer" key="NSTextContainer" id="41784439">
 																	<object class="NSLayoutManager" key="NSLayoutManager">
 																		<object class="NSTextStorage" key="NSTextStorage">
 																			<object class="NSMutableString" key="NSString">
-																				<bytes key="NS.bytes">dmFyIHNob3dzID0gbmV3IFRWU2hvd0JyaWRnZSgpOwoKdmFyIGFsbFNob3dzID0gc2hvd3MuYWxsU2hv
-d3M7CmZvcih2YXIgaWR4PTA7IGlkeCA8IGFsbFNob3dzLmxlbmd0aDsgaWR4KyspewoJdmFyIHNob3cg
-PSBhbGxTaG93c1tpZHhdOwoJdmFyIGVwaXNvZGVzID0gc2hvdy5lcGlzb2RlczsKCWZvcih2YXIgaWR4
-Mj0wOyBpZHgyIDwgZXBpc29kZXMubGVuZ3RoOyBpZHgyKyspewoJCXZhciBlcCA9IGVwaXNvZGVzW2lk
-eDJdOwoJCXByaW50KCIiICsgc2hvdy5zaG93TmFtZSArICIgLSAiICsgZXAuZXBpc29kZUlEICsgIiAt
-ICIgKyBlcC5lcGlzb2RlTmFtZSk7CgkJdmFyIGZpbGVzID0gZXAudmlkZW9GaWxlczsKCQlmb3IodmFy
-IGlkeDM9MDsgaWR4MyA8IGZpbGVzLmxlbmd0aDsgaWR4MysrKXsKCQkJdmFyIGZpbGUgPSBmaWxlc1tp
-ZHgzXTsKCQkJcHJpbnQoIi1GaWxlOiAiICsgZmlsZS5wYXRoKTsKCQl9Cgl9Cn0</bytes>
+																				<bytes key="NS.bytes">dmFyIHNob3dzID0gbmV3IFRWU2hvd0JyaWRnZSgpOwoKLyoKc2hvd3MuZmlsZUZvclBhdGggKHBhdGgp
+CkRvZXMgYSBzdG9yZSBsb29rdXAgZm9yIHRoZSBWaWRlb0ZpbGUgYXQgcGF0aCwgY3JlYXRpbmcgb25l
+IGlmIG5lY2Vzc2FyeS4KKi8KCg</bytes>
 																			</object>
 																			<object class="NSDictionary" key="NSAttributes">
 																				<bool key="EncodedWithXMLCoder">YES</bool>

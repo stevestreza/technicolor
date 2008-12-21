@@ -29,4 +29,6 @@
 		sUUID = CFUUIDCreateFromString(NULL, ((CFStringRef)(__uuid)) ); \
 	} \
 	return sUUID; \
-} \
+}
+
+typedef unsigned long long TCFileSize;

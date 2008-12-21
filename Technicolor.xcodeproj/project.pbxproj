@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E10D8080E6C459900C69D38 /* TCProcessingQueueController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E10D8070E6C459900C69D38 /* TCProcessingQueueController.m */; };
 		1E23C8080EEFA3A100E6C373 /* JSXObjC.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1E23C6560EEFA06700E6C373 /* JSXObjC.framework */; };
 		1E23C82E0EEFA5FC00E6C373 /* TCJSInterpreterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E23C82D0EEFA5FC00E6C373 /* TCJSInterpreterController.m */; };
 		1E23C8300EEFA6C300E6C373 /* TCJSInterpreter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E23C82F0EEFA6C300E6C373 /* TCJSInterpreter.xib */; };
@@ -60,6 +59,8 @@
 		1E636A560EA29B030003034E /* TCTVShowView.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1E636A540EA29B030003034E /* TCTVShowView.nib */; };
 		1E636A720EA29CA10003034E /* whitebar-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E636A710EA29CA10003034E /* whitebar-bg.png */; };
 		1E636A7E0EA29D1B0003034E /* TCCore-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E63689F0EA253590003034E /* TCCore-Info.plist */; };
+		1E6AC83C0EFD94D700DE9E6D /* TCListView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6AC83A0EFD94D700DE9E6D /* TCListView.h */; };
+		1E6AC83D0EFD94D700DE9E6D /* TCListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6AC83B0EFD94D700DE9E6D /* TCListView.m */; };
 		1E6C75B30EE651F80099140B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E49162D0EABFBF3005CEC4F /* CoreFoundation.framework */; };
 		1E6C75B40EE651F80099140B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C82804067257F0000B614F /* CoreData.framework */; };
 		1E6C75B50EE651F80099140B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
@@ -100,7 +101,14 @@
 		1ED8D9BE0EF5CEF0008EF249 /* TCNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8D9BC0EF5CEF0008EF249 /* TCNavigationItem.m */; };
 		1ED8D9D90EF5D0A3008EF249 /* TCNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8D9D80EF5D0A3008EF249 /* TCNavigationController.xib */; };
 		1ED8D9E80EF5DCD4008EF249 /* TCAddFiles.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8D9E60EF5DCD4008EF249 /* TCAddFiles.xib */; };
-		1ED8DA3A0EF5EA0F008EF249 /* ProcessingQueue.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8DA380EF5EA0F008EF249 /* ProcessingQueue.nib */; };
+		1ED8DAF70EF6070A008EF249 /* TCProcessingQueueController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E10D8070E6C459900C69D38 /* TCProcessingQueueController.m */; };
+		1ED8DAFA0EF60780008EF249 /* TCCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6C75B90EE651F80099140B /* TCCoreUI.framework */; };
+		1ED8DC400EF607B6008EF249 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E38446E0ED7D58400DD6F43 /* Foundation.framework */; };
+		1ED8DC410EF607B6008EF249 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6C75BE0EE652090099140B /* AppKit.framework */; };
+		1ED8DC460EF607E4008EF249 /* ProcessingQueue.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8DA380EF5EA0F008EF249 /* ProcessingQueue.nib */; };
+		1ED8DC580EF609BC008EF249 /* TCEditTVEpisode.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8DC570EF609BC008EF249 /* TCEditTVEpisode.xib */; };
+		1ED8DC5A0EF609C5008EF249 /* TCEditTVShow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8DC590EF609C5008EF249 /* TCEditTVShow.xib */; };
+		1ED8DC670EF63A5D008EF249 /* TCEditEpisodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8DC660EF63A5D008EF249 /* TCEditEpisodeController.m */; };
 		1EE135730EF4AA0A00668132 /* TCTVShowJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE135720EF4AA0A00668132 /* TCTVShowJSObject.m */; };
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
 		77C8280E06725ACE000B614F /* Technicolor_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* Technicolor_AppDelegate.m */; };
@@ -215,6 +223,13 @@
 			remoteGlobalIDString = 1E63689D0EA253590003034E;
 			remoteInfo = TCCore;
 		};
+		1ED8DC440EF607D1008EF249 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E6C75970EE651F80099140B;
+			remoteInfo = TCCoreUI;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -246,8 +261,8 @@
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		1E10D8060E6C459900C69D38 /* TCProcessingQueueController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCProcessingQueueController.h; sourceTree = "<group>"; };
-		1E10D8070E6C459900C69D38 /* TCProcessingQueueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCProcessingQueueController.m; sourceTree = "<group>"; };
+		1E10D8060E6C459900C69D38 /* TCProcessingQueueController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCProcessingQueueController.h; path = ../../../TCProcessingQueueController.h; sourceTree = "<group>"; };
+		1E10D8070E6C459900C69D38 /* TCProcessingQueueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCProcessingQueueController.m; path = ../../../TCProcessingQueueController.m; sourceTree = "<group>"; };
 		1E23C75A0EEFA2F600E6C373 /* JSXObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjC.h; path = ../../../Packages/jsxobjc/source/JSXore/JSXObjC.h; sourceTree = SOURCE_ROOT; };
 		1E23C75B0EEFA2F600E6C373 /* JSXObjCWrappers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCWrappers.h; path = ../../../Packages/jsxobjc/source/JSXore/JSXObjCWrappers.h; sourceTree = SOURCE_ROOT; };
 		1E23C75C0EEFA2F600E6C373 /* JSXObjCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSXObjCObject.h; path = ../../../Packages/jsxobjc/source/JSXore/JSXObjCObject.h; sourceTree = SOURCE_ROOT; };
@@ -305,6 +320,8 @@
 		1E636A010EA290200003034E /* TCCoreUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCCoreUtils.m; sourceTree = "<group>"; };
 		1E636A550EA29B030003034E /* TCTVShowView.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = TCTVShowView.nib; path = Resources/App/English.lproj/TCTVShowView.nib; sourceTree = "<group>"; };
 		1E636A710EA29CA10003034E /* whitebar-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whitebar-bg.png"; sourceTree = "<group>"; };
+		1E6AC83A0EFD94D700DE9E6D /* TCListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCListView.h; sourceTree = "<group>"; };
+		1E6AC83B0EFD94D700DE9E6D /* TCListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCListView.m; sourceTree = "<group>"; };
 		1E6C75B90EE651F80099140B /* TCCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TCCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E6C75BC0EE651F80099140B /* TCCoreUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TCCoreUI-Info.plist"; sourceTree = "<group>"; };
 		1E6C75BE0EE652090099140B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -359,6 +376,10 @@
 		1ED8D9D80EF5D0A3008EF249 /* TCNavigationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TCNavigationController.xib; path = Resources/Framework/TCNavigationController.xib; sourceTree = "<group>"; };
 		1ED8D9E70EF5DCD4008EF249 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/App/English.lproj/TCAddFiles.xib; sourceTree = "<group>"; };
 		1ED8DA390EF5EA0F008EF249 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../../Projects.old/Technicolor/English.lproj/ProcessingQueue.nib; sourceTree = SOURCE_ROOT; };
+		1ED8DC570EF609BC008EF249 /* TCEditTVEpisode.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TCEditTVEpisode.xib; sourceTree = "<group>"; };
+		1ED8DC590EF609C5008EF249 /* TCEditTVShow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TCEditTVShow.xib; sourceTree = "<group>"; };
+		1ED8DC650EF63A5D008EF249 /* TCEditEpisodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCEditEpisodeController.h; sourceTree = "<group>"; };
+		1ED8DC660EF63A5D008EF249 /* TCEditEpisodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCEditEpisodeController.m; sourceTree = "<group>"; };
 		1EE135710EF4AA0A00668132 /* TCTVShowJSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTVShowJSObject.h; sourceTree = "<group>"; };
 		1EE135720EF4AA0A00668132 /* TCTVShowJSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTVShowJSObject.m; sourceTree = "<group>"; };
 		1EE3EE750E53CF590099684C /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
@@ -380,6 +401,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ED8DC400EF607B6008EF249 /* Foundation.framework in Frameworks */,
+				1ED8DC410EF607B6008EF249 /* AppKit.framework in Frameworks */,
+				1ED8DAFA0EF60780008EF249 /* TCCoreUI.framework in Frameworks */,
 				1E5E38680EA2FBB700FD67A3 /* TCCore.framework in Frameworks */,
 				1E5E386A0EA2FBB700FD67A3 /* CoreData.framework in Frameworks */,
 			);
@@ -547,7 +571,10 @@
 		1E5E384E0EA2FB6E00FD67A3 /* Processing Queue */ = {
 			isa = PBXGroup;
 			children = (
+				1ED8DC640EF63A39008EF249 /* Editor */,
 				1E5E38620EA2FBA100FD67A3 /* TCProcessingQueuePlugin-Info.plist */,
+				1E10D8060E6C459900C69D38 /* TCProcessingQueueController.h */,
+				1E10D8070E6C459900C69D38 /* TCProcessingQueueController.m */,
 				1E5E38730EA2FBD400FD67A3 /* TCProcessingQueuePlugin.h */,
 				1E5E38740EA2FBD400FD67A3 /* TCProcessingQueuePlugin.m */,
 			);
@@ -611,7 +638,6 @@
 		1E636A630EA29B750003034E /* App */ = {
 			isa = PBXGroup;
 			children = (
-				1ED8DA380EF5EA0F008EF249 /* ProcessingQueue.nib */,
 				1E636A540EA29B030003034E /* TCTVShowView.nib */,
 				1E636A710EA29CA10003034E /* whitebar-bg.png */,
 				1E50D7D40E5010ED00BDA918 /* Wizard.nib */,
@@ -625,6 +651,9 @@
 		1E636A6D0EA29C030003034E /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				1ED8DA380EF5EA0F008EF249 /* ProcessingQueue.nib */,
+				1ED8DC570EF609BC008EF249 /* TCEditTVEpisode.xib */,
+				1ED8DC590EF609C5008EF249 /* TCEditTVShow.xib */,
 			);
 			path = Plugins;
 			sourceTree = "<group>";
@@ -641,7 +670,6 @@
 		1E6C75750EE651000099140B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1ED8D9E90EF5E788008EF249 /* Processing Queue */,
 				1E6C75760EE651090099140B /* TV Shows */,
 			);
 			name = "View Controllers";
@@ -664,6 +692,8 @@
 				1E6C75F80EE653DB0099140B /* TCMasterDetailCell.m */,
 				1E6C767E0EE660A50099140B /* TCVideoFile+PreviewImage.h */,
 				1E6C767F0EE660A50099140B /* TCVideoFile+PreviewImage.m */,
+				1E6AC83A0EFD94D700DE9E6D /* TCListView.h */,
+				1E6AC83B0EFD94D700DE9E6D /* TCListView.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -801,13 +831,13 @@
 			name = "Navigation Controller";
 			sourceTree = "<group>";
 		};
-		1ED8D9E90EF5E788008EF249 /* Processing Queue */ = {
+		1ED8DC640EF63A39008EF249 /* Editor */ = {
 			isa = PBXGroup;
 			children = (
-				1E10D8060E6C459900C69D38 /* TCProcessingQueueController.h */,
-				1E10D8070E6C459900C69D38 /* TCProcessingQueueController.m */,
+				1ED8DC650EF63A5D008EF249 /* TCEditEpisodeController.h */,
+				1ED8DC660EF63A5D008EF249 /* TCEditEpisodeController.m */,
 			);
-			name = "Processing Queue";
+			name = Editor;
 			sourceTree = "<group>";
 		};
 		29B97314FDCFA39411CA2CEA /* Technicolor */ = {
@@ -885,6 +915,7 @@
 				1ED8D9B50EF5CD58008EF249 /* TCNavigationController.h in Headers */,
 				1ED8D9B90EF5CD68008EF249 /* TCNavigationBar.h in Headers */,
 				1ED8D9BD0EF5CEF0008EF249 /* TCNavigationItem.h in Headers */,
+				1E6AC83C0EFD94D700DE9E6D /* TCListView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -903,6 +934,7 @@
 			);
 			dependencies = (
 				1E5E38670EA2FBA600FD67A3 /* PBXTargetDependency */,
+				1ED8DC450EF607D1008EF249 /* PBXTargetDependency */,
 			);
 			name = TCProcessingQueuePlugin;
 			productName = TCProcessingQueuePlugin;
@@ -1097,6 +1129,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ED8DC460EF607E4008EF249 /* ProcessingQueue.nib in Resources */,
+				1ED8DC580EF609BC008EF249 /* TCEditTVEpisode.xib in Resources */,
+				1ED8DC5A0EF609C5008EF249 /* TCEditTVShow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1149,7 +1184,6 @@
 				1E636A560EA29B030003034E /* TCTVShowView.nib in Resources */,
 				1E636A720EA29CA10003034E /* whitebar-bg.png in Resources */,
 				1ED8D9E80EF5DCD4008EF249 /* TCAddFiles.xib in Resources */,
-				1ED8DA3A0EF5EA0F008EF249 /* ProcessingQueue.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1161,6 +1195,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E5E38750EA2FBD400FD67A3 /* TCProcessingQueuePlugin.m in Sources */,
+				1ED8DAF70EF6070A008EF249 /* TCProcessingQueueController.m in Sources */,
+				1ED8DC670EF63A5D008EF249 /* TCEditEpisodeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1204,6 +1240,7 @@
 				1ED8D9B60EF5CD58008EF249 /* TCNavigationController.m in Sources */,
 				1ED8D9BA0EF5CD68008EF249 /* TCNavigationBar.m in Sources */,
 				1ED8D9BE0EF5CEF0008EF249 /* TCNavigationItem.m in Sources */,
+				1E6AC83D0EFD94D700DE9E6D /* TCListView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1235,7 +1272,6 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				77C8280E06725ACE000B614F /* Technicolor_AppDelegate.m in Sources */,
 				1E95DBF90E57BD9600B6A7E9 /* TCTVShowController.m in Sources */,
-				1E10D8080E6C459900C69D38 /* TCProcessingQueueController.m in Sources */,
 				1E63698A0EA2736E0003034E /* TCOrganizationPluginManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1293,6 +1329,11 @@
 			target = 1E63689D0EA253590003034E /* TCCore */;
 			targetProxy = 1E6C76F70EE66FA10099140B /* PBXContainerItemProxy */;
 		};
+		1ED8DC450EF607D1008EF249 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E6C75970EE651F80099140B /* TCCoreUI */;
+			targetProxy = 1ED8DC440EF607D1008EF249 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1335,6 +1376,7 @@
 				1ED8DA390EF5EA0F008EF249 /* English */,
 			);
 			name = ProcessingQueue.nib;
+			path = ../App;
 			sourceTree = "<group>";
 		};
 		2F7446970DB6B7EA00F9684A /* MainMenu.xib */ = {

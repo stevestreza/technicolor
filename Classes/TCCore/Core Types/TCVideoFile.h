@@ -24,6 +24,7 @@
  */
 
 #import <Cocoa/Cocoa.h>
+#import "Technicolor.h"
 //#import "TCFFMPEGVideo.h"
 @class TCFFMPEGVideo;
 
@@ -37,7 +38,7 @@
 -(NSString *)filename;
 -(NSString *)fileSizeString;
 
--(unsigned long long)filesize;
+-(TCFileSize)filesize;
 
 @property (readonly) NSString *filename;
 @property (readonly) NSString *fileSizeString;

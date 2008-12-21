@@ -51,4 +51,28 @@ static NSBundle *coreBundle = nil;
 	return [ourContext autorelease];
 }
 
++(NSArray *)_filetypes{
+	return [NSArray arrayWithObjects:
+			@"bytes",
+			@"KB",
+			@"MB",
+			@"GB",
+			@"TB",
+			nil];
+}
+
++(NSString *)formattedStringForFileSize:(TCFileSize)filesize{
+	NSArray *types = [TCCoreUtils _filetypes];
+	NSUInteger typeIndex = 0;
+	for(typeIndex; typeIndex < types.count; typeIndex++){
+		if(pow(1024,typeIndex+1) >= filesize){
+			break;
+		}
+	}
+	
+	double finalValue = (filesize / pow(1024,typeIndex));
+	NSString *retValue = [NSString stringWithFormat:@"%0.1f %@",finalValue, [types objectAtIndex:typeIndex]];
+	return retValue;	
+}
+
 @end

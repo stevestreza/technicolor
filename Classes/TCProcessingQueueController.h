@@ -28,6 +28,14 @@
 
 @interface TCProcessingQueueController : NSViewController {
 	IBOutlet NSTableView *filesTable;
+	IBOutlet NSView *editorBox;
+	IBOutlet NSArrayController *filesController;
+	IBOutlet NSPopUpButton *fileTypeButton;
+	
+	NSMutableDictionary *typeHandlers;
 }
+
 -(IBAction)go:(id)sender;
+-(IBAction)updateFileType:(id)sender;
+
 @end

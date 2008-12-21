@@ -30,4 +30,10 @@
 
 TCUUID(@"CCB2286A-1841-4193-9F19-B9D21D2316C8")
 
+-(void)awake{
+	vc = [[TCProcessingQueueController alloc] init];
+	[vc setTitle:@"Unprocessed"];
+	[self addViewController:vc forType:@"Workers"];
+}
+
 @end

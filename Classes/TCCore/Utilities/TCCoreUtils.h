@@ -24,7 +24,7 @@
  */
 
 #import <Cocoa/Cocoa.h>
-
+#import "Technicolor.h"
 
 @interface TCCoreUtils : NSObject {
 
@@ -33,5 +33,8 @@
 +(NSBundle *)coreBundle;
 +(NSManagedObjectModel *)coreModel;
 +(NSManagedObjectContext *)newStoreContext;
+
++(NSString *)formattedStringForFileSize:(TCFileSize)filesize;	
++(NSArray *)_filetypes;		
 
 @end

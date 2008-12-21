@@ -33,14 +33,7 @@
 	NSString *frameworkPath=[[[NSBundle bundleForClass:[self class]] bundlePath]
 							 stringByAppendingPathComponent:@"Contents/Frameworks/JSXObjC.framework"];
 	
-	NSBundle *framework=[NSBundle bundleWithPath:frameworkPath];
-	
-	if([framework load])
-		NSLog(@"Framework loaded");
-	else
-	{
-		NSLog(@"Error, framework failed to load\nAborting.");
-	}	
+	[TCOrganizationPlugin loadFrameworkAtPath: frameworkPath];
 }
 
 TCUUID(@"B040A569-DE2C-4CAF-9905-DB327C876C41")

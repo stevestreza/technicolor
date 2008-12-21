@@ -28,10 +28,12 @@
 #import "TCMasterDetailCell.h"
 #import "TCVideoFile.h"
 
+#import "TCEditEpisodeController.h"
+
 @implementation TCProcessingQueueController
 
 -(id)init{
-	if(self = [super initWithNibName:@"ProcessingQueue" bundle:[NSBundle bundleForClass:self]]){
+	if(self = [super initWithNibName:@"ProcessingQueue" bundle:[NSBundle bundleForClass:[TCProcessingQueueController class]]]){
 	}
 	return self;
 }
@@ -43,6 +45,24 @@
 	filesCell.secondaryKey = @"fileSizeString";
 	
 	[[[filesTable tableColumns] objectAtIndex:1] setDataCell:filesCell];
+	
+	typeHandlers = [[NSMutableDictionary dictionary] retain];
+	
+	[typeHandlers setObject:[[[TCEditEpisodeController alloc] init] autorelease] 
+					 forKey:@"TV Episode"];
+	
+	[self updateFileType:self];
+}
+
+-(IBAction)updateFileType:(id)sender{
+	NSViewController *typeController = [typeHandlers objectForKey:[[fileTypeButton selectedItem] title]];
+	
+	for(NSView *view in editorBox.subviews){
+		[view removeFromSuperview];
+	}
+	
+	[editorBox addSubview:typeController.view];
+	typeController.view.frame = editorBox.bounds;
 }
 
 @end

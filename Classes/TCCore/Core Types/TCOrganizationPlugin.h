@@ -36,6 +36,9 @@
 -(CFUUIDRef)uuid;
 -(NSString *)uuidString;
 
++(BOOL)loadFrameworkAtPath:(NSString *)frameworkPath;
+
 +(CFUUIDRef)generateUUID;
+
 -(void)addViewController:(NSViewController *)controller forType:(NSString *)type;
 @end

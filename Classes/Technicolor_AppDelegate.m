@@ -130,10 +130,6 @@
 		[self addViewController:vc forType:@"Videos"];
 		[vc release];
 		
-		vc = [[TCProcessingQueueController alloc] init];
-		[vc setTitle:@"Unprocessed"];
-		[self addViewController:vc forType:@"Workers"];
-		[vc release];
 /*		
 		vc = [[NSViewController alloc] init];
 		[vc setTitle:@"Downloads"];

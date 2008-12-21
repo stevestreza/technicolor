@@ -26,9 +26,10 @@
 #import <Cocoa/Cocoa.h>
 #import "Technicolor.h"
 #import "TCOrganizationPlugin.h"
+#import "TCProcessingQueueController.h"
 
 @interface TCProcessingQueuePlugin : TCOrganizationPlugin {
-
+	TCProcessingQueueController *vc;
 }
 
 @end
