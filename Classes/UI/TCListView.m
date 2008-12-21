@@ -66,6 +66,10 @@
 }
 
 -(NSRect)frameForRowAtIndex:(NSUInteger)index{
+	if(index > mRows.count){
+		return NSZeroRect;
+	}
+	
 	NSView *indexedRow = [mRows objectAtIndex:index];
 	NSRect frame = indexedRow.frame;
 	frame.origin.y = 0;
@@ -76,21 +80,9 @@
 		NSView *view = [mRows objectAtIndex:loopIndex];
 		frame.origin.y += view.frame.size.height + 1;
 	}
-	return frame;
+	return NSIntegralRect(frame);
 }
-/*
--(void)setFrame:(NSRect)theRect{
-	NSLog(@"Setting some frame nigga %@",NSStringFromRect(theRect));
-	
-	[super setFrame:theRect];
-	
-	NSUInteger index=0;
-	for(index; index < mRows.count; index++){
-		NSView *view = [mRows objectAtIndex:index];
-		[view setFrame:[self frameForRowAtIndex:index]];
-	}
-}
-*/
+
 -(BOOL)isFlipped{
 	return YES;
 }
@@ -131,6 +123,27 @@
 	return frameSize;
 }
 
+-(NSIndexSet *)displayingRows{
+	NSMutableIndexSet *set = [NSMutableIndexSet indexSet];
+	
+	if(mRows.count == 0) goto finish_index_set;
+	
+	NSRect bounds = [self superview].bounds;
+	
+	NSUInteger index = 0;
+	for(index; index < mRows.count; index++){
+		NSRect frame = [self frameForRowAtIndex:index];
+		if(NSIntersectsRect(bounds, frame)){
+			[set addIndex:index];
+		}else if([set count] > 0){
+			goto finish_index_set;
+		}
+	}
+	
+finish_index_set:
+	return [[set copy] autorelease];
+}
+
 -(void)drawRect:(NSRect)theRect{
 	if(selectedRow != NSNotFound){
 		NSRect selectionFrame = [self frameForRowAtIndex:selectedRow];
@@ -139,6 +152,38 @@
 			[self drawSelectedBackgroundInRect:selectionFrame];
 		}
 	}
+	
+	[self drawGridInRect:theRect];
+}
+
+-(void)drawGridInRect:(NSRect)theRect{
+	NSIndexSet *set = [self displayingRows];
+	if([set count] == 0) return;
+	
+	NSUInteger index = [set firstIndex];
+	if(index == NSNotFound) return;
+	
+	[[NSColor grayColor] setStroke];
+	do{
+		NSRect frame = [self frameForRowAtIndex:index];
+		if(frame.size.height < 1) break;
+		float line = frame.origin.y + frame.size.height;
+		
+		NSLog(@"Drawing grid line at index %i: %f",index, line);
+		
+		[self drawGridLineAtY:line width:frame.size.width];
+		
+		index = [set indexGreaterThanIndex:index];
+	}while(index != [set lastIndex]);
+}
+
+-(void)drawGridLineAtY:(float)y width:(float)width{
+	NSBezierPath *path = [NSBezierPath bezierPath];
+	[path moveToPoint:NSMakePoint(0,y+0.5)];
+	[path lineToPoint:NSMakePoint(width,y+0.5)];
+	
+	[[NSColor lightGrayColor] setStroke];
+	[path stroke];
 }
 
 //Override to provide custom cell selection behavior

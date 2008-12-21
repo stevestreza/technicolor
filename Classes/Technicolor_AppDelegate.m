@@ -28,6 +28,7 @@
 #import "TCTVShowController.h"
 #import "TCProcessingQueueController.h"
 #import "TCCoreUtils.h"
+#import "TCCoreUI.h"
 
 @implementation Technicolor_AppDelegate
 @synthesize viewControllers, jobQueue;
@@ -112,6 +113,8 @@
 
 -(id)init{
 	if(self = [super init]){
+		[TCCoreUI initUI];
+		
 		NSViewController *vc;
 		
 /*		vc = [[NSViewController alloc] init];
@@ -152,6 +155,7 @@
 		array = [[NSMutableArray alloc] init];
 		[viewControllers setValue:array forKey:type];
 		[viewSelectionList reloadData];
+		[viewSelectionList expandItem:[NSNumber numberWithInt:[[viewControllers allKeys] count]]];
 		[array autorelease];
 	}
 	

@@ -24,29 +24,14 @@
  */
 
 #import "TCOrganizationPlugin.h"
-
+#import "TCCoreUtils.h"
 
 @implementation TCOrganizationPlugin
 
 static NSMutableArray *pluginArray;
 
-static NSMutableDictionary *frameworkDictionary;
-
 +(BOOL)loadFrameworkAtPath:(NSString *)frameworkPath{
-	if(!frameworkDictionary){
-		frameworkDictionary = [[NSMutableDictionary dictionary] retain];
-	}
-
-	if([frameworkDictionary objectForKey:frameworkPath]) return YES;
-	
-	NSBundle *framework=[NSBundle bundleWithPath:frameworkPath];
-	
-	if([framework load]){
-		NSLog(@"%@ framework loaded", [[frameworkPath lastPathComponent] stringByDeletingPathExtension]);
-		[frameworkDictionary setObject:framework forKey:frameworkPath];
-	}else{
-		NSLog(@"Error, %@ framework failed to load\nAborting.",[[frameworkPath lastPathComponent] stringByDeletingPathExtension]);
-	}	
+	return [TCCoreUtils loadFrameworkAtPath:frameworkPath];
 }
 
 +(void)initialize{

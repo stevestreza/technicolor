@@ -28,7 +28,10 @@
 
 @implementation TCCoreUtils
 
+static NSMutableDictionary *frameworkDictionary;
+
 static NSBundle *coreBundle = nil;
+
 +(NSBundle *)coreBundle{
 	if(!coreBundle){
 		coreBundle = [[NSBundle bundleForClass:[TCCoreUtils class]] retain];
@@ -73,6 +76,23 @@ static NSBundle *coreBundle = nil;
 	double finalValue = (filesize / pow(1024,typeIndex));
 	NSString *retValue = [NSString stringWithFormat:@"%0.1f %@",finalValue, [types objectAtIndex:typeIndex]];
 	return retValue;	
+}
+
++(BOOL)loadFrameworkAtPath:(NSString *)frameworkPath{
+	if(!frameworkDictionary){
+		frameworkDictionary = [[NSMutableDictionary dictionary] retain];
+	}
+	
+	if([frameworkDictionary objectForKey:frameworkPath]) return YES;
+	
+	NSBundle *framework=[NSBundle bundleWithPath:frameworkPath];
+	
+	if([framework load]){
+		NSLog(@"%@ framework loaded", [[frameworkPath lastPathComponent] stringByDeletingPathExtension]);
+		[frameworkDictionary setObject:framework forKey:frameworkPath];
+	}else{
+		NSLog(@"Error, %@ framework failed to load\nAborting.",[[frameworkPath lastPathComponent] stringByDeletingPathExtension]);
+	}	
 }
 
 @end

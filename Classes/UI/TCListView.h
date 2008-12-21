@@ -29,4 +29,10 @@
 -(NSSize)totalContentSize;
 
 -(NSUInteger)indexOfPoint:(NSPoint)pt;
+-(NSIndexSet *)displayingRows;
+
+-(void)drawGridInRect:(NSRect)theRect;
+-(void)drawGridLineAtY:(float)y width:(float)width;
+-(void)drawSelectedBackgroundInRect:(NSRect)rect;
+
 @end

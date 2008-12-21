@@ -37,4 +37,6 @@
 +(NSString *)formattedStringForFileSize:(TCFileSize)filesize;	
 +(NSArray *)_filetypes;		
 
++(BOOL)loadFrameworkAtPath:(NSString *)frameworkPath;
+
 @end
