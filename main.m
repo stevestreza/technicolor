@@ -24,8 +24,16 @@
  */
 
 #import <Cocoa/Cocoa.h>
+#import "TCCoreUI.h"
 
 int main(int argc, char *argv[])
 {
-    return NSApplicationMain(argc,  (const char **) argv);
+	int retVal = 0;
+	
+	NSAutoreleasePool *pool = [NSAutoreleasePool new];
+	[TCCoreUI initUI];
+    retVal = NSApplicationMain(argc,  (const char **) argv);
+	[pool release];
+	
+	return retVal;
 }

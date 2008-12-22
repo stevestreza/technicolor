@@ -169,8 +169,6 @@ finish_index_set:
 		if(frame.size.height < 1) break;
 		float line = frame.origin.y + frame.size.height;
 		
-		NSLog(@"Drawing grid line at index %i: %f",index, line);
-		
 		[self drawGridLineAtY:line width:frame.size.width];
 		
 		index = [set indexGreaterThanIndex:index];

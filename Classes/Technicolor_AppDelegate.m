@@ -113,7 +113,6 @@
 
 -(id)init{
 	if(self = [super init]){
-		[TCCoreUI initUI];
 		
 		NSViewController *vc;
 		
