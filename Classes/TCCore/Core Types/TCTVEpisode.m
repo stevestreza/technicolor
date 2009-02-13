@@ -127,27 +127,21 @@
 }
 
 +(NSArray *)episodesForPredicate:(NSPredicate *)predicate{
-	NSManagedObjectContext *moc = [[NSApp delegate] managedObjectContext];
-	NSEntityDescription *entityDescription = [NSEntityDescription
-											  entityForName:@"TVEpisode" inManagedObjectContext:moc];
-	NSFetchRequest *request = [[[NSFetchRequest alloc] init] autorelease];
-	[request setEntity:entityDescription];
-	[request setPredicate:predicate];
+	NSArray *sortDescriptors = nil;
+	
+	NSSortDescriptor *dateDescriptor     = [[[NSSortDescriptor alloc] initWithKey:@"airDate" ascending:YES] autorelease];
 	
 #ifdef TCTVEpisodeFavoritesEnabled
 	NSSortDescriptor *favoriteDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"show.favorite" ascending:NO] autorelease];
 #endif
-	
-	NSSortDescriptor *dateDescriptor     = [[[NSSortDescriptor alloc] initWithKey:@"airDate" ascending:YES] autorelease];
-	
-	[request setSortDescriptors:[NSArray arrayWithObjects:
+
+	sortDescriptors = 	[NSArray arrayWithObjects:
 #ifdef TCTVEpisodeFavoritesEnabled
-								 favoriteDescriptor, 
+						 favoriteDescriptor, 
 #endif
-								 dateDescriptor,nil]];
+						 dateDescriptor,nil];
 	
-	NSArray *items = [moc executeFetchRequest:request error:nil];
-	return items;
+	return [TCTVEpisode videosForPredicate:predicate];
 }
 
 +(NSArray *)episodesOnToday{

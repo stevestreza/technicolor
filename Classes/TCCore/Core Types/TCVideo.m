@@ -25,12 +25,36 @@
 
 #import "TCVideo.h"
 
-
 @implementation TCVideo
+
++(NSArray *)videosForPredicate:(NSPredicate *)predicate{
+	return [self videosForPredicate:predicate withSortDescriptors:[NSArray array]];
+}
+
++(NSArray *)videosForPredicate:(NSPredicate *)predicate withSortDescriptors:(NSArray *)sortDescriptors{
+	NSManagedObjectContext *moc = [[NSApp delegate] managedObjectContext];
+	
+	NSEntityDescription *entityDescription = [NSEntityDescription entityForName:[[self entity] name] 
+														 inManagedObjectContext:moc];
+	
+	NSFetchRequest *request = [[[NSFetchRequest alloc] init] autorelease];
+	
+	[request setEntity:entityDescription];
+	[request setPredicate:predicate];
+	
+	[request setSortDescriptors:sortDescriptors];
+	
+	NSArray *items = [moc executeFetchRequest:request error:nil];
+	return items;
+}
 
 -(void)addFile:(TCVideoFile *)videoFile{
 	NSMutableSet *files = [self mutableSetValueForKey:@"videoFiles"];
 	[files addObject:videoFile];
+}
+
+-(TCVideoFile *)anyFile{
+	return [[self valueForKey:@"videoFiles"] anyObject];
 }
 
 @end

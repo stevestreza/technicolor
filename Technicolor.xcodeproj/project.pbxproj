@@ -15,7 +15,6 @@
 		1E38470B0ED8C72D00DD6F43 /* Technicolor_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 1E38470A0ED8C72D00DD6F43 /* Technicolor_DataModel.xcdatamodel */; };
 		1E4916140EABFB76005CEC4F /* Technicolor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E4916130EABFB76005CEC4F /* Technicolor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E50D7D60E5010ED00BDA918 /* Wizard.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1E50D7D40E5010ED00BDA918 /* Wizard.nib */; };
-		1E5E38680EA2FBB700FD67A3 /* TCCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E63689E0EA253590003034E /* TCCore.framework */; };
 		1E5E386A0EA2FBB700FD67A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5E38690EA2FBB700FD67A3 /* CoreData.framework */; };
 		1E5E38750EA2FBD400FD67A3 /* TCProcessingQueuePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5E38740EA2FBD400FD67A3 /* TCProcessingQueuePlugin.m */; };
 		1E5E38810EA2FC1200FD67A3 /* TCCore.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1E63689E0EA253590003034E /* TCCore.framework */; };
@@ -144,7 +143,6 @@
 		1E6ACD1D0EFEDC0800DE9E6D /* Library-VerticalSplitView.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1E6ACCC60EFEDC0800DE9E6D /* Library-VerticalSplitView.tif */; };
 		1E6ACD1E0EFEDC0800DE9E6D /* ToolbarItemColors.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 1E6ACCC70EFEDC0800DE9E6D /* ToolbarItemColors.tiff */; };
 		1E6ACD1F0EFEDC0800DE9E6D /* ToolbarItemFonts.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 1E6ACCC80EFEDC0800DE9E6D /* ToolbarItemFonts.tiff */; };
-		1E6ACD200EFEDC0800DE9E6D /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6ACCC90EFEDC0800DE9E6D /* BWToolkitFramework.framework */; };
 		1E6ACD210EFEDC0800DE9E6D /* License.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1E6ACCCA0EFEDC0800DE9E6D /* License.rtf */; };
 		1E6ACD220EFEDC0800DE9E6D /* Release Notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1E6ACCCB0EFEDC0800DE9E6D /* Release Notes.rtf */; };
 		1E6ACD540EFEDC4200DE9E6D /* BWToolkitFramework.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6ACCC90EFEDC0800DE9E6D /* BWToolkitFramework.framework */; };
@@ -199,6 +197,7 @@
 		1ED8DC5A0EF609C5008EF249 /* TCEditTVShow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8DC590EF609C5008EF249 /* TCEditTVShow.xib */; };
 		1ED8DC670EF63A5D008EF249 /* TCEditEpisodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8DC660EF63A5D008EF249 /* TCEditEpisodeController.m */; };
 		1EE135730EF4AA0A00668132 /* TCTVShowJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE135720EF4AA0A00668132 /* TCTVShowJSObject.m */; };
+		1EE45BF20F44080C00299DB4 /* TCCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E63689E0EA253590003034E /* TCCore.framework */; };
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
 		77C8280E06725ACE000B614F /* Technicolor_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* Technicolor_AppDelegate.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -242,13 +241,6 @@
 			remoteGlobalIDString = 3A6F2FC80DF6399700F70283;
 			remoteInfo = JSXObjCCoreGraphics;
 		};
-		1E23C8100EEFA3D800E6C373 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E5EF99C0EAC33BC006F064E;
-			remoteInfo = TCJSPlugin;
-		};
 		1E5E38660EA2FBA600FD67A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -283,13 +275,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1E63689D0EA253590003034E;
 			remoteInfo = TCCore;
-		};
-		1E636A790EA29D090003034E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1EB8C9620EA1AB4000984CD7;
-			remoteInfo = TCCalendarPlugin;
 		};
 		1E636A7B0EA29D090003034E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -593,8 +578,8 @@
 				1ED8DC400EF607B6008EF249 /* Foundation.framework in Frameworks */,
 				1ED8DC410EF607B6008EF249 /* AppKit.framework in Frameworks */,
 				1ED8DAFA0EF60780008EF249 /* TCCoreUI.framework in Frameworks */,
-				1E5E38680EA2FBB700FD67A3 /* TCCore.framework in Frameworks */,
 				1E5E386A0EA2FBB700FD67A3 /* CoreData.framework in Frameworks */,
+				1EE45BF20F44080C00299DB4 /* TCCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,7 +612,6 @@
 				1E6C75B50EE651F80099140B /* Foundation.framework in Frameworks */,
 				1E6C75BF0EE652090099140B /* AppKit.framework in Frameworks */,
 				1E6C76860EE660F40099140B /* QuickLook.framework in Frameworks */,
-				1E6ACD200EFEDC0800DE9E6D /* BWToolkitFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1376,10 +1360,8 @@
 			dependencies = (
 				1E6368BA0EA253D60003034E /* PBXTargetDependency */,
 				1E6C75CC0EE652400099140B /* PBXTargetDependency */,
-				1E636A7A0EA29D090003034E /* PBXTargetDependency */,
 				1E636A7C0EA29D090003034E /* PBXTargetDependency */,
 				1E5E389D0EA2FD4400FD67A3 /* PBXTargetDependency */,
-				1E23C8110EEFA3D800E6C373 /* PBXTargetDependency */,
 			);
 			name = Technicolor;
 			productInstallPath = "$(HOME)/Applications";
@@ -1695,11 +1677,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1E23C8110EEFA3D800E6C373 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1E5EF99C0EAC33BC006F064E /* TCJSPlugin */;
-			targetProxy = 1E23C8100EEFA3D800E6C373 /* PBXContainerItemProxy */;
-		};
 		1E5E38670EA2FBA600FD67A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E63689D0EA253590003034E /* TCCore */;
@@ -1724,11 +1701,6 @@
 			isa = PBXTargetDependency;
 			target = 1E63689D0EA253590003034E /* TCCore */;
 			targetProxy = 1E6368C00EA253EC0003034E /* PBXContainerItemProxy */;
-		};
-		1E636A7A0EA29D090003034E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1EB8C9620EA1AB4000984CD7 /* TCCalendarPlugin */;
-			targetProxy = 1E636A790EA29D090003034E /* PBXContainerItemProxy */;
 		};
 		1E636A7C0EA29D090003034E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1857,7 +1829,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "TCProcessingQueuePlugin-Info.plist";
+				INFOPLIST_FILE = "Resources/Plugins/TCProcessingQueuePlugin-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -2031,16 +2003,18 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "/Users/syco/Projects/Technicolor/technicolor/Resources/Framework/TCCore-Info copy.plist";
+				INFOPLIST_FILE = "Resources/Framework/TCCoreUI-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
 					"-framework",
 					AppKit,
+					"-weak_framework",
+					BWToolkitFramework,
 				);
 				PREBINDING = NO;
-				PRODUCT_NAME = TCCore;
+				PRODUCT_NAME = TCCoreUI;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -2138,7 +2112,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "TCTVRagePlugin-Info.plist";
+				INFOPLIST_FILE = "Resources/Plugins/TCTVRagePlugin-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -2202,7 +2176,7 @@
 					"/usr/local/include/**",
 					"~/Projects/External/ffmpeg/ffmpeg/trunk//**",
 				);
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Resources/App/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

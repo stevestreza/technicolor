@@ -30,4 +30,8 @@
 
 }
 -(void)addFile:(TCVideoFile *)videoFile;
+-(TCVideoFile *)anyFile;
+
++(NSArray *)videosForPredicate:(NSPredicate *)predicate;
++(NSArray *)videosForPredicate:(NSPredicate *)predicate withSortDescriptors:(NSArray *)sortDescriptors;
 @end

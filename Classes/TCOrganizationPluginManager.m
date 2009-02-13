@@ -267,12 +267,13 @@
 			if([[bundleName pathExtension] isEqualToString:@"tcplugin"]){
 				NSString *fullPath = [path stringByAppendingPathComponent:bundleName];
 				NSBundle *bundle = [NSBundle bundleWithPath:fullPath];
+//				NSLog(@"Bundle %@ at %@ - %@",bundleName, fullPath, bundle);
 				if(bundle){
 					NSDictionary *bundleInfo = [bundle infoDictionary];
 					
 					NSString *uuid = [bundleInfo valueForKey:@"UUID"];
 					if(!uuid){
-//						NSLog(@"ERROR - Could not find UUID for %@",path);
+						NSLog(@"ERROR - Could not find UUID for %@\n\n%@",path, CFUUIDCreateString(NULL,CFUUIDCreate(NULL)));
 					}else{
 						[mUUIDDictionary setValue:bundle forKey:uuid];
 					
