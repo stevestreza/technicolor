@@ -25,6 +25,8 @@
 
 #import "TVRageOperation.h"
 
+#import "TCTVEpisode.h"
+
 @implementation TVRageOperation
 
 -(id)initWithOperation:(TCTVRageOperationType)opType dataObject:(id)obj delegate:(id)del{
@@ -53,6 +55,7 @@
 			break;
 		case TCTVRageGetEpisodesOperation:
 			if([dataObject isKindOfClass:[TCTVShow class]]){
+				[self loadShowInformation:(TCTVShow *)dataObject];
 				[self loadEpisodesForShow:(TCTVShow *)dataObject];
 			}
 			break;
@@ -159,6 +162,33 @@
 
 -(void)loadEpisodesForShow:(TCTVShow *)show{
 	NSLog(@"Loading episodes for show %@",[show showName]);
+	
+	NSString *showID = [self showIDForShow:show];
+	NSLog(@"%@ has show ID %@",[show showName], showID);
+	
+	NSXMLDocument *doc = [[NSXMLDocument alloc] initWithContentsOfURL:[NSURL URLWithString:kTVRageXMLEpisodeListURLString(showID)]
+															  options:0
+																error:nil];
+	
+	NSUInteger seasonCount = 0;
+	
+	NSArray *seasons = [[[[doc rootElement] elementsForName:@"Episodelist"] objectAtIndex:0] elementsForName:@"Season"];
+	for(NSXMLElement *seasonElement in seasons){
+		NSUInteger seasonNumber = [[[seasonElement attributeForName:@"no"] stringValue] intValue];
+		NSArray *episodes = [seasonElement elementsForName:@"episode"];
+		for(NSXMLElement *episodeElement in episodes){
+			NSUInteger episodeNumber = [[[[episodeElement elementsForName:@"epnum"] objectAtIndex:0] stringValue] intValue] - seasonCount;
+			NSString *title = [[[episodeElement elementsForName:@"title"] objectAtIndex:0] stringValue];
+			
+			TCTVEpisode *episode = [TCTVEpisode showVideoWithEpisodeName:title season:seasonNumber episodeNumber:episodeNumber show:show];
+			
+			NSLog(@"Created episode %@ for: %@ - %i %i %@",episode, [show showName],seasonNumber,episodeNumber,title);
+		}
+		seasonCount += episodes.count;
+	}
+}
+
+-(void)loadShowInformation:(TCTVShow *)show{
 	NSDictionary *dictionary = [self quickInfoForURL:[TVRageOperation quickInfoURLForShow:show]];
 	
 	if([dictionary valueForKey:@"Show URL"]){
@@ -233,4 +263,34 @@
 	return nil;
 }
 
+-(NSString *)showIDForShow:(TCTVShow *)show{
+	if([show valueForKey:@"TVRageShowID"]){
+		return [show valueForKey:@"TVRageShowID"];
+	}
+	
+	NSString *showName = [show showName];
+	
+	NSString *urlString = kTVRageXMLSearchURLString(showName);
+	
+	NSURL *url = [NSURL URLWithString:urlString];
+	NSData *data = [TCDownload loadResourceDataForURL:url];
+	
+	NSXMLDocument *doc = [[NSXMLDocument alloc] initWithData:data options:0 error:nil];
+	NSArray *shows = [[doc rootElement] elementsForName:@"show"];
+	
+	NSString *showID = nil;
+	
+	for(NSXMLElement *showElement in shows){
+		if([[[[showElement elementsForName:@"name"] objectAtIndex:0] stringValue] isEqualToString:showName]){
+			showID = [[[showElement elementsForName:@"showid"] objectAtIndex:0] stringValue];
+			break;
+		}
+	}
+	
+	if(showID){
+		[show setValue:showID forUndefinedKey:@"TVRageShowID"];
+	}
+	return showID;
+}
+  
 @end

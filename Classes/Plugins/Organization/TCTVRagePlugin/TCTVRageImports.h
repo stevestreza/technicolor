@@ -28,6 +28,9 @@
 #define kTVRageQuickInfoShowNameURLKey @"show"
 #define kTVRageQuickInfoEpisodeURLKey  @"ep"
 
+#define kTVRageXMLSearchURLString(__showName) [NSString stringWithFormat:@"http://www.tvrage.com/feeds/search.php?show=%@",[(__showName) stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
+#define kTVRageXMLEpisodeListURLString(__showID) [NSString stringWithFormat:@"http://www.tvrage.com/feeds/episode_list.php?sid=%@",(__showID)]
+
 typedef enum TCTVRageOperationType {
 	TCTVRageGetShowsOperation,
 	TCTVRageGetEpisodesOperation,

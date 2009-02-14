@@ -26,9 +26,10 @@
 	if(data){
 		NSDictionary *dict = [NSKeyedUnarchiver unarchiveObjectWithData:data];
 		NSLog(@"Whee! %@",dict);
+		props = [dict mutableCopy];
+	}else{
+		props = [[NSMutableDictionary alloc] init];		
 	}
-	
-	props = [[NSMutableDictionary alloc] init];	
 }
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key{
@@ -45,10 +46,10 @@
 - (BOOL)validateValue:(id *)value forKey:(NSString *)key error:(NSError **)error{
 	*error = nil;
 	
-	NSLog(@"Validating %@ with %@",key,*value);
+//	NSLog(@"Validating %@ with %@",key,*value);
 	if([key isEqualToString:@"extraProperties"] && props){
 		*value = [NSKeyedArchiver archivedDataWithRootObject:props];
-		NSLog(@"Archived - %@",*value);
+//		NSLog(@"Archived - %@",*value);
 		return YES;
 	}
 	return YES;
