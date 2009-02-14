@@ -495,9 +495,9 @@
 		1E6ACCC60EFEDC0800DE9E6D /* Library-VerticalSplitView.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Library-VerticalSplitView.tif"; sourceTree = "<group>"; };
 		1E6ACCC70EFEDC0800DE9E6D /* ToolbarItemColors.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ToolbarItemColors.tiff; sourceTree = "<group>"; };
 		1E6ACCC80EFEDC0800DE9E6D /* ToolbarItemFonts.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ToolbarItemFonts.tiff; sourceTree = "<group>"; };
-		1E6ACCC90EFEDC0800DE9E6D /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = "../../../Downloads/BWToolkit-1/BWToolkitFramework.framework"; sourceTree = SOURCE_ROOT; };
-		1E6ACCCA0EFEDC0800DE9E6D /* License.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = License.rtf; path = "../../../Downloads/BWToolkit-1/License.rtf"; sourceTree = SOURCE_ROOT; };
-		1E6ACCCB0EFEDC0800DE9E6D /* Release Notes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "Release Notes.rtf"; path = "../../../Downloads/BWToolkit-1/Release Notes.rtf"; sourceTree = SOURCE_ROOT; };
+		1E6ACCC90EFEDC0800DE9E6D /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BWToolkitFramework.framework; sourceTree = "<group>"; };
+		1E6ACCCA0EFEDC0800DE9E6D /* License.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = License.rtf; sourceTree = "<group>"; };
+		1E6ACCCB0EFEDC0800DE9E6D /* Release Notes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Release Notes.rtf"; sourceTree = "<group>"; };
 		1E6ACDA60EFEE78700DE9E6D /* TCCoreUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCCoreUI.h; sourceTree = "<group>"; };
 		1E6ACDA70EFEE78700DE9E6D /* TCCoreUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCCoreUI.m; sourceTree = "<group>"; };
 		1E6C75B90EE651F80099140B /* TCCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TCCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -853,7 +853,7 @@
 				1E6ACCCA0EFEDC0800DE9E6D /* License.rtf */,
 				1E6ACCCB0EFEDC0800DE9E6D /* Release Notes.rtf */,
 			);
-			name = BWToolkit;
+			path = BWToolkit;
 			sourceTree = "<group>";
 		};
 		1E6ACC6E0EFEDC0800DE9E6D /* BWToolkit.ibplugin */ = {
@@ -861,9 +861,8 @@
 			children = (
 				1E6ACC6F0EFEDC0800DE9E6D /* Contents */,
 			);
-			name = BWToolkit.ibplugin;
-			path = "../../../Downloads/BWToolkit-1/BWToolkit.ibplugin";
-			sourceTree = SOURCE_ROOT;
+			path = BWToolkit.ibplugin;
+			sourceTree = "<group>";
 		};
 		1E6ACC6F0EFEDC0800DE9E6D /* Contents */ = {
 			isa = PBXGroup;
