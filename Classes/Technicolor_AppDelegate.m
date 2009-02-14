@@ -229,6 +229,11 @@
 	
 }
 
+-(id)recoveryAttempter{
+	NSLog(@"OMG");
+	return nil;
+}
+
 /**
     Returns the managed object context for the application (which is already
     bound to the persistent store coordinator for the application.) 
@@ -283,7 +288,7 @@
  
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
 
-    NSError *error;
+    NSError *error = nil;
     int reply = NSTerminateNow;
     
     if (managedObjectContext != nil) {

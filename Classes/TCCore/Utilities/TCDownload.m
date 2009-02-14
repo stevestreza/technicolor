@@ -45,7 +45,7 @@ expectedSize=mExpectedSize;
 
 +(NSData *)loadResourceDataForURL:(NSURL *)url{
 	TCDownload *download = [[TCDownload alloc] initWithURL:url];
-	[download send];
+	[download send:NO];
 	while(!download.finished){
 		[NSThread sleepUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
 	}
@@ -106,9 +106,28 @@ expectedSize=mExpectedSize;
 }
 
 -(void)send{
+	[self send:YES];
+}
+
+-(void)send:(BOOL)async{
 	mRequest = [[self _buildRequest] retain];
-	mConnection = [[NSURLConnection connectionWithRequest:mRequest delegate:self] retain];
-	[mConnection start];
+	if(async){
+		mConnection = [[NSURLConnection connectionWithRequest:mRequest delegate:self] retain];
+		[mConnection start];	
+	}else{
+		NSURLResponse *response = nil;
+		NSError *error = nil;
+		
+		NSData *data = [NSURLConnection sendSynchronousRequest:mRequest returningResponse:&response error:&error];
+		
+		if(response && !error){
+			[self connection:nil didReceiveResponse:response];
+			[self connection:nil didReceiveData:data];
+			[self connectionDidFinishLoading:nil];
+		}else if(error){
+			[self connection:nil didFailWithError:error];
+		}
+	}
 }
 
 -(void)cancel{
@@ -117,7 +136,7 @@ expectedSize=mExpectedSize;
 
 - (void)connection:(NSURLConnection*)connection
   didFailWithError:(NSError*)deadError{
-	
+	mError = [deadError copy];
 	if(mDelegate && [mDelegate respondsToSelector:@selector(download:hadError:)]){
 		[mDelegate download:self hadError:deadError];
 	}	
@@ -136,6 +155,8 @@ expectedSize=mExpectedSize;
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
+	mFinished = YES;
+	
 	if(mDelegate && [mDelegate respondsToSelector:@selector(downloadFinished:)]){
 		[mDelegate downloadFinished:self];
 	}
@@ -158,6 +179,36 @@ expectedSize=mExpectedSize;
 	if(!mData){
 		mData = [[NSMutableData alloc] initWithCapacity:(NSUInteger)mExpectedSize];
 	}
+}
+
+-(void)dealloc{
+	mDelegate = nil;
+	
+	[mURL release];
+	mURL = nil;
+	
+	[mRequest release];
+	mRequest = nil;
+	
+	[mResponse release];
+	mResponse = nil;
+	
+	[mConnection release];
+	mConnection = nil;
+	
+	[mHeaders release];
+	mHeaders = nil;
+	
+	[mError release];
+	mError = nil;
+
+	[mRequestData release];
+	mRequestData = nil;
+	
+	[mData release];
+	mData = nil;
+	
+	[super dealloc];
 }
 
 @end

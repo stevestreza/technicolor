@@ -51,6 +51,7 @@ typedef enum {
 	NSHTTPURLResponse *mResponse;
 	NSURLConnection *mConnection;
 	NSDictionary *mHeaders;
+	NSError *mError;
 	
 	TCDownloadRequestType mRequestType;
 	TCDownloadSize mExpectedSize;
@@ -74,6 +75,7 @@ typedef enum {
 -(id)initWithURL:(NSURL *)url;
 
 -(void)send;
+-(void)send:(BOOL)async;
 -(void)cancel;
 
 +(NSData *)loadResourceDataForURL:(NSURL *)url;

@@ -13,6 +13,8 @@
 		1E3845F60ED8BEDF00DD6F43 /* TCRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E3845F40ED8BEDF00DD6F43 /* TCRegex.h */; };
 		1E3845F70ED8BEDF00DD6F43 /* TCRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3845F50ED8BEDF00DD6F43 /* TCRegex.m */; };
 		1E38470B0ED8C72D00DD6F43 /* Technicolor_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 1E38470A0ED8C72D00DD6F43 /* Technicolor_DataModel.xcdatamodel */; };
+		1E3FB6AB0F4757B90017321F /* TCExtendableObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E3FB6A90F4757B90017321F /* TCExtendableObject.h */; };
+		1E3FB6AC0F4757B90017321F /* TCExtendableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FB6AA0F4757B90017321F /* TCExtendableObject.m */; };
 		1E4916140EABFB76005CEC4F /* Technicolor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E4916130EABFB76005CEC4F /* Technicolor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E50D7D60E5010ED00BDA918 /* Wizard.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1E50D7D40E5010ED00BDA918 /* Wizard.nib */; };
 		1E5E386A0EA2FBB700FD67A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5E38690EA2FBB700FD67A3 /* CoreData.framework */; };
@@ -376,6 +378,8 @@
 		1E3845F50ED8BEDF00DD6F43 /* TCRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCRegex.m; sourceTree = "<group>"; };
 		1E38470A0ED8C72D00DD6F43 /* Technicolor_DataModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = Technicolor_DataModel.xcdatamodel; sourceTree = "<group>"; };
 		1E3BA36A0E8F070200585E21 /* CalendarStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalendarStore.framework; path = System/Library/Frameworks/CalendarStore.framework; sourceTree = SDKROOT; };
+		1E3FB6A90F4757B90017321F /* TCExtendableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCExtendableObject.h; sourceTree = "<group>"; };
+		1E3FB6AA0F4757B90017321F /* TCExtendableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCExtendableObject.m; sourceTree = "<group>"; };
 		1E4916130EABFB76005CEC4F /* Technicolor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Technicolor.h; sourceTree = "<group>"; };
 		1E49162D0EABFBF3005CEC4F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		1E50D7D50E5010ED00BDA918 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Wizard.nib; sourceTree = "<group>"; };
@@ -1056,6 +1060,8 @@
 			isa = PBXGroup;
 			children = (
 				1E38470A0ED8C72D00DD6F43 /* Technicolor_DataModel.xcdatamodel */,
+				1E3FB6A90F4757B90017321F /* TCExtendableObject.h */,
+				1E3FB6AA0F4757B90017321F /* TCExtendableObject.m */,
 				1EB8C94A0EA1AAA500984CD7 /* TCMovie.h */,
 				1EB8C94B0EA1AAA500984CD7 /* TCMovie.m */,
 				1EB8C94C0EA1AAA500984CD7 /* TCMovieVideo.h */,
@@ -1215,6 +1221,7 @@
 				1E636A020EA290200003034E /* TCCoreUtils.h in Headers */,
 				1E4916140EABFB76005CEC4F /* Technicolor.h in Headers */,
 				1E3845F60ED8BEDF00DD6F43 /* TCRegex.h in Headers */,
+				1E3FB6AB0F4757B90017321F /* TCExtendableObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1625,6 +1632,7 @@
 				1E636A030EA290200003034E /* TCCoreUtils.m in Sources */,
 				1E3845F70ED8BEDF00DD6F43 /* TCRegex.m in Sources */,
 				1E38470B0ED8C72D00DD6F43 /* Technicolor_DataModel.xcdatamodel in Sources */,
+				1E3FB6AC0F4757B90017321F /* TCExtendableObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

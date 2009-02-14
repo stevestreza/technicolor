@@ -24,8 +24,9 @@
  */
 
 #import <Cocoa/Cocoa.h>
+#import "TCExtendableObject.h"
 
-@interface TCTVShow : NSManagedObject {
+@interface TCTVShow : TCExtendableObject {
 
 }
 +(TCTVShow *)showWithName:(NSString *)name;

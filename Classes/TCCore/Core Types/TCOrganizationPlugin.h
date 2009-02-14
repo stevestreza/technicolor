@@ -26,6 +26,7 @@
 #import <Cocoa/Cocoa.h>
 #import <CoreFoundation/CoreFoundation.h>
 #import "Technicolor.h"
+#import "TCExtendableObject.h"
 
 @class TCOrganizationPluginManager;
 

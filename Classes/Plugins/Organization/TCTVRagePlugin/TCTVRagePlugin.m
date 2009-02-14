@@ -24,10 +24,18 @@
  */
 
 #import "TCTVRagePlugin.h"
-
+#import "TVRageController.h"
 
 @implementation TCTVRagePlugin
 
 TCUUID(@"90FAD8EB-FE51-48E3-9783-5BBE81CEFBAC")
+
+-(void)handleInsertedObject:(TCExtendableObject *)object{ 
+	if([object isKindOfClass:[TCTVShow class]]){
+		[[TVRageController sharedController] beginLoadOperation:TCTVRageGetEpisodesOperation
+												 withInfoObject:object
+													   delegate:self];
+	}
+}
 
 @end

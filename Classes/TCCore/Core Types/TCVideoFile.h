@@ -25,10 +25,11 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Technicolor.h"
+#import "TCExtendableObject.h"
 //#import "TCFFMPEGVideo.h"
 @class TCFFMPEGVideo;
 
-@interface TCVideoFile : NSManagedObject {
+@interface TCVideoFile : TCExtendableObject {
 	NSMutableDictionary *metadata;
 }
 

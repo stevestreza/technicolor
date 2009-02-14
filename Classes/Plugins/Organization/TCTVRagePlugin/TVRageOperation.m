@@ -158,8 +158,15 @@
 }
 
 -(void)loadEpisodesForShow:(TCTVShow *)show{
-//	NSLog(@"Loading episodes for show %@",[show showName]);
+	NSLog(@"Loading episodes for show %@",[show showName]);
 	NSDictionary *dictionary = [self quickInfoForURL:[TVRageOperation quickInfoURLForShow:show]];
+	
+	if([dictionary valueForKey:@"Show URL"]){
+		NSURL *showURL = [NSURL URLWithString:[dictionary valueForKey:@"Show URL"]];
+		NSLog(@"Setting show url %@",showURL);
+		[show setValue:showURL forUndefinedKey:@"TVRageShowURL"];
+		NSLog(@"Show URL? %@",[show valueForKey:@"TVRageShowURL"]);
+	}
 }
 
 -(void)loadInfoForEpisode:(TCTVEpisode *)episode{
@@ -199,12 +206,12 @@
 +(NSURL *)quickInfoURLForEpisode:(TCTVEpisode *)episode{
 	NSURL *showURL = [self quickInfoURLForShow:[episode show]];
 	NSString *urlString = [NSString stringWithFormat:@"%@&%@=%ix%i",showURL, kTVRageQuickInfoEpisodeURLKey, [[episode seasonNumber] intValue], [[episode episodeNumber] intValue]];
-	return [NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
+	return [NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 }
 
 -(NSDictionary *)quickInfoForURL:(NSURL *)url{
 //	NSData *data = [url resourceDataUsingCache:NO];
-	NSString *contents = [TCDownload loadResourceStringForURL:url encoding:NSASCIIStringEncoding];
+	NSString *contents = [TCDownload loadResourceStringForURL:url encoding:NSUTF8StringEncoding];
 	
 	NSMutableDictionary *dict = [NSMutableDictionary dictionary];
 	

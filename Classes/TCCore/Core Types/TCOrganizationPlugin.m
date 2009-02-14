@@ -55,8 +55,17 @@ static NSMutableArray *pluginArray;
 }
 
 -(void)awake{
-	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(objectsChanged:) name:NSManagedObjectContextObjectsDidChangeNotification object:nil];
 }
+
+-(void)objectsChanged:(NSNotification *)notif{
+	NSSet *insertedObjects = [[notif userInfo] objectForKey:NSInsertedObjectsKey];
+	for(TCExtendableObject *object in insertedObjects){
+		[self handleInsertedObject:object];
+	}
+}
+
+-(void)handleInsertedObject:(TCExtendableObject *)object{ }
 
 -(void)addViewController:(NSViewController *)controller forType:(NSString *)type{
 	[[NSApp delegate] addViewController:controller forType:type];

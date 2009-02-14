@@ -24,8 +24,9 @@
  */
 
 #import <Cocoa/Cocoa.h>
+#import "TCExtendableObject.h"
 
-@interface TCMovie : NSManagedObject {
+@interface TCMovie : TCExtendableObject {
 
 }
 

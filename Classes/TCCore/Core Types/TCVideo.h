@@ -25,8 +25,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import "TCVideoFile.h"
+#import "TCExtendableObject.h"
 
-@interface TCVideo : NSManagedObject {
+@interface TCVideo : TCExtendableObject {
 
 }
 -(void)addFile:(TCVideoFile *)videoFile;
