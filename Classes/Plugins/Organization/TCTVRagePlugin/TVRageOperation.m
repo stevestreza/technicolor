@@ -182,7 +182,9 @@
 			
 			TCTVEpisode *episode = [TCTVEpisode showVideoWithEpisodeName:title season:seasonNumber episodeNumber:episodeNumber show:show];
 			
-			NSLog(@"Created episode %@ for: %@ - %i %i %@",episode, [show showName],seasonNumber,episodeNumber,title);
+			NSCalendarDate *airDate = [NSCalendarDate dateWithString:[[[episodeElement elementsForName:@"airdate"] objectAtIndex:0] stringValue]
+													  calendarFormat:@"%Y-%m-%d"];
+			[episode setValue:airDate forKey:@"airDate"];
 		}
 		seasonCount += episodes.count;
 	}

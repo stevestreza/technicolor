@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>ActivePerspectiveName</key>
-	<string>Debug</string>
+	<string>Project</string>
 	<key>AllowedModules</key>
 	<array>
 		<dict>
@@ -319,6 +319,8 @@
 							<string>MainColumn</string>
 							<real>301</real>
 						</array>
+						<key>RubberWindowFrame</key>
+						<string>1 59 1440 819 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -329,6 +331,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -346,7 +350,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1E3FB8F50F4783580017321F</string>
+										<string>1E3FB9120F4785440017321F</string>
 										<key>history</key>
 										<array>
 											<string>1E735AAB0E514688004FAD1A</string>
@@ -475,7 +479,7 @@
 											<string>1E3FB8AC0F477FFF0017321F</string>
 											<string>1E3FB8AD0F477FFF0017321F</string>
 											<string>1E3FB8AE0F477FFF0017321F</string>
-											<string>1E3FB8AF0F477FFF0017321F</string>
+											<string>1E3FB90F0F4785380017321F</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -706,6 +710,8 @@
 							<dict>
 								<key>Frame</key>
 								<string>{{0, 0}, {1117, 595}}</string>
+								<key>RubberWindowFrame</key>
+								<string>1 59 1440 819 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -785,6 +791,8 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1117, 151}}</string>
+										<key>RubberWindowFrame</key>
+										<string>1 59 1440 819 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -865,8 +873,6 @@
 					<dict>
 						<key>Frame</key>
 						<string>{{0, 0}, {1440, 329}}</string>
-						<key>RubberWindowFrame</key>
-						<string>1 59 1440 819 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugCLIModule</string>
@@ -941,11 +947,7 @@
 							</array>
 							<key>Frame</key>
 							<string>{{703, 0}, {737, 215}}</string>
-							<key>RubberWindowFrame</key>
-							<string>1 59 1440 819 0 0 1440 878 </string>
 						</dict>
-						<key>RubberWindowFrame</key>
-						<string>1 59 1440 819 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugSessionModule</string>
