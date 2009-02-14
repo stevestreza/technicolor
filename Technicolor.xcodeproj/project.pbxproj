@@ -165,7 +165,6 @@
 		1E6C76860EE660F40099140B /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6C76850EE660F40099140B /* QuickLook.framework */; };
 		1E7D03FC0EF47AAD00719C28 /* TCTVShowJSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D03FB0EF47AAD00719C28 /* TCTVShowJSBridge.m */; };
 		1E83CC760E6B74CB00987FC1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E83CC750E6B74CB00987FC1 /* WebKit.framework */; };
-		1E83CCD80E6B890D00987FC1 /* libpng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E735ADF0E5159D9004FAD1A /* libpng.dylib */; };
 		1E83CCD90E6B890D00987FC1 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE3EE750E53CF590099684C /* libz.1.2.3.dylib */; };
 		1E83CCDA0E6B890D00987FC1 /* libbz2.1.0.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE3EE890E53D0470099684C /* libbz2.1.0.4.dylib */; };
 		1E95DBF90E57BD9600B6A7E9 /* TCTVShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E95DBF80E57BD9600B6A7E9 /* TCTVShowController.m */; };
@@ -249,13 +248,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1E63689D0EA253590003034E;
 			remoteInfo = TCCore;
-		};
-		1E5E389C0EA2FD4400FD67A3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E5E38600EA2FBA100FD67A3;
-			remoteInfo = TCProcessingQueuePlugin;
 		};
 		1E6368B90EA253D60003034E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -419,7 +411,7 @@
 		1E6ACC780EFEDC0800DE9E6D /* BWAddSmallBottomBar.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWAddSmallBottomBar.classdescription; sourceTree = "<group>"; };
 		1E6ACC790EFEDC0800DE9E6D /* BWAnchoredButton.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWAnchoredButton.classdescription; sourceTree = "<group>"; };
 		1E6ACC7A0EFEDC0800DE9E6D /* BWAnchoredButtonBar.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWAnchoredButtonBar.classdescription; sourceTree = "<group>"; };
-		1E6ACC7B0EFEDC0800DE9E6D /* BWAnchoredButtonBarInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = BWAnchoredButtonBarInspector.nib; sourceTree = "<group>"; };
+		1E6ACC7B0EFEDC0800DE9E6D /* BWAnchoredButtonBarInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BWAnchoredButtonBarInspector.nib; sourceTree = "<group>"; };
 		1E6ACC7C0EFEDC0800DE9E6D /* BWAnchoredPopUpButton.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWAnchoredPopUpButton.classdescription; sourceTree = "<group>"; };
 		1E6ACC7D0EFEDC0800DE9E6D /* BWBottomBarLibrary.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = BWBottomBarLibrary.nib; sourceTree = "<group>"; };
 		1E6ACC7E0EFEDC0800DE9E6D /* BWButtonBarLibrary.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = BWButtonBarLibrary.nib; sourceTree = "<group>"; };
@@ -430,7 +422,7 @@
 		1E6ACC830EFEDC0800DE9E6D /* BWSelectableToolbarInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = BWSelectableToolbarInspector.nib; sourceTree = "<group>"; };
 		1E6ACC840EFEDC0800DE9E6D /* BWSheetController.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWSheetController.classdescription; sourceTree = "<group>"; };
 		1E6ACC850EFEDC0800DE9E6D /* BWSplitView.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWSplitView.classdescription; sourceTree = "<group>"; };
-		1E6ACC860EFEDC0800DE9E6D /* BWSplitViewInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = BWSplitViewInspector.nib; sourceTree = "<group>"; };
+		1E6ACC860EFEDC0800DE9E6D /* BWSplitViewInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BWSplitViewInspector.nib; sourceTree = "<group>"; };
 		1E6ACC870EFEDC0800DE9E6D /* BWSplitViewLibrary.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = BWSplitViewLibrary.nib; sourceTree = "<group>"; };
 		1E6ACC880EFEDC0800DE9E6D /* BWTexturedSlider.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWTexturedSlider.classdescription; sourceTree = "<group>"; };
 		1E6ACC890EFEDC0800DE9E6D /* BWTexturedSliderCell.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWTexturedSliderCell.classdescription; sourceTree = "<group>"; };
@@ -438,7 +430,7 @@
 		1E6ACC8B0EFEDC0800DE9E6D /* BWTokenField.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWTokenField.classdescription; sourceTree = "<group>"; };
 		1E6ACC8C0EFEDC0800DE9E6D /* BWTokenFieldCell.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWTokenFieldCell.classdescription; sourceTree = "<group>"; };
 		1E6ACC8D0EFEDC0800DE9E6D /* BWToolbarItem.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWToolbarItem.classdescription; sourceTree = "<group>"; };
-		1E6ACC8E0EFEDC0800DE9E6D /* BWToolbarItemInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = BWToolbarItemInspector.nib; sourceTree = "<group>"; };
+		1E6ACC8E0EFEDC0800DE9E6D /* BWToolbarItemInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BWToolbarItemInspector.nib; sourceTree = "<group>"; };
 		1E6ACC8F0EFEDC0800DE9E6D /* BWToolbarItemsLibrary.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = BWToolbarItemsLibrary.nib; sourceTree = "<group>"; };
 		1E6ACC900EFEDC0800DE9E6D /* BWToolbarShowColorsItem.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWToolbarShowColorsItem.classdescription; sourceTree = "<group>"; };
 		1E6ACC910EFEDC0800DE9E6D /* BWToolbarShowFontsItem.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWToolbarShowFontsItem.classdescription; sourceTree = "<group>"; };
@@ -649,7 +641,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E83CCD80E6B890D00987FC1 /* libpng.dylib in Frameworks */,
 				1E83CCD90E6B890D00987FC1 /* libz.1.2.3.dylib in Frameworks */,
 				1E83CCDA0E6B890D00987FC1 /* libbz2.1.0.4.dylib in Frameworks */,
 				1E6368A50EA253740003034E /* CoreData.framework in Frameworks */,
@@ -1367,7 +1358,6 @@
 				1E6368BA0EA253D60003034E /* PBXTargetDependency */,
 				1E6C75CC0EE652400099140B /* PBXTargetDependency */,
 				1E636A7C0EA29D090003034E /* PBXTargetDependency */,
-				1E5E389D0EA2FD4400FD67A3 /* PBXTargetDependency */,
 			);
 			name = Technicolor;
 			productInstallPath = "$(HOME)/Applications";
@@ -1689,11 +1679,6 @@
 			target = 1E63689D0EA253590003034E /* TCCore */;
 			targetProxy = 1E5E38660EA2FBA600FD67A3 /* PBXContainerItemProxy */;
 		};
-		1E5E389D0EA2FD4400FD67A3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1E5E38600EA2FBA100FD67A3 /* TCProcessingQueuePlugin */;
-			targetProxy = 1E5E389C0EA2FD4400FD67A3 /* PBXContainerItemProxy */;
-		};
 		1E6368BA0EA253D60003034E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E63689D0EA253590003034E /* TCCore */;
@@ -1967,8 +1952,8 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../Downloads/BWToolkit-1/BWToolkit.ibplugin/Contents/Frameworks\"",
-					"\"$(SRCROOT)/../../../Downloads/BWToolkit-1\"",
+					"\"$(SRCROOT)/Classes/UI/BWToolkit/BWToolkit.ibplugin/Contents/Frameworks\"",
+					"\"$(SRCROOT)/Classes/UI/BWToolkit\"",
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2002,8 +1987,8 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../Downloads/BWToolkit-1/BWToolkit.ibplugin/Contents/Frameworks\"",
-					"\"$(SRCROOT)/../../../Downloads/BWToolkit-1\"",
+					"\"$(SRCROOT)/Classes/UI/BWToolkit/BWToolkit.ibplugin/Contents/Frameworks\"",
+					"\"$(SRCROOT)/Classes/UI/BWToolkit\"",
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;

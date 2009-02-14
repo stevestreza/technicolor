@@ -57,7 +57,10 @@
 	[request setSortDescriptors:sortDescriptors];
 	
 	NSError *error = nil;
-	NSArray *array = [moc executeFetchRequest:request error:&error];
+	NSArray *array = nil;	
+	@synchronized(moc){
+		array = [moc executeFetchRequest:request error:&error];
+	}
 	if(error){
 		*errPtr = error;
 		return nil;

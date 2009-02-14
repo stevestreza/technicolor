@@ -86,7 +86,10 @@
 	[sortDescriptor release];
 	
 	NSError *error = nil;
-	NSArray *array = [moc executeFetchRequest:request error:&error];
+	NSArray *array = nil;
+	@synchronized(moc){
+		array =[moc executeFetchRequest:request error:&error];
+	}
 	if (array == nil || array.count == 0)
 	{
 		//		NSLog(@"Creating show on %@ thread",([NSThread isMainThread] ? @"main" : @"NOT MAIN"));

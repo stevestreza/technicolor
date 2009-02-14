@@ -39,7 +39,7 @@
 }
 
 - (id)valueForUndefinedKey:(NSString *)key{
-	NSLog(@"-[TCExtendableObject valueForUndefinedKey: %@],key");
+	NSLog(@"-[TCExtendableObject valueForUndefinedKey: %@]",key);
 	return [props valueForKey:key];
 }
 

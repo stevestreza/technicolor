@@ -44,7 +44,10 @@
 	
 	[request setSortDescriptors:sortDescriptors];
 	
-	NSArray *items = [moc executeFetchRequest:request error:nil];
+	NSArray *items = nil;
+	@synchronized(moc){
+		items = [moc executeFetchRequest:request error:nil];
+	}
 	return items;
 }
 
