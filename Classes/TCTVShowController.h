@@ -32,9 +32,11 @@
 	IBOutlet NSTableView *episodesTable;
 	IBOutlet NSTableView *filesTable;
 	
+	IBOutlet NSArrayController *episodesController;
+	
 	TCMasterDetailCell *filesCell;
 }
-
+-(IBAction)toggleFilesOnly:(id)sender;
 -(IBAction)import:(id)sender;
 - (BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex;
 @end

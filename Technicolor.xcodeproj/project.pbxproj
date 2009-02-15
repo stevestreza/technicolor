@@ -411,7 +411,7 @@
 		1E6ACC780EFEDC0800DE9E6D /* BWAddSmallBottomBar.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWAddSmallBottomBar.classdescription; sourceTree = "<group>"; };
 		1E6ACC790EFEDC0800DE9E6D /* BWAnchoredButton.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWAnchoredButton.classdescription; sourceTree = "<group>"; };
 		1E6ACC7A0EFEDC0800DE9E6D /* BWAnchoredButtonBar.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWAnchoredButtonBar.classdescription; sourceTree = "<group>"; };
-		1E6ACC7B0EFEDC0800DE9E6D /* BWAnchoredButtonBarInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BWAnchoredButtonBarInspector.nib; sourceTree = "<group>"; };
+		1E6ACC7B0EFEDC0800DE9E6D /* BWAnchoredButtonBarInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = BWAnchoredButtonBarInspector.nib; sourceTree = "<group>"; };
 		1E6ACC7C0EFEDC0800DE9E6D /* BWAnchoredPopUpButton.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWAnchoredPopUpButton.classdescription; sourceTree = "<group>"; };
 		1E6ACC7D0EFEDC0800DE9E6D /* BWBottomBarLibrary.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = BWBottomBarLibrary.nib; sourceTree = "<group>"; };
 		1E6ACC7E0EFEDC0800DE9E6D /* BWButtonBarLibrary.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = BWButtonBarLibrary.nib; sourceTree = "<group>"; };
@@ -422,7 +422,7 @@
 		1E6ACC830EFEDC0800DE9E6D /* BWSelectableToolbarInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = BWSelectableToolbarInspector.nib; sourceTree = "<group>"; };
 		1E6ACC840EFEDC0800DE9E6D /* BWSheetController.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWSheetController.classdescription; sourceTree = "<group>"; };
 		1E6ACC850EFEDC0800DE9E6D /* BWSplitView.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWSplitView.classdescription; sourceTree = "<group>"; };
-		1E6ACC860EFEDC0800DE9E6D /* BWSplitViewInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BWSplitViewInspector.nib; sourceTree = "<group>"; };
+		1E6ACC860EFEDC0800DE9E6D /* BWSplitViewInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = BWSplitViewInspector.nib; sourceTree = "<group>"; };
 		1E6ACC870EFEDC0800DE9E6D /* BWSplitViewLibrary.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = BWSplitViewLibrary.nib; sourceTree = "<group>"; };
 		1E6ACC880EFEDC0800DE9E6D /* BWTexturedSlider.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWTexturedSlider.classdescription; sourceTree = "<group>"; };
 		1E6ACC890EFEDC0800DE9E6D /* BWTexturedSliderCell.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWTexturedSliderCell.classdescription; sourceTree = "<group>"; };
@@ -430,7 +430,7 @@
 		1E6ACC8B0EFEDC0800DE9E6D /* BWTokenField.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWTokenField.classdescription; sourceTree = "<group>"; };
 		1E6ACC8C0EFEDC0800DE9E6D /* BWTokenFieldCell.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWTokenFieldCell.classdescription; sourceTree = "<group>"; };
 		1E6ACC8D0EFEDC0800DE9E6D /* BWToolbarItem.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWToolbarItem.classdescription; sourceTree = "<group>"; };
-		1E6ACC8E0EFEDC0800DE9E6D /* BWToolbarItemInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BWToolbarItemInspector.nib; sourceTree = "<group>"; };
+		1E6ACC8E0EFEDC0800DE9E6D /* BWToolbarItemInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = BWToolbarItemInspector.nib; sourceTree = "<group>"; };
 		1E6ACC8F0EFEDC0800DE9E6D /* BWToolbarItemsLibrary.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = BWToolbarItemsLibrary.nib; sourceTree = "<group>"; };
 		1E6ACC900EFEDC0800DE9E6D /* BWToolbarShowColorsItem.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWToolbarShowColorsItem.classdescription; sourceTree = "<group>"; };
 		1E6ACC910EFEDC0800DE9E6D /* BWToolbarShowFontsItem.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BWToolbarShowFontsItem.classdescription; sourceTree = "<group>"; };

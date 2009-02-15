@@ -40,6 +40,11 @@
 	[[[filesTable tableColumns] objectAtIndex:1] setDataCell:filesCell];
 }
 
+-(IBAction)toggleFilesOnly:(id)sender{
+	BOOL isFilesOnly = ([sender state] == NSOnState ? YES : NO);
+	[episodesController setFetchPredicate:(isFilesOnly ? [TCVideo predicateForVideosWithFiles] : nil)];
+}
+
 -(IBAction)import:(id)sender{
 	NSOpenPanel *openPanel = [NSOpenPanel openPanel];
 	[openPanel setAllowsMultipleSelection:YES];

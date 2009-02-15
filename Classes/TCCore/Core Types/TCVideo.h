@@ -35,4 +35,6 @@
 
 +(NSArray *)videosForPredicate:(NSPredicate *)predicate;
 +(NSArray *)videosForPredicate:(NSPredicate *)predicate withSortDescriptors:(NSArray *)sortDescriptors;
+
++(NSPredicate *)predicateForVideosWithFiles;
 @end

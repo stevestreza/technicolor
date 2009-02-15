@@ -51,6 +51,10 @@
 	return items;
 }
 
++(NSPredicate *)predicateForVideosWithFiles{
+	return [NSPredicate predicateWithFormat:@"videoFiles.@count > 0"];
+}
+
 -(void)addFile:(TCVideoFile *)videoFile{
 	NSMutableSet *files = [self mutableSetValueForKey:@"videoFiles"];
 	[files addObject:videoFile];
