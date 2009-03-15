@@ -28,6 +28,10 @@
 
 @implementation TCMovieVideo
 
++(NSString *)entityName{
+	return @"MovieVideo";
+}
+
 +(NSArray *)allMovies:(BOOL)onlyWithFiles{
 	NSPredicate *pred = nil;
 	if(onlyWithFiles){

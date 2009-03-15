@@ -969,35 +969,6 @@
 					<int key="connectionID">83</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">predicate: filterPredicate</string>
-						<reference key="source" ref="800331634"/>
-						<reference key="destination" ref="307165263"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="800331634"/>
-							<reference key="NSDestination" ref="307165263"/>
-							<string key="NSLabel">predicate: filterPredicate</string>
-							<string key="NSBinding">predicate</string>
-							<string key="NSKeyPath">filterPredicate</string>
-							<object class="NSDictionary" key="NSOptions">
-								<bool key="EncodedWithXMLCoder">YES</bool>
-								<object class="NSMutableArray" key="dict.sortedKeys">
-									<bool key="EncodedWithXMLCoder">YES</bool>
-									<string>NSDisplayName</string>
-									<string>NSPredicateFormat</string>
-								</object>
-								<object class="NSMutableArray" key="dict.values">
-									<bool key="EncodedWithXMLCoder">YES</bool>
-									<string>predicate</string>
-									<string>keyPath contains $value</string>
-								</object>
-							</object>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">98</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">import:</string>
 						<reference key="source" ref="1001"/>
@@ -1020,6 +991,35 @@
 						<reference key="destination" ref="138355397"/>
 					</object>
 					<int key="connectionID">121</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">predicate: filterPredicate.show.showName</string>
+						<reference key="source" ref="800331634"/>
+						<reference key="destination" ref="307165263"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="800331634"/>
+							<reference key="NSDestination" ref="307165263"/>
+							<string key="NSLabel">predicate: filterPredicate.show.showName</string>
+							<string key="NSBinding">predicate</string>
+							<string key="NSKeyPath">filterPredicate.show.showName</string>
+							<object class="NSDictionary" key="NSOptions">
+								<bool key="EncodedWithXMLCoder">YES</bool>
+								<object class="NSMutableArray" key="dict.sortedKeys">
+									<bool key="EncodedWithXMLCoder">YES</bool>
+									<string>NSDisplayName</string>
+									<string>NSPredicateFormat</string>
+								</object>
+								<object class="NSMutableArray" key="dict.values">
+									<bool key="EncodedWithXMLCoder">YES</bool>
+									<string>predicate</string>
+									<string>keyPath contains $value</string>
+								</object>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">122</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1522,7 +1522,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">121</int>
+			<int key="maxID">122</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

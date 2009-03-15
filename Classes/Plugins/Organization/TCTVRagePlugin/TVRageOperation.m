@@ -26,6 +26,7 @@
 #import "TVRageOperation.h"
 
 #import "TCTVEpisode.h"
+#import "TCDataStore.h"
 
 @implementation TVRageOperation
 
@@ -180,7 +181,15 @@
 			NSUInteger episodeNumber = [[[[episodeElement elementsForName:@"epnum"] objectAtIndex:0] stringValue] intValue] - seasonCount;
 			NSString *title = [[[episodeElement elementsForName:@"title"] objectAtIndex:0] stringValue];
 			
-			TCTVEpisode *episode = [TCTVEpisode showVideoWithEpisodeName:title season:seasonNumber episodeNumber:episodeNumber show:show];
+//			TCTVEpisode *episode = [TCTVEpisode showVideoWithEpisodeName:title season:seasonNumber episodeNumber:episodeNumber show:show];
+			TCDataStore *dataStore = (TCDataStore *)[[NSApp delegate] dataStore];
+			TCTVEpisode *episode = [dataStore objectForClass:[TCTVEpisode class] 
+									withValues:[NSDictionary dictionaryWithObjectsAndKeys:
+												title,@"episodeName",
+												[NSNumber numberWithUnsignedInteger:seasonNumber], @"seasonNumber",
+												[NSNumber numberWithUnsignedInteger:episodeNumber], @"episodeNumber",
+												nil]
+									createIfNeeded:YES];
 			
 			NSCalendarDate *airDate = [NSCalendarDate dateWithString:[[[episodeElement elementsForName:@"airdate"] objectAtIndex:0] stringValue]
 													  calendarFormat:@"%Y-%m-%d"];

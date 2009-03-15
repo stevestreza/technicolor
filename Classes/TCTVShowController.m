@@ -48,8 +48,8 @@
 -(IBAction)import:(id)sender{
 	NSOpenPanel *openPanel = [NSOpenPanel openPanel];
 	[openPanel setAllowsMultipleSelection:YES];
-	[openPanel setCanChooseFiles:NO];
-	[openPanel setCanChooseDirectories:YES];
+	[openPanel setCanChooseFiles:YES];
+	[openPanel setCanChooseDirectories:NO];
 
 	[openPanel beginSheetForDirectory:@"/Volumes/Lavos/Video/TV Shows/"
 								 file:nil
@@ -62,8 +62,10 @@
 }
 
 -(void)importPanel:(NSOpenPanel *)openPanel didReturn:(int)returnCode contextInfo:(void*)hahaWhoCares{
-	NSArray *sourceDirectories = [openPanel filenames];
-	[self threadedLoadDirectories:sourceDirectories];
+	NSArray *filenames = [openPanel filenames];                                                              
+	for(NSString *file in filenames){
+		TCVideoFile *videoFile = [TCVideoFile videoFileForPath:file];
+	}
 }
 
 -(void)threadedLoadDirectories:(NSArray *)sourceDirectories{

@@ -56,6 +56,7 @@
 
 -(IBAction)updateFileType:(id)sender{
 	NSViewController *typeController = [typeHandlers objectForKey:[[fileTypeButton selectedItem] title]];
+	[typeController bind:@"videoFile" toObject:filesController withKeyPath:@"selectedObjects.lastObject" options:nil];
 	
 	for(NSView *view in editorBox.subviews){
 		[view removeFromSuperview];

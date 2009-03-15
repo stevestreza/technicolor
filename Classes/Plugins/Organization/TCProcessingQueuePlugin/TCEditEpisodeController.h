@@ -9,9 +9,14 @@
 #import <Cocoa/Cocoa.h>
 #import "TCTVShow.h"
 #import "TCTVEpisode.h"
+#import "TCVideoFile.h"
 
 @interface TCEditEpisodeController : NSViewController {
-	
+	TCVideoFile *mEpisode;
+	id mEditor;
 }
+
+@property (retain) TCVideoFile *videoFile;
+@property (readonly) id editor;
 
 @end

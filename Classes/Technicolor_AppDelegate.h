@@ -31,6 +31,8 @@
 
 #import "TCOrganizationPluginManager.h"
 
+#import "TCDataStore.h"
+
 @interface Technicolor_AppDelegate : NSObject 
 {
     IBOutlet NSWindow *window;
@@ -38,6 +40,8 @@
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
     NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;
+	
+	TCDataStore *dataStore;
 	
 	IBOutlet NSOutlineView *viewSelectionList;
 	IBOutlet NSView *contentView;
@@ -60,6 +64,8 @@
 - (NSManagedObjectModel *)managedObjectModel;
 - (NSManagedObjectContext *)managedObjectContext;
 -(TCOrganizationPluginManager *)organizationPluginManager;
+
+-(TCDataStore *)dataStore;
 
 - (IBAction)saveAction:sender;
 -(IBAction)addVideos:(id)sender;

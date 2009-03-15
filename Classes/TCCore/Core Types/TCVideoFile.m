@@ -28,6 +28,10 @@
 
 @implementation TCVideoFile
 
++(NSString *)entityName{
+	return @"VideoFile";
+}
+
 +(TCVideoFile *)videoFileForPath:(NSString *)path{
 	NSManagedObjectContext *moc = [[NSApp delegate] managedObjectContext];
 	

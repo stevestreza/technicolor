@@ -28,6 +28,10 @@
 
 @implementation TCTVEpisode
 
++(NSString *)entityName{
+	return @"TVEpisode";
+}
+
 +(TCTVEpisode *)showVideoWithEpisodeName:(NSString *)name season:(int)season episodeNumber:(int)episode show:(TCTVShow *)show{
 	if([[show valueForKey:@"numberOfSeasons"] intValue] < season){
 		[show setValue:[NSNumber numberWithInt:season] forKey:@"numberOfSeasons"];

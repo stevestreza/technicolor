@@ -29,6 +29,10 @@
 
 @implementation TCTVShow
 
++(NSString *)entityName{
+	return @"TVShow";
+}
+
 +(TCTVShow *)showWithName:(NSString *)name{
 	return [self showWithName:name inContext:[[NSApp delegate] managedObjectContext]];
 }

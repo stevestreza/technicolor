@@ -163,6 +163,13 @@
 		1E6C76800EE660A50099140B /* TCVideoFile+PreviewImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6C767E0EE660A50099140B /* TCVideoFile+PreviewImage.h */; };
 		1E6C76810EE660A50099140B /* TCVideoFile+PreviewImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C767F0EE660A50099140B /* TCVideoFile+PreviewImage.m */; };
 		1E6C76860EE660F40099140B /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6C76850EE660F40099140B /* QuickLook.framework */; };
+		1E703EB70F48B8E500595D6A /* ProcessingQueue.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1E703EA10F48B8D300595D6A /* ProcessingQueue.nib */; };
+		1E703EB80F48B8E500595D6A /* TCEditTVEpisode.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E703EA30F48B8D300595D6A /* TCEditTVEpisode.xib */; };
+		1E703EB90F48B8E500595D6A /* TCEditTVShow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E703EA40F48B8D300595D6A /* TCEditTVShow.xib */; };
+		1E703ECF0F48BC6400595D6A /* TCEditorProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E703ECD0F48BC6400595D6A /* TCEditorProxy.h */; };
+		1E703ED00F48BC6400595D6A /* TCEditorProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E703ECE0F48BC6400595D6A /* TCEditorProxy.m */; };
+		1E703F8D0F48E3D200595D6A /* TCDataStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E703F8B0F48E3D200595D6A /* TCDataStore.h */; };
+		1E703F8E0F48E3D200595D6A /* TCDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E703F8C0F48E3D200595D6A /* TCDataStore.m */; };
 		1E7D03FC0EF47AAD00719C28 /* TCTVShowJSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D03FB0EF47AAD00719C28 /* TCTVShowJSBridge.m */; };
 		1E83CC760E6B74CB00987FC1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E83CC750E6B74CB00987FC1 /* WebKit.framework */; };
 		1E83CCD90E6B890D00987FC1 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE3EE750E53CF590099684C /* libz.1.2.3.dylib */; };
@@ -193,9 +200,6 @@
 		1ED8DAFA0EF60780008EF249 /* TCCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6C75B90EE651F80099140B /* TCCoreUI.framework */; };
 		1ED8DC400EF607B6008EF249 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E38446E0ED7D58400DD6F43 /* Foundation.framework */; };
 		1ED8DC410EF607B6008EF249 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6C75BE0EE652090099140B /* AppKit.framework */; };
-		1ED8DC460EF607E4008EF249 /* ProcessingQueue.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8DA380EF5EA0F008EF249 /* ProcessingQueue.nib */; };
-		1ED8DC580EF609BC008EF249 /* TCEditTVEpisode.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8DC570EF609BC008EF249 /* TCEditTVEpisode.xib */; };
-		1ED8DC5A0EF609C5008EF249 /* TCEditTVShow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8DC590EF609C5008EF249 /* TCEditTVShow.xib */; };
 		1ED8DC670EF63A5D008EF249 /* TCEditEpisodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8DC660EF63A5D008EF249 /* TCEditEpisodeController.m */; };
 		1EE135730EF4AA0A00668132 /* TCTVShowJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE135720EF4AA0A00668132 /* TCTVShowJSObject.m */; };
 		1EE45BF20F44080C00299DB4 /* TCCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E63689E0EA253590003034E /* TCCore.framework */; };
@@ -290,6 +294,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1E63689D0EA253590003034E;
 			remoteInfo = TCCore;
+		};
+		1E703E870F48B78E00595D6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E5E38600EA2FBA100FD67A3;
+			remoteInfo = TCProcessingQueuePlugin;
 		};
 		1ED8DC440EF607D1008EF249 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -500,6 +511,17 @@
 		1E6C767E0EE660A50099140B /* TCVideoFile+PreviewImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TCVideoFile+PreviewImage.h"; sourceTree = "<group>"; };
 		1E6C767F0EE660A50099140B /* TCVideoFile+PreviewImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TCVideoFile+PreviewImage.m"; sourceTree = "<group>"; };
 		1E6C76850EE660F40099140B /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		1E703EA10F48B8D300595D6A /* ProcessingQueue.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = ProcessingQueue.nib; sourceTree = "<group>"; };
+		1E703EA20F48B8D300595D6A /* TCCalendarPlugin-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TCCalendarPlugin-Info.plist"; sourceTree = "<group>"; };
+		1E703EA30F48B8D300595D6A /* TCEditTVEpisode.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TCEditTVEpisode.xib; sourceTree = "<group>"; };
+		1E703EA40F48B8D300595D6A /* TCEditTVShow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TCEditTVShow.xib; sourceTree = "<group>"; };
+		1E703EA50F48B8D300595D6A /* TCJSPlugin-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TCJSPlugin-Info.plist"; sourceTree = "<group>"; };
+		1E703EA60F48B8D300595D6A /* TCProcessingQueuePlugin-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TCProcessingQueuePlugin-Info.plist"; sourceTree = "<group>"; };
+		1E703EA70F48B8D300595D6A /* TCTVRagePlugin-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TCTVRagePlugin-Info.plist"; sourceTree = "<group>"; };
+		1E703ECD0F48BC6400595D6A /* TCEditorProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCEditorProxy.h; sourceTree = "<group>"; };
+		1E703ECE0F48BC6400595D6A /* TCEditorProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCEditorProxy.m; sourceTree = "<group>"; };
+		1E703F8B0F48E3D200595D6A /* TCDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDataStore.h; sourceTree = "<group>"; };
+		1E703F8C0F48E3D200595D6A /* TCDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDataStore.m; sourceTree = "<group>"; };
 		1E735ADF0E5159D9004FAD1A /* libpng.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng.dylib; path = usr/local/lib/libpng.dylib; sourceTree = SDKROOT; };
 		1E7D03FA0EF47AAD00719C28 /* TCTVShowJSBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTVShowJSBridge.h; sourceTree = "<group>"; };
 		1E7D03FB0EF47AAD00719C28 /* TCTVShowJSBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTVShowJSBridge.m; sourceTree = "<group>"; };
@@ -545,9 +567,6 @@
 		1ED8D9BC0EF5CEF0008EF249 /* TCNavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCNavigationItem.m; sourceTree = "<group>"; };
 		1ED8D9D80EF5D0A3008EF249 /* TCNavigationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TCNavigationController.xib; path = Resources/Framework/TCNavigationController.xib; sourceTree = "<group>"; };
 		1ED8D9E70EF5DCD4008EF249 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/App/English.lproj/TCAddFiles.xib; sourceTree = "<group>"; };
-		1ED8DA390EF5EA0F008EF249 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = ../../../Projects.old/Technicolor/English.lproj/ProcessingQueue.nib; sourceTree = SOURCE_ROOT; };
-		1ED8DC570EF609BC008EF249 /* TCEditTVEpisode.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TCEditTVEpisode.xib; sourceTree = "<group>"; };
-		1ED8DC590EF609C5008EF249 /* TCEditTVShow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TCEditTVShow.xib; sourceTree = "<group>"; };
 		1ED8DC650EF63A5D008EF249 /* TCEditEpisodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCEditEpisodeController.h; sourceTree = "<group>"; };
 		1ED8DC660EF63A5D008EF249 /* TCEditEpisodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCEditEpisodeController.m; sourceTree = "<group>"; };
 		1EE135710EF4AA0A00668132 /* TCTVShowJSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTVShowJSObject.h; sourceTree = "<group>"; };
@@ -817,16 +836,6 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		1E636A6D0EA29C030003034E /* Plugins */ = {
-			isa = PBXGroup;
-			children = (
-				1ED8DA380EF5EA0F008EF249 /* ProcessingQueue.nib */,
-				1ED8DC570EF609BC008EF249 /* TCEditTVEpisode.xib */,
-				1ED8DC590EF609C5008EF249 /* TCEditTVShow.xib */,
-			);
-			path = Plugins;
-			sourceTree = "<group>";
-		};
 		1E636A6E0EA29C090003034E /* Framework */ = {
 			isa = PBXGroup;
 			children = (
@@ -1004,6 +1013,20 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		1E703EA00F48B8D300595D6A /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				1E703EA10F48B8D300595D6A /* ProcessingQueue.nib */,
+				1E703EA20F48B8D300595D6A /* TCCalendarPlugin-Info.plist */,
+				1E703EA30F48B8D300595D6A /* TCEditTVEpisode.xib */,
+				1E703EA40F48B8D300595D6A /* TCEditTVShow.xib */,
+				1E703EA50F48B8D300595D6A /* TCJSPlugin-Info.plist */,
+				1E703EA60F48B8D300595D6A /* TCProcessingQueuePlugin-Info.plist */,
+				1E703EA70F48B8D300595D6A /* TCTVRagePlugin-Info.plist */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
 		1E7D03F90EF47A9900719C28 /* Bridges */ = {
 			isa = PBXGroup;
 			children = (
@@ -1066,6 +1089,8 @@
 				1EB8C9550EA1AAA500984CD7 /* TCVideoFile.m */,
 				1E63692B0EA26EE60003034E /* TCOrganizationPlugin.h */,
 				1E63692C0EA26EE60003034E /* TCOrganizationPlugin.m */,
+				1E703F8B0F48E3D200595D6A /* TCDataStore.h */,
+				1E703F8C0F48E3D200595D6A /* TCDataStore.m */,
 			);
 			path = "Core Types";
 			sourceTree = "<group>";
@@ -1080,6 +1105,8 @@
 				1E636A010EA290200003034E /* TCCoreUtils.m */,
 				1E3845F40ED8BEDF00DD6F43 /* TCRegex.h */,
 				1E3845F50ED8BEDF00DD6F43 /* TCRegex.m */,
+				1E703ECD0F48BC6400595D6A /* TCEditorProxy.h */,
+				1E703ECE0F48BC6400595D6A /* TCEditorProxy.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1177,8 +1204,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1E703EA00F48B8D300595D6A /* Plugins */,
 				1E636A6E0EA29C090003034E /* Framework */,
-				1E636A6D0EA29C030003034E /* Plugins */,
 				1E636A630EA29B750003034E /* App */,
 			);
 			path = Resources;
@@ -1212,6 +1239,8 @@
 				1E4916140EABFB76005CEC4F /* Technicolor.h in Headers */,
 				1E3845F60ED8BEDF00DD6F43 /* TCRegex.h in Headers */,
 				1E3FB6AB0F4757B90017321F /* TCExtendableObject.h in Headers */,
+				1E703ECF0F48BC6400595D6A /* TCEditorProxy.h in Headers */,
+				1E703F8D0F48E3D200595D6A /* TCDataStore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1358,6 +1387,7 @@
 				1E6368BA0EA253D60003034E /* PBXTargetDependency */,
 				1E6C75CC0EE652400099140B /* PBXTargetDependency */,
 				1E636A7C0EA29D090003034E /* PBXTargetDependency */,
+				1E703E880F48B78E00595D6A /* PBXTargetDependency */,
 			);
 			name = Technicolor;
 			productInstallPath = "$(HOME)/Applications";
@@ -1437,9 +1467,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ED8DC460EF607E4008EF249 /* ProcessingQueue.nib in Resources */,
-				1ED8DC580EF609BC008EF249 /* TCEditTVEpisode.xib in Resources */,
-				1ED8DC5A0EF609C5008EF249 /* TCEditTVShow.xib in Resources */,
+				1E703EB70F48B8E500595D6A /* ProcessingQueue.nib in Resources */,
+				1E703EB80F48B8E500595D6A /* TCEditTVEpisode.xib in Resources */,
+				1E703EB90F48B8E500595D6A /* TCEditTVShow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1622,6 +1652,8 @@
 				1E3845F70ED8BEDF00DD6F43 /* TCRegex.m in Sources */,
 				1E38470B0ED8C72D00DD6F43 /* Technicolor_DataModel.xcdatamodel in Sources */,
 				1E3FB6AC0F4757B90017321F /* TCExtendableObject.m in Sources */,
+				1E703ED00F48BC6400595D6A /* TCEditorProxy.m in Sources */,
+				1E703F8E0F48E3D200595D6A /* TCDataStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1709,6 +1741,11 @@
 			target = 1E63689D0EA253590003034E /* TCCore */;
 			targetProxy = 1E6C76F70EE66FA10099140B /* PBXContainerItemProxy */;
 		};
+		1E703E880F48B78E00595D6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E5E38600EA2FBA100FD67A3 /* TCProcessingQueuePlugin */;
+			targetProxy = 1E703E870F48B78E00595D6A /* PBXContainerItemProxy */;
+		};
 		1ED8DC450EF607D1008EF249 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E6C75970EE651F80099140B /* TCCoreUI */;
@@ -1764,15 +1801,6 @@
 				1ED8D9E70EF5DCD4008EF249 /* English */,
 			);
 			name = TCAddFiles.xib;
-			sourceTree = "<group>";
-		};
-		1ED8DA380EF5EA0F008EF249 /* ProcessingQueue.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1ED8DA390EF5EA0F008EF249 /* English */,
-			);
-			name = ProcessingQueue.nib;
-			path = ../App;
 			sourceTree = "<group>";
 		};
 		2F7446970DB6B7EA00F9684A /* MainMenu.xib */ = {

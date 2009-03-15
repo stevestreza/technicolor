@@ -254,6 +254,13 @@
     return managedObjectContext;
 }
 
+-(TCDataStore *)dataStore{
+	if(!dataStore){
+		dataStore = [[TCDataStore alloc] initWithContext:[self managedObjectContext]];
+	}
+	return dataStore;
+}
+
 
 /**
     Returns the NSUndoManager for the application.  In this case, the manager

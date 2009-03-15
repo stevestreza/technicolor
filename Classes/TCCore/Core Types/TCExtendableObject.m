@@ -11,6 +11,14 @@
 
 @implementation TCExtendableObject
 
++(NSEntityDescription *)entity{
+	return [NSEntityDescription entityForName:[self entityName] inManagedObjectContext:[[NSApp delegate] managedObjectContext]];
+}
+
++(NSString *)entityName{
+	return @"ExtendableObject";
+}
+
 - (id)initWithEntity:(NSEntityDescription *)entity insertIntoManagedObjectContext:(NSManagedObjectContext *)context{
 	if(self = [super initWithEntity:entity insertIntoManagedObjectContext:context]){
 		[self _setupPropertyDictionary];

@@ -28,4 +28,8 @@
 
 @implementation TCMovie
 
++(NSString *)entityName{
+	return @"Movie";
+}
+
 @end

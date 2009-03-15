@@ -37,6 +37,15 @@
 	[[mParentScrollView contentView] addSubview:self];
 }
 
+-(void)setFrame:(NSRect)frame{
+	// this is assuming an NSScrollView superview, but it probably works anywhere
+	NSRect bounds = [[[self superview] superview] bounds];
+	if( frame.size.height < bounds.size.height ){
+		frame.size.height = bounds.size.height;
+	}
+	[super setFrame:frame];
+}
+
 -(void)addRow:(NSView *)row{
 	[self insertRow:row atIndex:mRows.count];
 }
@@ -106,6 +115,7 @@
 			return index;
 		}
 	}
+	return NSNotFound;
 }
 
 -(void)_updateScrollView{

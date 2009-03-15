@@ -27,6 +27,10 @@
 
 @implementation TCVideo
 
++(NSString *)entityName{
+	return @"Video";
+}
+
 +(NSArray *)videosForPredicate:(NSPredicate *)predicate{
 	return [self videosForPredicate:predicate withSortDescriptors:[NSArray array]];
 }
